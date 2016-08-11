@@ -7,7 +7,7 @@
     </insert>
 
     <select id="findPageByCategory" resultType="WeiboDataEntity">
-    SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM weibo WHERE  categoryId=#{categoryId}  LIMIT #{start},#{limit}
+    SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM weibo WHERE  categoryId=#{categoryId} ORDER BY interactNum DESC LIMIT #{start},#{limit}
     </select>
 
     <select id="countAll" resultType="integer">
@@ -18,7 +18,8 @@
         SELECT COUNT(*) FROM weibo WHERE categoryId=#{categoryId}
     </select>
 
+
     <select id="findPageByAll" resultType="WeiboDataEntity">
-          SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM weibo    LIMIT #{start},#{limit}
+          SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM  weibo  ORDER BY interactNum DESC LIMIT #{start},#{limit}
     </select>
 </mapper>

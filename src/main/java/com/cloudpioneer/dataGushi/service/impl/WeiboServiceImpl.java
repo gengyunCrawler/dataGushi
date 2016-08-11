@@ -29,7 +29,7 @@ public class WeiboServiceImpl implements WeiboDataService
     }
 
     /**
-     * categoryId==null 即为查询全部
+     * categoryId=="all" 即为查询全部
      * @param categoryId
      * @param pageNo
      * @param pageSize
@@ -41,15 +41,17 @@ public class WeiboServiceImpl implements WeiboDataService
     {
 
         int limit = pageSize;
-        int start = pageNo*pageSize;
+        int start = (pageNo-1)*pageSize;
         int totalRecord =0;
         List<WeiboDataEntity> categorysEntities=null;
-       if (categoryId==null){
+       if (categoryId.equals("all")){
            totalRecord= weiboDataEntityMapper.countAll();
-           categorysEntities= weiboDataEntityMapper.findPageByCategory(categoryId, start, limit);
-       }else {
-            totalRecord = weiboDataEntityMapper.countByCategoryId(categoryId);
            categorysEntities= weiboDataEntityMapper.findPageByAll(start, limit);
+       }else {
+
+           totalRecord = weiboDataEntityMapper.countByCategoryId(categoryId);
+           categorysEntities= weiboDataEntityMapper.findPageByCategory(categoryId, start, limit);
+
        }
 
         int totalPage = 1 + (totalRecord - 1) / pageSize;
@@ -62,7 +64,9 @@ public class WeiboServiceImpl implements WeiboDataService
         page.setCurrentPage(pageNo);
         page.setPageSize(pageSize);
         page.setTotalPage(totalPage);
+        page.setTotalRecord(totalRecord);
 
         return page;
     }
+
 }

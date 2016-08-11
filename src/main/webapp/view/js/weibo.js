@@ -2,7 +2,7 @@
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId,
+        url:'../weibo/data/'+currentPage+'/'+pageSize+'/'+categoryId,
         async:false,
         success:function(data){
             wxData=data;
@@ -35,17 +35,12 @@ function bindWxData(currentPage,categoryId){
                 '<td class="behind-7"><span>'+sequence+'</span></td>'
         }
         sequenceHtml+=
-            "<td class='avator'><img src='"+item.headPicture+"'></td>"+
-            '<td class="nickname">'+item.wxName+'</td>'+
-            '<td>'+item.articlesNum+'</td>'+
-            '<td>'+item.totalOriginalNum+'</td>'+
-            '<td>'+item.totalReadNum+'</td>'+
-            '<td>'+item.totalLikeNum+'</td>'+
-            '<td>'+item.avgReadNum+'</td>'+
-            '<td>'+item.avgLikeNum+'</td>'+
-            '<td>'+item.avgHeadlineNum+'</td>'+
-            '<td>'+item.qualityNum+'</td>'+
-            '<td>'+item.influenceNum+'</td>'+
+            "<td class='avator'><img src='"+item.head+"'></td>"+
+            '<td class="nickname">'+item.nickName+'</td>'+
+            '<td>'+item.followCount+'</td>'+
+            '<td>'+item.newFllowCount+'</td>'+
+            '<td>'+item.rateActivity+'</td>'+
+            '<td>'+item.interactNum+'</td>'+
             '</tr>'
         html+=sequenceHtml
         sequence++;
@@ -72,14 +67,14 @@ function removeTypeClass(){
 
 
 $(function(){
-    bindWxData(1,"all");
+    bindWxData('1',"all");
 
     $("#all").click(function(){
         firstHandle()
         removeTypeClass()
         $(this).addClass('active')
         categoryId="all";
-        bindWxData(1,categoryId)
+        bindWxData('1',categoryId)
     })
 
     $("#type li").click(function(){
@@ -88,7 +83,7 @@ $(function(){
         $("#all").css('color','#FFFFFF')
         categoryId=$(this).val();
         $(this).addClass('active')
-        bindWxData(1,categoryId);
+        bindWxData('1',categoryId);
 
     })
 
@@ -112,8 +107,13 @@ $(function(){
 
         var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
 
+        var curentHtml=$("[class='hand1 active']");
+        if(curentHtml.html()==totalPage){
+            alert("当前已是最后页")
+            return;
+        }
         if(lastNum==totalPage){
-            var curentHtml=$("[class='hand1 active']");
+
 
             if(parseInt(curentHtml.html())<totalPage){
                 curentHtml.next().addClass("active")
@@ -130,9 +130,9 @@ $(function(){
         $.each($("li[name='num']"),function(index,item){
             var  value=$(this).text();
             value= parseInt(value)
-            $(this).html(parseInt(value)+1)
-            var page=parseInt($("[class='hand1 active']").html())
-            bindWxData(page,categoryId);
+                $(this).html(parseInt(value)+1)
+                var page=parseInt($("[class='hand1 active']").html())
+                bindWxData(page,categoryId);
         });
     })
 

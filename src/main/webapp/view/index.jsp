@@ -74,10 +74,10 @@
       <div class="pagination">
         <ul id="pagination">
           <li class="hand" id="first">首页</li>
-          <li class="hand active" name="num">1</li>
-          <li class="hand" name="num">2</li>
-          <li class="hand" name="num">3</li>
-          <li  class="hand" name="num">4</li>
+          <li class="hand1 active" name="num">1</li>
+          <li class="hand1" name="num">2</li>
+          <li class="hand1" name="num">3</li>
+          <li  class="hand1" name="num">4</li>
           <li>...</li>
            <li class="hand" id="next">后页</li>
         </ul>

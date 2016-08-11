@@ -14,4 +14,6 @@ public interface WeiboDataService
     void insertByList(List<WeiboDataEntity> weiboDataEntity) throws Exception;
 
     Page<WeiboDataEntity> findPageBycategoryId(String categoryId, int pageNo, int pageSize) throws Exception;
+
+
 }

@@ -1,0 +1,30 @@
+package com.cloudpioneer.dataGushi.domain;
+
+/**
+ * Created by tijun on 2016/8/9.
+ */
+public class WeiboCategorysEntity
+{
+    String categoryId;
+    String categoryName;
+
+    public String getCategoryId()
+    {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId)
+    {
+        this.categoryId = categoryId;
+    }
+
+    public String getCategoryName()
+    {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName)
+    {
+        this.categoryName = categoryName;
+    }
+}

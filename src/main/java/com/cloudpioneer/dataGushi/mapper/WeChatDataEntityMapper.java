@@ -20,4 +20,5 @@ public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
 
     int countByCategory(@Param("categoryId") String categoryId)throws Exception;
 
+    void deleteAll() throws Exception;
 }

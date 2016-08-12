@@ -26,4 +26,6 @@ public interface WeiboDataEntityMapper extends BaseDao<WeiboDataEntity>
     Integer countByCategoryId(@Param("categoryId") String categoryId)throws Exception;
 
     List<WeiboDataEntity> findPageByAll(@Param("start") int start, @Param("limit") int limit)throws Exception;
+
+    void deleteAll() throws Exception;
 }

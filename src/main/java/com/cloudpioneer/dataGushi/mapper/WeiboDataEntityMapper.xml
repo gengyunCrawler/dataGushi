@@ -22,4 +22,8 @@
     <select id="findPageByAll" resultType="WeiboDataEntity">
           SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM  weibo  ORDER BY interactNum DESC LIMIT #{start},#{limit}
     </select>
+
+    <delete id="deleteAll">
+        DELETE  FROM  weibo
+    </delete>
 </mapper>

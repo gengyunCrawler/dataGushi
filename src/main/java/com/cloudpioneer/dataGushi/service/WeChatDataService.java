@@ -13,4 +13,6 @@ public interface WeChatDataService {
     void insertByList(List<WeChatDataEntity> weChatDataEntities) throws Exception;
 
     Page<WeChatDataEntity> findIimitPage(int newPage, int pageSize, String categoryId) throws Exception;
+
+    public void gainData()throws Exception;
 }

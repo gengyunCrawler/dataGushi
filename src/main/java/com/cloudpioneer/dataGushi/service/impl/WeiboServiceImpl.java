@@ -2,6 +2,8 @@ package com.cloudpioneer.dataGushi.service.impl;
 
 import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
 import com.cloudpioneer.dataGushi.mapper.WeiboDataEntityMapper;
+import com.cloudpioneer.dataGushi.parse.DataStoryParse;
+import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeiboDataService;
 import com.cloudpioneer.dataGushi.util.Page;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,6 +69,17 @@ public class WeiboServiceImpl implements WeiboDataService
         page.setTotalRecord(totalRecord);
 
         return page;
+    }
+
+    @Override
+    public void gainData4DB() throws Exception
+    {
+        weiboDataEntityMapper.deleteAll();
+        String json=HttpService.dataStoryJSON(HttpService.DATA_WEIBO);
+        List<WeiboDataEntity> weiboDataEntities=DataStoryParse.parseJson4Weibo(json);
+        this.insertByList(weiboDataEntities);
+
+
     }
 
 }

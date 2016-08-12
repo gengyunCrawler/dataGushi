@@ -6,15 +6,15 @@ import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.service.WeiboDataService;
 import com.cloudpioneer.dataGushi.util.Page;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by tijun on 2016/8/9.
  */
-@Controller
+@RestController
 @RequestMapping("/")
 public class DataStoryController
 {
@@ -30,7 +30,7 @@ public class DataStoryController
         return "index";
     }
 
-    @ResponseBody
+
     @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}")
     public  Object weChatData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId) throws Exception {
      if(categoryId.equals("all")){
@@ -48,25 +48,39 @@ public class DataStoryController
      * @return
      * @throws Exception
      */
-    @ResponseBody
+
     @RequestMapping("weibo/data/{currentPage}/{pageSize}/{categoryId}")
     public Object weiBoData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId) throws Exception
     {
-        Page<WeiboDataEntity> page=weiboDataService.findPageBycategoryId(categoryId,currentPage,pageSize);
+        Page<WeiboDataEntity> page=weiboDataService.findPageBycategoryId(categoryId, currentPage, pageSize);
 
         return page;
     }
 
-
+    /**
+     * pc 端 type="weixin" /weibo
+     * 手机端：mobilewx mobilewb
+     * @param type
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("view/{type}")
-    public String wxWeibo(@PathVariable("type")String type) throws Exception
+    public ModelAndView wxWeibo(@PathVariable("type")String type) throws Exception
     {
-        if (type.equals("weixin")){
-            return "index";
+       return new ModelAndView(type);
+    }
 
-        }else if (type.equals("weibo")){
-            return "weibo";
-        }
-        return "erro";
-        }
+    @RequestMapping("data/weibo/gain")
+    public String wbDataGain() throws Exception
+    {
+            weiboDataService.gainData4DB();
+        return "success";
+    }
+
+    @RequestMapping("data/weixin/gain")
+    public String wxDataGain() throws Exception
+    {
+        weChatDataService.gainData();
+        return "success";
+    }
 }

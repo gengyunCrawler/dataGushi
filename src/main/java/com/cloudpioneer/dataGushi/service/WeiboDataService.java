@@ -15,5 +15,7 @@ public interface WeiboDataService
 
     Page<WeiboDataEntity> findPageBycategoryId(String categoryId, int pageNo, int pageSize) throws Exception;
 
+    public void gainData4DB() throws Exception;
+
 
 }

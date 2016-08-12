@@ -2,6 +2,8 @@ package com.cloudpioneer.dataGushi.service.impl;
 
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
+import com.cloudpioneer.dataGushi.parse.DataStoryParse;
+import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.util.Page;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +58,15 @@ public class WeChatServiceImpl implements WeChatDataService{
 
 
         return resultPage;
+    }
+
+    @Override
+    public void gainData() throws Exception
+    {
+        weChatDataEntityMapper.deleteAll();
+
+        String json=HttpService.dataStoryJSON(HttpService.DATA_WEIXIN);
+        List<WeChatDataEntity> dataEntityList=DataStoryParse.parseWeChatJSONData(json);
+        this.insertByList(dataEntityList);
     }
 }

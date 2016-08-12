@@ -62,8 +62,10 @@ function removeTypeClass(){
         $(this).removeClass('active')
     })
 }
+//解决出现数字比页数多的情况
+function dealPageSizeWith(){
 
-
+}
 
 
 $(function(){

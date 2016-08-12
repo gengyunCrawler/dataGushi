@@ -15,7 +15,7 @@
 <div class="main-container">
   <div class="header">
     <div class="logo">
-      <i class="iconfont icon-weixin"></i>
+      <i class="iconfont icon-weibo"></i>
     </div>
     <div class="logo-title">
       <span>微博</span>

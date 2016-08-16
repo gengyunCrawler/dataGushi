@@ -239,7 +239,15 @@ tbody tr {
 }
 
 .nickname {
-  font-size: 13px;
+  font-size: 10px;
+}
+
+.weixin_hao{
+  margin: auto;
+  padding: 0px;
+  height: 20px;
+  text-align: center;
+  line-height: 10px;
 }
 
 .font-3 span {

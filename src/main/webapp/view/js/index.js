@@ -36,7 +36,7 @@ function bindWxData(currentPage,categoryId){
         }
         sequenceHtml+=
             "<td class='avator'><img src='"+item.headPicture+"'></td>"+
-            '<td class="nickname">'+item.wxName+'</td>'+
+            '<td class="nickname"><div style="margin-top: 10px"><div class="weixin_hao" >'+item.wxName+'</div><div class="weixin_hao" >'+item.wxid+'</div></div>'+'</td>'+
             '<td>'+item.articlesNum+'</td>'+
             '<td>'+item.totalOriginalNum+'</td>'+
             '<td>'+item.totalReadNum+'</td>'+
@@ -111,29 +111,25 @@ $(function(){
     $("#next").click(function(){
 
         var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
+        var curentHtml=$("[class='hand1 active']");
+        var currentNum=parseInt(curentHtml.html())
 
-        if(lastNum==totalPage){
-            var curentHtml=$("[class='hand1 active']");
+        if(currentNum<totalPage){
+            $.each($("li[name='num']"),function(index,item){
+                var  value=$(this).text();
+                value= parseInt(value)
+                $(this).html(parseInt(value)+1)
+                var page=parseInt($("[class='hand1 active']").html())
+                bindWxData(page,categoryId);
+            });
 
-            if(parseInt(curentHtml.html())<totalPage){
-                curentHtml.next().addClass("active")
-                curentHtml.removeClass("active")
-                bindWxData(parseInt(curentHtml.html())+1,categoryId);
-
-            }else{
-                alert("当前已是最后页")
-            }
-
-            return;
+        }else{
+            alert("当前已是最后页")
+            return
         }
 
-        $.each($("li[name='num']"),function(index,item){
-            var  value=$(this).text();
-            value= parseInt(value)
-            $(this).html(parseInt(value)+1)
-            var page=parseInt($("[class='hand1 active']").html())
-            bindWxData(page,categoryId);
-        });
+
+
     })
 
 

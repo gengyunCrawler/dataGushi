@@ -18,11 +18,11 @@
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum from wechatdata   ORDER  BY influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum from wechatdata   ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
-        select headPicture,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum from wechatdata where categoryId=#{categoryId} ORDER BY  influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum from wechatdata where categoryId=#{categoryId} ORDER BY  influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="countByCategory" resultType="integer">

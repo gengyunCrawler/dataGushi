@@ -108,34 +108,25 @@ $(function(){
     $("#next").click(function(){
 
         var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
-
         var curentHtml=$("[class='hand1 active']");
-        if(curentHtml.html()==totalPage){
-            alert("当前已是最后页")
-            return;
-        }
-        if(lastNum==totalPage){
+        var currentNum=parseInt(curentHtml.html())
 
-
-            if(parseInt(curentHtml.html())<totalPage){
-                curentHtml.next().addClass("active")
-                curentHtml.removeClass("active")
-                bindWxData(parseInt(curentHtml.html())+1,categoryId);
-
-            }else{
-                alert("当前已是最后页")
-            }
-
-            return;
-        }
-
-        $.each($("li[name='num']"),function(index,item){
-            var  value=$(this).text();
-            value= parseInt(value)
+        if(currentNum<totalPage){
+            $.each($("li[name='num']"),function(index,item){
+                var  value=$(this).text();
+                value= parseInt(value)
                 $(this).html(parseInt(value)+1)
                 var page=parseInt($("[class='hand1 active']").html())
                 bindWxData(page,categoryId);
-        });
+            });
+
+        }else{
+            alert("当前已是最后页")
+            return
+        }
+
+
+
     })
 
 

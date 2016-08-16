@@ -10,6 +10,8 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+  <script type="text/javascript" src="plugin/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
 <div class="main-container">
@@ -49,7 +51,7 @@
       <span class="arrow"><i></i></span>
     </div>
     <div class="table-wrap">
-      <table>
+      <table class="table-responsive">
         <thead>
         <tr>
           <th>序号</th>

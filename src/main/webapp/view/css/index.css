@@ -313,3 +313,20 @@ tbody tr {
 .hand1{
   cursor:pointer;
 }
+@media screen and ( max-height:900px ){
+    thead tr{
+           height: 40px;
+           line-height: 40px;
+       }
+    tbody tr{
+        height:40px;
+        line-height: 40px;
+
+    }
+    .avator img{
+        width: 28px;
+        height: 28px;
+    }
+
+}
+

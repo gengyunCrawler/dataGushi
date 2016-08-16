@@ -23,9 +23,10 @@ body{
 }
 
 .logo {
+  margin-top: 10px;
   color:#0078ff;
-  height: 67px;
-  line-height: 67px;
+  height: 50px;
+  line-height: 50px;
   width: 40px;
   margin-left: 147px;
   padding-right: 20px;
@@ -67,8 +68,9 @@ body{
 }
 
 .monitor {
-  height: 67px;
-  line-height: 67px;
+  margin-top: 10px;
+  height: 50px;
+  line-height: 50px;
   width: 40px;
   padding-right: 20px;
   display: inline-block;
@@ -104,7 +106,7 @@ body{
   color:#fff;
   font-size: 12px;
   margin-left: 40px;
-  background-color: #0078ff;
+  background-image: url("../plugin/images/dropdowntoggle.png");
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -115,7 +117,6 @@ body{
   line-height: 20px;
   text-align: center;
   padding: 0 5px;
-  background-color: #0078ff;
 }
 
 .monitor-result span i {

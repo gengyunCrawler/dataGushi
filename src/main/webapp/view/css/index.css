@@ -182,7 +182,7 @@ body{
   border-right: 1px #0079ff solid;
   display: inline-block;
   float: left;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .category ul:first-child li {

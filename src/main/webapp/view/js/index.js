@@ -74,21 +74,23 @@ function removeTypeClass(){
 $(function(){
     bindWxData(1,"all");
 
-    $("#all").click(function(){
-        firstHandle()
-        removeTypeClass()
-        $(this).addClass('active')
-        categoryId="all";
-        bindWxData(1,categoryId)
-    })
+    //$("#all").click(function(){
+    //    firstHandle()
+    //    removeTypeClass()
+    //    $(this).addClass('active')
+    //    categoryId="all";
+    //    bindWxData(1,categoryId)
+    //})
 
     $("#type li").click(function(){
         firstHandle()
         removeTypeClass()
-        $("#all").css('color','#FFFFFF')
         categoryId=$(this).val();
+        if(categoryId=='0'){
+            categoryId="all";
+        }
         $(this).addClass('active')
-        bindWxData(1,categoryId);
+        bindWxData('1',categoryId);
 
     })
 

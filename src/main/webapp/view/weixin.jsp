@@ -38,9 +38,11 @@
     </div>
     <div class="main">
       <div class="category">
-        <span class="active hand" id="all">全部</span>
-        <span class="line"></span>
+        <%--<span class="active hand" id="all">全部</span>--%>
+        <%--<span class="line"></span>--%>
         <ul id="type">
+          <li class="active hand" id="all" value="all">全部</li>
+          <li class="hand" style="width: 2px"> <span class="line" style="margin-top: 8px;padding: 0px;margin-left: 4px"></span></li>
           <li id="provence" class="hand" value="5051">省市发布</li>
           <li id="media" class="hand" value="5052">文化传媒</li>
           <li id="trip" class="hand" value="5053">旅游</li>

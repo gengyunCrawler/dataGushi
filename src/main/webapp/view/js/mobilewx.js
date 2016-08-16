@@ -2,7 +2,7 @@
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId,
+        url:'/DataStory/wx/data/'+currentPage+'/'+pageSize+'/'+categoryId,
         async:false,
         success:function(data){
             wxData=data;
@@ -36,7 +36,7 @@ function bindWxData(body,data){
                 '<td><span class="xh">'+sequence+'</span></td>'
         }else{
             sequenceHtml='<tr>'+
-                '<td ><span>'+sequence+'</span></td>'
+                '<td ><span class="xh" style="background-color: #9c98f0">'+sequence+'</span></td>'
         }
         sequenceHtml+=
 

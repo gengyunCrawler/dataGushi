@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fea024a1-5574-4dde-a87e-41db3d453fc7" name="Default" comment="添加微信号">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" />
+    <list default="true" id="fea024a1-5574-4dde-a87e-41db3d453fc7" name="Default" comment="fix">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dataGushi.iws" />
@@ -33,13 +30,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7898894">
-              <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
               <folding>
                 <marker date="1471338014706" expanded="true" signature="1024:1040" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobilewx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="98" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="98" />
+              <folding>
+                <marker date="1471338829374" expanded="true" signature="903:928" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobilewb.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6319115">
+              <caret line="46" column="98" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
+              <folding>
+                <marker date="1471338829382" expanded="true" signature="1163:1188" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -60,16 +81,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeiboDataEntityMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/mapper/WeiboDataEntityMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -218,19 +229,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataStoryParse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/parse/DataStoryParse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2499#2517#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WeChatDataEntityMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/mapper/WeChatDataEntityMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -286,6 +284,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
       </list>
     </option>
   </component>
@@ -671,7 +671,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webmagicDemo" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
@@ -1208,12 +1208,19 @@
       <option name="number" value="Default" />
       <updated>1471315545209</updated>
       <workItem from="1471315548145" duration="8308000" />
-      <workItem from="1471335780451" duration="2280000" />
+      <workItem from="1471335780451" duration="3066000" />
     </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1471338087935</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1471338087935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11659000" />
+    <option name="totallyTimeSpent" value="12445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1265,7 +1272,8 @@
     <MESSAGE value="finish the mobile interface,but also have many bug" />
     <MESSAGE value="fix response chrome size" />
     <MESSAGE value="添加微信号" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加微信号" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1491,13 +1499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1544,14 +1545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/c3p0.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1585,7 +1578,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1781,10 +1776,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7898894">
-          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
           <folding>
             <marker date="1471338014706" expanded="true" signature="1024:1040" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="98" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="98" />
+          <folding>
+            <marker date="1471338829374" expanded="true" signature="903:928" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6319115">
+          <caret line="46" column="98" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
+          <folding>
+            <marker date="1471338829382" expanded="true" signature="1163:1188" placeholder="..." />
           </folding>
         </state>
       </provider>

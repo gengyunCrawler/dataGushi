@@ -187,8 +187,9 @@
 
 <div style="position:fixed;width: 100%;background: #F6F8FD;bottom: 0;text-align: center;padding: 10px 0 10px 0">
   <div style="color: #94c4af;font-size: 12px;font-family: 微软雅黑;padding: 0 20px 0 20px;">指导单位 : 贵州省互联网信息办公室</div>
-  <div style="color: #94c4af;font-size: 12px;font-family: 微软雅黑;padding: 0 20px 0 20px;">榜单发布单位 : 贵州互联网大数据公共实验室</div>
-  <div style="color: #94c4af;font-size: 12px;font-family: 微软雅黑;padding: 0 20px 0 20px;">数据支撑 : 贵州耕云科技有限公司</div>
+  <div style="color: #94c4af;font-size: 12px;font-family: 微软雅黑;padding: 0 20px 0 20px;">发榜单位 : 贵州省互联网发展协会</div>
+  <div style="color: #94c4af;font-size: 12px;font-family: 微软雅黑;padding: 0 20px 0 20px;">指数编制单位 : 贵州大数据公共实验室</div>
+  <div style="color: #94c4af;font-size: 12px;font-family: 微软雅黑;padding: 0 20px 0 20px;">数据提供单位 : 贵州耕云科技有限公司</div>
 </div>
 
 

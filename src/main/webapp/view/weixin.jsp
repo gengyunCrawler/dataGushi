@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <title>微信排行</title>
-    <script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+
 </head>
 <body>
   <div class="main-container">
@@ -58,21 +59,21 @@
               <th>头像</th>
               <th>昵称</th>
               <th>文章数</th>
-              <th>原创数[?]</th>
-              <th>阅读数[?]</th>
-              <th>点赞数[?]</th>
-              <th>平均阅读数[?]</th>
-              <th>平均点赞数[?]</th>
-              <th>平均头条阅读数[?]</th>
-              <th>质量指数[?]</th>
-              <th>影响力[?]</th>
+              <th>原创数<span id="origin" class="questionmark" title="带原创标识的文章数">[?]</span></th>
+              <th>阅读数<span id="readNo" class="questionmark" title="30天所有文章阅读总数">[?]</span></th>
+              <th>点赞数<span id="likeNo" class="questionmark" title="30天所有文章点赞总数">[?]</span></th>
+              <th>平均阅读数<span id="aveReadNo" class="questionmark" title="30天的平均阅读数">[?]</span></th>
+              <th>平均点赞数<span id="aveLikeNo" class="questionmark" title="30天的平均点赞数">[?]</span></th>
+              <th>平均头条阅读数<span id="aveTopReadNo" class="questionmark" title="30天的平均头条阅读数">[?]</span></th>
+              <th>质量指数<span id="quaVector" class="questionmark" title="平均阅读数、平均点赞数和点赞率的加权">[?]</span></th>
+              <th>影响力<span id="influence" class="questionmark" title="总阅读数和总点赞数的加权">[?]</span></th>
             </tr>
           </thead>
           <tbody>
-
           </tbody>
         </table>
       </div>
+
       <div class="pagination">
         <ul id="pagination">
           <li class="hand" id="first">首页</li>

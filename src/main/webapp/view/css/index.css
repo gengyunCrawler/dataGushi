@@ -1,7 +1,7 @@
 body{
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
   padding: 0;
   margin: 0;
   background-color: #fff;
@@ -213,7 +213,7 @@ table thead {
   font-size: 14px;
   color:#0057d3;
   background-color:#f6f8fd;
-  height: 51px;
+  height: 45px;
   line-height: 51px;
 }
 
@@ -228,7 +228,7 @@ tbody {
 
 tbody tr {
   height: 58px;
-  line-height: 58px;
+  line-height: 55px;
   text-align: center;
   color:#2845a0;
   font-size: 14px;
@@ -249,6 +249,10 @@ tbody tr {
   height: 20px;
   text-align: center;
   line-height: 10px;
+}
+
+.questionmark {
+  color: #f101ff;
 }
 
 .font-3 span {
@@ -322,20 +326,5 @@ tbody tr {
 .hand1{
   cursor:pointer;
 }
-@media screen and ( max-height:900px ){
-    thead tr{
-           height: 40px;
-           line-height: 40px;
-       }
-    tbody tr{
-        height:40px;
-        line-height: 40px;
 
-    }
-    .avator img{
-        width: 28px;
-        height: 28px;
-    }
-
-}
 

@@ -83,7 +83,6 @@ $(function(){
     //})
 
     $("#type li").click(function(){
-        $("li[flag='5']").show()
         firstHandle()
         removeTypeClass()
         categoryId=$(this).val();
@@ -92,28 +91,10 @@ $(function(){
         }
         $(this).addClass('active')
         bindWxData('1',categoryId);
-        for(var i=0;i<=5;i++){
-            var num=i
-            $("li[flag='"+num+"']").show()
-        }
-        if(totalPage<5){
-            //if(totalPage==4){
-            //    $("li[flag='5']").hide()
-            //    return
-            //}
-            var i=totalPage
-            for(i;i<=5;i++){
-                var num=i+1
-                $("li[flag='"+num+"']").hide()
-            }
-            return
-
-        }
 
     })
 
     $("#first").click(function(){
-        $("li[flag='5']").show()
         firstHandle()
 
     })
@@ -134,24 +115,6 @@ $(function(){
         var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
         var curentHtml=$("[class='hand1 active']");
         var currentNum=parseInt(curentHtml.html())
-        var flagNum=parseInt($("[class='hand1 active']").attr("flag"))
-        if(totalPage<5){
-
-        }
-
-        if(totalPage-currentNum<=4-flagNum){
-            $("li[flag='5']").hide()
-            if(currentNum==totalPage){
-                alert("当前已是最后页")
-                return
-            }
-            curentHtml.next().addClass("active")
-            curentHtml.removeClass("active")
-            var page=parseInt($("[class='hand1 active']").html())
-            bindWxData(page,categoryId);
-            return
-
-        }
 
         if(currentNum<totalPage){
             $.each($("li[name='num']"),function(index,item){
@@ -180,7 +143,25 @@ $(function(){
         })
     });
 
-  //  $("#origin").tooltip();
+    $("#origin").tipsy({gravity:'s'});
+    $("#readNo").tipsy({gravity:'s'});
+    $("#likeNo").tipsy({gravity:'s'});
+    $("#aveReadNo").tipsy({gravity:'s'});
+    $("#aveLikeNo").tipsy({gravity:'s'});
+    $("#aveTopReadNo").tipsy({gravity:'s'});
+    $("#quaVector").tipsy({gravity:'s'});
+    $("#influence").tipsy({gravity:'s'});
+
+    var num;
+    $('.nav-main>li[id]').hover(function () {
+        var obj =$(this).attr('id');
+        num = obj.substring(3,obj.length);
+        $('#box-'+num).slideDown(300);
+    },function(){
+        /*下拉框消失*/
+        $('#box-'+num).hide();
+    });
+
 
 //获取总页数
 //加载分页数

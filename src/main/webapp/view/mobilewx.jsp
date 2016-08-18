@@ -44,15 +44,15 @@
                 <span class="fa fa-chevron-down"></span>
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
-              <ul class="dropdown-menu ul-font" role="menu">
-                <li><a href="#" class="a-font">8月1日</a></li>
-                <li class="divider"></li>
-                <li><a href="#" class="a-font">8月2日</a></li>
-                <li class="divider"></li>
-                <li><a href="#"class="a-font">8月3日</a></li>
-                <li class="divider"></li>
-                <li><a href="#" class="a-font">8月4日</a></li>
-              </ul>
+              <%--<ul class="dropdown-menu ul-font" role="menu">--%>
+                <%--<li><a href="#" class="a-font">8月1日</a></li>--%>
+                <%--<li class="divider"></li>--%>
+                <%--<li><a href="#" class="a-font">8月2日</a></li>--%>
+                <%--<li class="divider"></li>--%>
+                <%--<li><a href="#"class="a-font">8月3日</a></li>--%>
+                <%--<li class="divider"></li>--%>
+                <%--<li><a href="#" class="a-font">8月4日</a></li>--%>
+              <%--</ul>--%>
             </div>
         </div>
         <div class="col-sm-12">
@@ -70,7 +70,7 @@
 
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 6px">
+          <table class="table table-striped table-bordered" style="font-size: 10px">
             <thead>
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
@@ -97,13 +97,13 @@
             </div>
         </div>
 
-      <div class="row" style="margin-top: 20px">
+      <div class="row" style="margin-top: 20px; padding-top: 0px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 6px">
+          <table class="table table-striped table-bordered" style="font-size: 10px">
             <thead>
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px; width: 60px">昵称</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章</span><br>数</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读</span><br>数</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞</span><br>数</th>
@@ -129,7 +129,7 @@
 
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 6px">
+          <table class="table table-striped table-bordered" style="font-size: 10px">
             <thead>
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
@@ -159,7 +159,7 @@
 
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 6px">
+          <table class="table table-striped table-bordered" style="font-size: 10px">
             <thead>
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>

@@ -11,6 +11,12 @@
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
 
+  <link rel="stylesheet" type="text/css" href="plugin/css/tipsy.css" />
+  <script type="text/javascript" src="plugin/js/jquery.tipsy.js"></script>
+
+  <%--<link rel="stylesheet" type="text/css" href="plugin/css/darktooltip.min.css" />
+  <script type="text/javascript" src="plugin/js/jquery.darktooltip.min.js"></script>--%>
+
 </head>
 <body>
   <div class="main-container">
@@ -33,10 +39,11 @@
         <div class="monitor-result">
           <span>出榜日期</span>
           <span>8月10日</span>
-          <span><i class="iconfont icon-xiasanjiao"></i></span>
+          <span><i id="selectDate" class="iconfont icon-xiasanjiao"></i></span>
         </div>
       </div>
     </div>
+
     <div class="main">
       <div class="category">
         <%--<span class="active hand" id="all">全部</span>--%>
@@ -59,14 +66,14 @@
               <th>头像</th>
               <th>昵称</th>
               <th>文章数</th>
-              <th>原创数<span id="origin" class="questionmark" title="带原创标识的文章数">[?]</span></th>
-              <th>阅读数<span id="readNo" class="questionmark" title="30天所有文章阅读总数">[?]</span></th>
-              <th>点赞数<span id="likeNo" class="questionmark" title="30天所有文章点赞总数">[?]</span></th>
-              <th>平均阅读数<span id="aveReadNo" class="questionmark" title="30天的平均阅读数">[?]</span></th>
-              <th>平均点赞数<span id="aveLikeNo" class="questionmark" title="30天的平均点赞数">[?]</span></th>
-              <th>平均头条阅读数<span id="aveTopReadNo" class="questionmark" title="30天的平均头条阅读数">[?]</span></th>
-              <th>质量指数<span id="quaVector" class="questionmark" title="平均阅读数、平均点赞数和点赞率的加权">[?]</span></th>
-              <th>影响力<span id="influence" class="questionmark" title="总阅读数和总点赞数的加权">[?]</span></th>
+              <th id="origin" original-title="带原创标识的文章数" >原创数<span class="questionmark">[?]</span></th>
+              <th id="readNo" original-title="30天所有文章阅读总数">阅读数<span class="questionmark">[?]</span></th>
+              <th id="likeNo"  original-title="30天所有文章点赞总数">点赞数<span class="questionmark" >[?]</span></th>
+              <th id="aveReadNo"  original-title="30天的平均阅读数">平均阅读数<span  class="questionmark">[?]</span></th>
+              <th id="aveLikeNo"  original-title="30天的平均点赞数">平均点赞数<span  class="questionmark">[?]</span></th>
+              <th id="aveTopReadNo"  original-title="30天的平均头条阅读数">平均头条阅读数<span  class="questionmark">[?]</span></th>
+              <th id="quaVector"  original-title="平均阅读数、平均点赞数和点赞率的加权">质量指数<span  class="questionmark">[?]</span></th>
+              <th id="influence"  original-title="总阅读数和总点赞数的加权">影响力<span  class="questionmark">[?]</span></th>
             </tr>
           </thead>
           <tbody>
@@ -94,6 +101,7 @@
         <li>数据提供单位：贵州耕云科技有限公司</li>
       </ul>
     </div>
+
   </div>
 </body>
 </html>

@@ -327,4 +327,18 @@ tbody tr {
   cursor:pointer;
 }
 
+.hidden-box ul{
+  list-style-type:none;
+  color:#fff;cursor:pointer;
+  padding-top:12px;
+  padding-bottom:15px
+}
 
+.hidden-box ul,li {
+  line-height:30px;
+  height:30px;
+  font-weight:500
+}
+
+/*隐藏盒子位置设置*/
+.hidden-loc-index{left:284px}

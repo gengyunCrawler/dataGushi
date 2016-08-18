@@ -9,8 +9,8 @@ import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -49,10 +49,6 @@ public class DataStoryParse
                 weiboDataEntity.setFollowCount(account.getIntValue("followCount"));
                 weiboDataEntity.setRateActivity(account.getFloatValue("rateActivity"));
                 weiboDataEntity.setCategoryId(categorys.getString(weiboDataEntity.getUid()));
-                weiboDataEntity.setDeleteFlag("false");
-                Date searchDate=Calendar.getInstance().getTime();
-                System.out.println(searchDate);
-                weiboDataEntity.setSearchDate(searchDate);
 
                 if (interact!=null){
                     weiboDataEntity.setNewFllowCount(interact.getIntValue("thisWeekFansIncr"));
@@ -106,6 +102,10 @@ public class DataStoryParse
                 weChatObj.setConfirm(jsonObject.getString("confirm"));
                 weChatObj.setTag(jsonObject.getString("tag"));
                 weChatObj.setPrice(jsonObject.getString("price"));
+                //String currentDate=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                //weChatObj.setLatestDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(currentDate));
+                weChatObj.setLatestDate(new Date());
+                weChatObj.setDeleteFlag(true);
                 arrayList.add(weChatObj);
             }
         }

@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,8 +27,30 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     @Override
     public void insertByList(List<WeChatDataEntity> weChatDataEntityList) throws Exception {
-        for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
-            weChatDataEntityMapper.insert(weChatDataEntity);
+        /*Date currentDate=weChatDataEntityList.get(1).getLatestDate();
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        String tempDate=dateFormat.format(currentDate);
+        Date beginMonth= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(tempDate);
+        weChatDataEntityMapper.updateDate(beginMonth,currentDate);*/
+        if(weChatDataEntityList.size()!=0){
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(Calendar.DAY_OF_MONTH, 1);
+            //将小时至0
+            calendar.set(Calendar.HOUR_OF_DAY, 0);
+            //将分钟至0
+            calendar.set(Calendar.MINUTE, 0);
+            //将秒至0
+            calendar.set(Calendar.SECOND,0);
+            //将毫秒至0
+            calendar.set(Calendar.MILLISECOND, 0);
+            //获得当前月第一天
+            Date beginMonth = calendar.getTime();
+            //获得插入数据时的时间
+            Date currentDate = weChatDataEntityList.get(0).getLatestDate();
+            weChatDataEntityMapper.updateDate(beginMonth,currentDate);
+            for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
+                weChatDataEntityMapper.insert(weChatDataEntity);
+            }
         }
     }
 

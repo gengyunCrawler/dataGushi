@@ -1,6 +1,7 @@
 package com.cloudpioneer.dataGushi.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Tianjinjin on 2016/8/9.
@@ -35,6 +36,8 @@ public class WeChatDataEntity implements Serializable
     String confirm;
     String tag;
     String price;
+    Date latestDate;
+    boolean deleteFlag;
 
     public String getUserId() {
         return userId;
@@ -258,5 +261,21 @@ public class WeChatDataEntity implements Serializable
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Date getLatestDate() {
+        return latestDate;
+    }
+
+    public void setLatestDate(Date latestDate) {
+        this.latestDate = latestDate;
+    }
+
+    public boolean isDeleteFlag() {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(boolean deleteFlag) {
+        this.deleteFlag = deleteFlag;
     }
 }

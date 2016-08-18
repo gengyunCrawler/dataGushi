@@ -18,11 +18,13 @@
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata where deleteflag=1 and ORDER  BY influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+        where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata where categoryId=#{categoryId} and deleteflag=1 ORDER BY  influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+        where categoryId=#{categoryId} and deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER BY  influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="countByCategory" resultType="integer">

@@ -15,9 +15,9 @@ import java.util.List;
 @Repository
 public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
 
-    List<WeChatDataEntity> findIimitPage(@Param("start") int start, @Param("pageSize") int pageSize) throws Exception;
+    List<WeChatDataEntity> findIimitPage(@Param("year") int year, @Param("month") int month,@Param("start") int start, @Param("pageSize") int pageSize) throws Exception;
 
-    List<WeChatDataEntity> findByCategoryId(@Param("start") int start, @Param("pageSize") int pageSize, @Param("categoryId") String categoryId) throws Exception;
+    List<WeChatDataEntity> findByCategoryId(@Param("year") int year, @Param("month") int month,@Param("start") int start, @Param("pageSize") int pageSize, @Param("categoryId") String categoryId) throws Exception;
 
     int countByCategory(@Param("categoryId") String categoryId)throws Exception;
 

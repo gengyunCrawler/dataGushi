@@ -31,12 +31,13 @@ public class DataStoryController
     }
 
 
-    @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}")
-    public  Object weChatData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId) throws Exception {
+    @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}")
+    public  Object weChatData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId,
+                              @PathVariable("year")int year,@PathVariable("month")int month) throws Exception {
      if(categoryId.equals("all")){
          categoryId="";
      }
-        Page<WeChatDataEntity> page= weChatDataService.findIimitPage(currentPage, pageSize, categoryId);
+        Page<WeChatDataEntity> page= weChatDataService.findIimitPage(year,month,currentPage, pageSize, categoryId);
         return page;
     }
 

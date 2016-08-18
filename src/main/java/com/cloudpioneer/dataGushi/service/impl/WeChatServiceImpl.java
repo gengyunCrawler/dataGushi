@@ -55,7 +55,7 @@ public class WeChatServiceImpl implements WeChatDataService{
     }
 
     @Override
-    public Page<WeChatDataEntity> findIimitPage(int newPage,int pageSize,String categoryId) throws Exception {
+    public Page<WeChatDataEntity> findIimitPage(int year, int month, int newPage,int pageSize,String categoryId) throws Exception {
 
 
         int countPage;// 共有多少页
@@ -66,11 +66,11 @@ public class WeChatServiceImpl implements WeChatDataService{
         List<WeChatDataEntity> resultList;
         if(categoryId==null||categoryId==""){
             countRecord=weChatDataEntityMapper.countAll();
-            resultList = weChatDataEntityMapper.findIimitPage(start, pageSize);
+            resultList = weChatDataEntityMapper.findIimitPage(year, month, start, pageSize);
         }
         else{
             countRecord=weChatDataEntityMapper.countByCategory(categoryId);
-            resultList=weChatDataEntityMapper.findByCategoryId(start, pageSize,categoryId);
+            resultList=weChatDataEntityMapper.findByCategoryId(year, month,start, pageSize,categoryId);
         }
         countPage = ((countRecord % pageSize) != 0 ? (countRecord / pageSize + 1) : (countRecord / pageSize));
 
@@ -88,8 +88,6 @@ public class WeChatServiceImpl implements WeChatDataService{
     @Override
     public void gainData() throws Exception
     {
-        weChatDataEntityMapper.deleteAll();
-
         String json=HttpService.dataStoryJSON(HttpService.DATA_WEIXIN);
         List<WeChatDataEntity> dataEntityList=DataStoryParse.parseWeChatJSONData(json);
         this.insertByList(dataEntityList);

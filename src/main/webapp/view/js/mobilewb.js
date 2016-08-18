@@ -1,8 +1,8 @@
 //获取数据
-function loadData(currentPage,pageSize,categoryId){
+function loadData(currentPage,pageSize,categoryId,year,month){
     var wxData;
     $.ajax({
-        url:'/DataStory/weibo/data/'+currentPage+'/'+pageSize+'/'+categoryId,
+        url:'/DataStory/weibo/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
         async:false,
         success:function(data){
             wxData=data;
@@ -85,7 +85,7 @@ $(function(){
     type1.value="233"
     arr.push(type1)
     $.each(arr,function(index,item){
-        var data=loadData(1,10,item.value)
+        var data=loadData(1,10,item.value,2016,8)
 
         bindWxData($("#"+item.key+""),data);
     })

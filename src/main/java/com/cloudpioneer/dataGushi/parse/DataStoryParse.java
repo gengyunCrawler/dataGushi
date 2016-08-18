@@ -10,6 +10,8 @@ import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -47,6 +49,10 @@ public class DataStoryParse
                 weiboDataEntity.setFollowCount(account.getIntValue("followCount"));
                 weiboDataEntity.setRateActivity(account.getFloatValue("rateActivity"));
                 weiboDataEntity.setCategoryId(categorys.getString(weiboDataEntity.getUid()));
+                weiboDataEntity.setDeleteFlag("false");
+                Date searchDate=Calendar.getInstance().getTime();
+                System.out.println(searchDate);
+                weiboDataEntity.setSearchDate(searchDate);
 
                 if (interact!=null){
                     weiboDataEntity.setNewFllowCount(interact.getIntValue("thisWeekFansIncr"));

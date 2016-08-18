@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Administrator on 2016/8/9.
@@ -39,7 +39,7 @@ public class WeiboServiceImpl implements WeiboDataService
      * @throws Exception
      */
     @Override
-    public Page<WeiboDataEntity> findPageBycategoryId(String categoryId, int pageNo, int pageSize) throws Exception
+    public Page<WeiboDataEntity> findPageBycategoryId(String categoryId, int pageNo, int pageSize,int year,int month) throws Exception
     {
 
         int limit = pageSize;
@@ -48,11 +48,11 @@ public class WeiboServiceImpl implements WeiboDataService
         List<WeiboDataEntity> categorysEntities=null;
        if (categoryId.equals("all")){
            totalRecord= weiboDataEntityMapper.countAll();
-           categorysEntities= weiboDataEntityMapper.findPageByAll(start, limit);
+           categorysEntities= weiboDataEntityMapper.findPageByAll(start, limit,year,month);
        }else {
 
-           totalRecord = weiboDataEntityMapper.countByCategoryId(categoryId);
-           categorysEntities= weiboDataEntityMapper.findPageByCategory(categoryId, start, limit);
+          totalRecord = weiboDataEntityMapper.countByCategoryId(categoryId,year,month);
+           categorysEntities= weiboDataEntityMapper.findPageByCategory(categoryId, start, limit,year,month);
 
        }
 
@@ -74,12 +74,40 @@ public class WeiboServiceImpl implements WeiboDataService
     @Override
     public void gainData4DB() throws Exception
     {
-        weiboDataEntityMapper.deleteAll();
+
+
         String json=HttpService.dataStoryJSON(HttpService.DATA_WEIBO);
         List<WeiboDataEntity> weiboDataEntities=DataStoryParse.parseJson4Weibo(json);
+
+        if (weiboDataEntities!=null&&weiboDataEntities.size()>0){
+            Calendar cal=Calendar.getInstance();
+            Date currentDate=cal.getTime();
+            System.out.println(currentDate);
+            cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), 1, 0, 0, 0);
+            Date startDate=cal.getTime();
+            weiboDataEntityMapper.setDeleteFlagByMonth(startDate, currentDate,"true");
+        }
         this.insertByList(weiboDataEntities);
 
 
+    }
+
+    @Override
+    public Set<Map<String, String>> dateList() throws Exception
+    {
+        List<Date> dates=weiboDataEntityMapper.findDateList();
+       Set<Map<String,String>> set=new HashSet<>();
+        for (Date date:dates){
+            if (date!=null){
+                Map<String,String> map=new HashMap<>();
+                Calendar calendar=Calendar.getInstance();
+                calendar.setTime(date);
+                map.put(calendar.get(Calendar.YEAR)+"",calendar.get(Calendar.MONTH)+"");
+                set.add(map);
+            }
+
+        }
+        return set;
     }
 
 }

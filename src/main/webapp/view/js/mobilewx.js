@@ -1,4 +1,8 @@
 //获取数据
+var date=new Date()
+var year=date.getFullYear()
+var month=date.getMonth()
+alert(year+":"+month)
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
@@ -40,7 +44,7 @@ function bindWxData(body,data){
         }
         sequenceHtml+=
 
-            '<td class="nickname">'+item.wxName+'</td>'+
+            '<td class="nickname"><div style="margin-top: 10px"><div class="weixin_hao" >'+item.wxName+'</div><div class="weixin_hao" >'+item.wxid+'</div></div>'+'</td>'+
             '<td>'+item.articlesNum+'</td>'+
 
             '<td>'+readNumStr+'</td>'+

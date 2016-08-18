@@ -1,5 +1,7 @@
 package com.cloudpioneer.dataGushi.domain;
 
+import java.util.Date;
+
 /**
  * Created by tijun on 2016/8/9.
  */
@@ -27,6 +29,30 @@ public class WeiboDataEntity
     private String categoryId;//分类id
 
     private String categoryName;//分类名称
+
+    private Date searchDate;//查询日期（只关心月份）
+
+    private String deleteFlag;
+
+    public Date getSearchDate()
+    {
+        return searchDate;
+    }
+
+    public void setSearchDate(Date searchDate)
+    {
+        this.searchDate = searchDate;
+    }
+
+    public String getDeleteFlag()
+    {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(String deleteFlag)
+    {
+        this.deleteFlag = deleteFlag;
+    }
 
     public String getCategoryId()
     {

@@ -49,10 +49,10 @@ public class DataStoryController
      * @throws Exception
      */
 
-    @RequestMapping("weibo/data/{currentPage}/{pageSize}/{categoryId}")
-    public Object weiBoData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId) throws Exception
+    @RequestMapping("weibo/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}")
+    public Object weiBoData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId,@PathVariable("year")Integer year,@PathVariable("month")Integer month) throws Exception
     {
-        Page<WeiboDataEntity> page=weiboDataService.findPageBycategoryId(categoryId, currentPage, pageSize);
+        Page<WeiboDataEntity> page=weiboDataService.findPageBycategoryId(categoryId, currentPage, pageSize,year,month);
 
         return page;
     }

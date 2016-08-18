@@ -2,7 +2,7 @@
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'../weibo/data/'+currentPage+'/'+pageSize+'/'+categoryId,
+        url:'../weibo/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/2016/8",
         async:false,
         success:function(data){
             wxData=data;
@@ -80,6 +80,7 @@ $(function(){
     //})
 
     $("#type li").click(function(){
+        $("li[flag='5']").show()
         firstHandle()
         removeTypeClass()
         //$("#all").css('color','#FFFFFF')
@@ -89,10 +90,28 @@ $(function(){
         }
         $(this).addClass('active')
         bindWxData('1',categoryId);
+        for(var i=0;i<=5;i++){
+            var num=i
+            $("li[flag='"+num+"']").show()
+        }
+        if(totalPage<5){
+            //if(totalPage==4){
+            //    $("li[flag='5']").hide()
+            //    return
+            //}
+            var i=totalPage
+            for(i;i<=5;i++){
+                var num=i+1
+                $("li[flag='"+num+"']").hide()
+            }
+            return
+
+        }
 
     })
 
     $("#first").click(function(){
+        $("li[flag='5']").show()
         firstHandle()
 
     })
@@ -113,6 +132,24 @@ $(function(){
         var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
         var curentHtml=$("[class='hand1 active']");
         var currentNum=parseInt(curentHtml.html())
+        var flagNum=parseInt($("[class='hand1 active']").attr("flag"))
+        if(totalPage<5){
+
+        }
+
+        if(totalPage-currentNum<=4-flagNum){
+            $("li[flag='5']").hide()
+            if(currentNum==totalPage){
+                alert("当前已是最后页")
+              return
+            }
+            curentHtml.next().addClass("active")
+            curentHtml.removeClass("active")
+            var page=parseInt($("[class='hand1 active']").html())
+            bindWxData(page,categoryId);
+            return
+
+        }
 
         if(currentNum<totalPage){
             $.each($("li[name='num']"),function(index,item){

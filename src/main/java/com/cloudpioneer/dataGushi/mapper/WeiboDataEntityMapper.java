@@ -5,6 +5,7 @@ import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,11 +22,15 @@ public interface WeiboDataEntityMapper extends BaseDao<WeiboDataEntity>
      * @return
      * @throws Exception
      */
-    List<WeiboDataEntity> findPageByCategory(@Param("categoryId") String categoryId, @Param("start") int start, @Param("limit") int limit)throws Exception;
+    List<WeiboDataEntity> findPageByCategory(@Param("categoryId") String categoryId, @Param("start") int start, @Param("limit") int limit,@Param("year")int year,@Param("month")int month)throws Exception;
 
-    Integer countByCategoryId(@Param("categoryId") String categoryId)throws Exception;
+    Integer countByCategoryId(@Param("categoryId") String categoryId,@Param("year")int year,@Param("month")int month)throws Exception;
 
-    List<WeiboDataEntity> findPageByAll(@Param("start") int start, @Param("limit") int limit)throws Exception;
+    List<WeiboDataEntity> findPageByAll(@Param("start") int start, @Param("limit") int limit,@Param("year")int year,@Param("month")int month)throws Exception;
 
     void deleteAll() throws Exception;
+
+    void setDeleteFlagByMonth(@Param("startDate")Date startDate,@Param("endDate")Date endDate,@Param("deleteFlag")String deleteFlag) throws Exception;
+
+    List<Date> findDateList()throws Exception;
 }

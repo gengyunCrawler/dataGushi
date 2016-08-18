@@ -5,8 +5,8 @@ package com.cloudpioneer.dataGushi.domain;
  */
 public class WeiboCategorysEntity
 {
-    String categoryId;
-    String categoryName;
+    private  String categoryId;
+    private  String categoryName;
 
     public String getCategoryId()
     {

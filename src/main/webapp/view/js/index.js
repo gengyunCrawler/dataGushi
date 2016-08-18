@@ -2,7 +2,7 @@
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId,
+        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/2016/8",
         async:false,
         success:function(data){
             wxData=data;
@@ -142,7 +142,6 @@ $(function(){
         if(totalPage-currentNum<=4-flagNum){
             $("li[flag='5']").hide()
             if(currentNum==totalPage){
-
                 alert("当前已是最后页")
                 return
             }
@@ -181,7 +180,7 @@ $(function(){
         })
     });
 
-    $("#origin").tooltip();
+  //  $("#origin").tooltip();
 
 //获取总页数
 //加载分页数

@@ -28,7 +28,7 @@
     </select>
 
     <select id="countByCategory" resultType="integer">
-        select count(*) from wechatdata where categoryId=#{categoryId}
+        select count(*) from wechatdata where categoryId=#{categoryId} and deleteflag=1
     </select>
 
     <delete id="deleteAll">

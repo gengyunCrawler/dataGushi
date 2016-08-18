@@ -6,11 +6,11 @@
     <insert id="insert">
         INSERT INTO wechatdata (userId,accountId,categoryId,categoryType,groupName,headPicture,wxName,lastUpdateTime,payTime,expireTime,
                                 wxid,username,openid,wxBiz,rank,articlesNum,totalReadNum,totalLikeNum,avgReadNum,
-                                avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price)
+                                avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price,latestDate,deleteFlag)
                                  VALUES
                               (#{userId},#{accountId},#{categoryId},#{categoryType},#{groupName},#{headPicture},#{wxName},#{lastUpdateTime},#{payTime},#{expireTime},
                                 #{wxid},#{username},#{openid},#{wxBiz},#{rank},#{articlesNum},#{totalReadNum},#{totalLikeNum},#{avgReadNum},
-                                #{avgLikeNum},#{qualityNum},#{influenceNum},#{activeNum},#{totalOriginalNum},#{avgHeadlineNum},#{confirm},#{tag},#{price})
+                                #{avgLikeNum},#{qualityNum},#{influenceNum},#{activeNum},#{totalOriginalNum},#{avgHeadlineNum},#{confirm},#{tag},#{price},#{latestDate},#{deleteFlag})
     </insert>
 
     <select id="countAll" resultType="integer">
@@ -18,11 +18,11 @@
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum from wechatdata   ORDER  BY influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata where deleteflag=1 ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum from wechatdata where categoryId=#{categoryId} ORDER BY  influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata where categoryId=#{categoryId} and deleteflag=1 ORDER BY  influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="countByCategory" resultType="integer">
@@ -32,5 +32,9 @@
     <delete id="deleteAll">
         DELETE FROM wechatdata
     </delete>
+
+    <update id="updateDate">
+        update wechatdata set deleteflag=0 where deleteflag=1
+    </update>
 
 </mapper>

@@ -1,17 +1,23 @@
 package com.gy.test;
 
 
+import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
+import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
 import com.cloudpioneer.dataGushi.parse.DataStoryParse;
 import com.cloudpioneer.dataGushi.service.HttpService;
+import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.service.WeiboCategorysService;
 import com.cloudpioneer.dataGushi.service.WeiboDataService;
+import com.cloudpioneer.dataGushi.util.Page;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,6 +27,12 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class WeiboServiceTester
 {
+    @Autowired
+    WeChatDataService weChatDataService;
+
+    @Autowired
+    WeChatDataEntityMapper weChatDataEntityMapper;
+
     @Autowired
     WeiboDataService weiboDataService;
 
@@ -35,13 +47,47 @@ public class WeiboServiceTester
         weiboDataService.insertByList(weiboDataEntities);
     }
 
-//    @Test
-//    public void testDataF4WeChat() throws IOException, ParseException
-//    {
-//        String json=HttpService.dataStoryJSON(HttpService.DATA_WEIXIN);
-//       List<WeChatDataEntity> list= DataStoryParse.parseWeChatJSONData(json);
-//        System.out.println(list);
-//    }
+    @Test
+   public void testDataF4WeChat() throws Exception
+    {
+        /*
+        String json=HttpService.dataStoryJSON(HttpService.DATA_WEIXIN);
+        List<WeChatDataEntity> list= DataStoryParse.parseWeChatJSONData(json);
+        System.out.println(list);
+        weChatDataService.insertByList(list);
+        */
+        Page<WeChatDataEntity> result = weChatDataService.findIimitPage(1, 10, null);
+        for(WeChatDataEntity page : result.getDatas()){
+            System.out.println(page.getLatestDate());
+        }
+    }
+
+    @Test
+    public void testUpdateData() throws Exception
+    {
+       /*
+        WeChatDataEntity weChatObj=new WeChatDataEntity();
+        weChatObj.setUserId("TLD");
+        weChatObj.setAccountId("accountId");
+        weChatObj.setCategoryId("categoryId");
+        weChatObj.setCategoryType("categoryType");
+        weChatObj.setGroupName("groupName");
+        weChatObj.setHeadPicture("http://open.weixin.qq.com/biz/headimg?wxid=");
+        weChatObj.setWxName("wxName");
+        weChatObj.setLastUpdateTime("lastUpdateTime");
+        weChatObj.setPayTime("payTime");
+        weChatObj.setExpireTime("expireTime");
+        weChatObj.setWxid("wxid");
+        weChatObj.setUsername("username");
+
+        String currentDate=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        weChatObj.setLatestDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(currentDate));
+        weChatObj.setDeleteFlag(false);
+        weChatDataEntityMapper.updateDate();
+        weChatDataEntityMapper.insert(weChatObj);*/
+        weChatDataEntityMapper.updateDate();
+
+    }
 //
 //    @Test
 //    public void testGetPropertiesFile() throws IOException

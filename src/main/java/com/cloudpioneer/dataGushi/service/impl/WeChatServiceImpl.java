@@ -24,6 +24,7 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     @Override
     public void insertByList(List<WeChatDataEntity> weChatDataEntityList) throws Exception {
+        weChatDataEntityMapper.updateDate();
         for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
             weChatDataEntityMapper.insert(weChatDataEntity);
         }

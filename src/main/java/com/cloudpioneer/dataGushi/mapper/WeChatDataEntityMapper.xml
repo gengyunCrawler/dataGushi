@@ -18,7 +18,7 @@
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata where deleteflag=1 ORDER  BY influenceNum DESC limit #{start},#{pageSize}
+        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata where deleteflag=1 and ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
@@ -34,7 +34,7 @@
     </delete>
 
     <update id="updateDate">
-        update wechatdata set deleteflag=0 where deleteflag=1
+        update wechatdata set deleteflag=0 where deleteflag=1 and latestDate between #{beforeDate} and #{currentDate}
     </update>
 
 </mapper>

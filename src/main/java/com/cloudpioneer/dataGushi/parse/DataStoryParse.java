@@ -102,8 +102,9 @@ public class DataStoryParse
                 weChatObj.setConfirm(jsonObject.getString("confirm"));
                 weChatObj.setTag(jsonObject.getString("tag"));
                 weChatObj.setPrice(jsonObject.getString("price"));
-                String currentDate=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-                weChatObj.setLatestDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(currentDate));
+                //String currentDate=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                //weChatObj.setLatestDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(currentDate));
+                weChatObj.setLatestDate(new Date());
                 weChatObj.setDeleteFlag(true);
                 arrayList.add(weChatObj);
             }

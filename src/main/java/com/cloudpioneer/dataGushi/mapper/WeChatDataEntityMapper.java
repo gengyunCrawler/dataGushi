@@ -5,6 +5,7 @@ import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -22,5 +23,5 @@ public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
 
     void deleteAll() throws Exception;
 
-    void updateDate() throws Exception;
+    void updateDate(@Param("beforeDate") Date beforeDate, @Param("currentDate") Date currentDate) throws Exception;
 }

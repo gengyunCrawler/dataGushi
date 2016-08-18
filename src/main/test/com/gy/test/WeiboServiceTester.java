@@ -17,6 +17,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -50,43 +51,45 @@ public class WeiboServiceTester
     @Test
    public void testDataF4WeChat() throws Exception
     {
-        /*
+
         String json=HttpService.dataStoryJSON(HttpService.DATA_WEIXIN);
         List<WeChatDataEntity> list= DataStoryParse.parseWeChatJSONData(json);
         System.out.println(list);
         weChatDataService.insertByList(list);
-        */
+        /*
         Page<WeChatDataEntity> result = weChatDataService.findIimitPage(1, 10, null);
         for(WeChatDataEntity page : result.getDatas()){
             System.out.println(page.getLatestDate());
         }
+        */
     }
 
     @Test
-    public void testUpdateData() throws Exception
+    public void testData() throws Exception
     {
-       /*
-        WeChatDataEntity weChatObj=new WeChatDataEntity();
-        weChatObj.setUserId("TLD");
-        weChatObj.setAccountId("accountId");
-        weChatObj.setCategoryId("categoryId");
-        weChatObj.setCategoryType("categoryType");
-        weChatObj.setGroupName("groupName");
-        weChatObj.setHeadPicture("http://open.weixin.qq.com/biz/headimg?wxid=");
-        weChatObj.setWxName("wxName");
-        weChatObj.setLastUpdateTime("lastUpdateTime");
-        weChatObj.setPayTime("payTime");
-        weChatObj.setExpireTime("expireTime");
-        weChatObj.setWxid("wxid");
-        weChatObj.setUsername("username");
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        //将小时至0
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        //将分钟至0
+        calendar.set(Calendar.MINUTE, 0);
+        //将秒至0
+        calendar.set(Calendar.SECOND,0);
+        //将毫秒至0
+        calendar.set(Calendar.MILLISECOND, 0);
+        //获得当前月第一天
+        Date sdate = calendar.getTime();
+        //将当前月加1；
+        calendar.add(Calendar.MONTH, 1);
+        //在当前月的下一月基础上减去1毫秒
+        calendar.add(Calendar.MILLISECOND, -1);
+        //获得当前月最后一天
+        Date edate = calendar.getTime();
 
-        String currentDate=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        weChatObj.setLatestDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(currentDate));
-        weChatObj.setDeleteFlag(false);
-        weChatDataEntityMapper.updateDate();
-        weChatDataEntityMapper.insert(weChatObj);*/
-        weChatDataEntityMapper.updateDate();
-
+        System.out.println("The first day of month=="+sdate.toString());
+        System.out.println("first day:"+sdate.getTime());
+        System.out.println("The last day of month=="+edate.toString());
+        System.out.println("last day:"+edate.getTime());
     }
 //
 //    @Test

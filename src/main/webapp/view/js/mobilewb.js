@@ -1,5 +1,29 @@
 //获取数据
-function loadData(currentPage,pageSize,categoryId,year,month){
+var date=new Date()
+var year=date.getFullYear();
+var month=date.getMonth()+1
+var arr=new Array();
+var type1=new Object()
+type1.key="provence";
+type1.value="229"
+arr.push(type1)
+
+var type1=new Object()
+type1.key="media";
+type1.value="230"
+arr.push(type1)
+
+var type1=new Object()
+type1.key="trip";
+type1.value="231"
+arr.push(type1)
+
+var type1=new Object()
+type1.key="life";
+type1.value="233"
+arr.push(type1)
+
+function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
         url:'/DataStory/weibo/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
@@ -62,33 +86,22 @@ function bindWxData(body,data){
     })
     body.append(html)
 }
-$(function(){
 
-    var arr=new Array();
-    var type1=new Object()
-    type1.key="provence";
-    type1.value="229"
-    arr.push(type1)
+function changeDate(year1,month1){
 
-    var type1=new Object()
-    type1.key="media";
-    type1.value="230"
-    arr.push(type1)
-
-    var type1=new Object()
-    type1.key="trip";
-    type1.value="231"
-    arr.push(type1)
-
-    var type1=new Object()
-    type1.key="life";
-    type1.value="233"
-    arr.push(type1)
+    year=year1
+    month=month1
     $.each(arr,function(index,item){
-        var data=loadData(1,10,item.value,2016,8)
+        var data=loadData(1,10,item.value)
 
         bindWxData($("#"+item.key+""),data);
     })
+}
+
+$(function(){
+
+
+    changeDate(year,month)
 
 
 

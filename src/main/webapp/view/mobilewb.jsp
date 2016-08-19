@@ -52,8 +52,8 @@
             </button>
             <ul class="dropdown-menu ul-font" role="menu">
               <div class="point_mobile" ></div>
-              <li><a  href="#" class="a-font" style="font-size: 14px; margin-top:9px; margin-bottom: 9px; background-color: #3091ff;">7月1日</a></li>
-              <li><a  href="#" class="a-font" style="font-size: 14px; margin-bottom: 6px;background-color: #3091ff;">9月1日</a></li>
+              <li><span class="a-font" onclick="changeDate(2016,7)" style="cursor:pointer;font-size: 14px; margin-top:9px; margin-bottom: 9px; background-color: #3091ff;">7月1日</span></li>
+              <li><span   class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-bottom: 6px;background-color: #3091ff;">8月1日</span></li>
             </ul>
           </div>
         </div>

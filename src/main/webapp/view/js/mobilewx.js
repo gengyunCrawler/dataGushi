@@ -1,12 +1,34 @@
 //获取数据
 var date=new Date()
 var year=date.getFullYear()
-var month=date.getMonth()
+var month=date.getMonth()+1
+
+var arr=new Array();
+var type1=new Object()
+type1.key="provence";
+type1.value="5051"
+arr.push(type1)
+
+var type1=new Object()
+type1.key="media";
+type1.value="5052"
+arr.push(type1)
+
+var type1=new Object()
+type1.key="trip";
+type1.value="5053"
+arr.push(type1)
+
+var type1=new Object()
+type1.key="life";
+type1.value="5054"
+arr.push(type1)
+typeArr=arr
 // alert(year+":"+month)
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'/DataStory/wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/2016/8",
+        url:'/DataStory/wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
         async:false,
         success:function(data){
             wxData=data;
@@ -59,33 +81,24 @@ function bindWxData(body,data){
     })
     body.append(html)
 }
-$(function(){
 
-    var arr=new Array();
-    var type1=new Object()
-    type1.key="provence";
-    type1.value="5051"
-    arr.push(type1)
 
-    var type1=new Object()
-    type1.key="media";
-    type1.value="5052"
-    arr.push(type1)
-
-    var type1=new Object()
-    type1.key="trip";
-    type1.value="5053"
-    arr.push(type1)
-
-    var type1=new Object()
-    type1.key="life";
-    type1.value="5054"
-    arr.push(type1)
-    $.each(arr,function(index,item){
+function changeDate(year1,month1){
+    alert(year1+month1)
+    year=year1
+    month=month1
+    $.each(typeArr,function(index,item){
         var data=loadData(1,10,item.value)
 
         bindWxData($("#"+item.key+""),data);
     })
+}
+
+
+$(function(){
+
+
+    changeDate(year,month)
 
 
 

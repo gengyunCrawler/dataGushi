@@ -47,7 +47,13 @@
         <div class="monitor-result">
           <span>出榜日期</span>
           <span>8月10日</span>
-          <span><i id="selectDate" class="iconfont icon-xiasanjiao"></i></span>
+          <span><i id="selectDate" class="iconfont icon-xiasanjiao">
+              <div class="dropDate" id="dropDate">
+                  <div class="point" ></div>
+                  <span id="s1" onclick="changeDate(2016,7)">7月1日</span>
+                  <span id="s2" onclick="changeDate(2016,8)">9月1日</span>
+              </div>
+          </i></span>
           <%--<div class="dropDate">
             <div class="point"></div>
             <span id="s1">7月1日</span>

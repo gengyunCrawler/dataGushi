@@ -3,12 +3,15 @@
 var url = window.location.href;
 redirectURL =url.replace('weixin','mobilewx');
 deviceJudge(redirectURL);
+var date=new Date()
+var year=date.getFullYear();
+var month=date.getMonth()+1
 
 //获取数据
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/2016/8",
+        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
         async:false,
         success:function(data){
             wxData=data;
@@ -16,7 +19,13 @@ function loadData(currentPage,pageSize,categoryId){
     })
     return wxData;
 }
+function changeDate(year1,month1){
 
+    year=year1
+    month=month1
+
+    dealTypeClick($("#all"))
+}
 
 var categoryId="all";
 var totalPage;
@@ -59,7 +68,36 @@ function bindWxData(currentPage,categoryId){
     $('table').append(html)
 }
 
+function dealTypeClick(obj){
+    $("li[flag='5']").show()
+    firstHandle()
+    removeTypeClass()
+    //$("#all").css('color','#FFFFFF')
+    categoryId=obj.val();
+    if(categoryId=='0'){
+        categoryId="all";
+    }
+    obj.addClass('active')
+    bindWxData('1',categoryId);
+    for(var i=0;i<=5;i++){
+        var num=i
+        $("li[flag='"+num+"']").show()
+    }
+    if(totalPage<5){
+        //if(totalPage==4){
+        //    $("li[flag='5']").hide()
+        //    return
+        //}
+        var i=totalPage
+        for(i;i<=5;i++){
+            var num=i+1
+            $("li[flag='"+num+"']").hide()
+        }
+        return
 
+    }
+
+}
 //移除所有翻页样式
 function removeCursor(){
     $.each($("#pagination li"),function(index,item){
@@ -74,10 +112,20 @@ function removeTypeClass(){
     })
 }
 
-
+function firstHandle(){
+    removeCursor()
+    bindWxData(1,categoryId);
+    $.each($("li[name='num']"),function(index,item){
+        if(index==0){
+            $(this).addClass('active')
+        }
+        $(this).html(index+1)
+    });
+}
 
 
 $(function(){
+    $("#dropDate").hide();
     bindWxData(1,"all");
 
     //$("#all").click(function(){
@@ -89,54 +137,22 @@ $(function(){
     //})
 
     $("#type li").click(function(){
-        $("li[flag='5']").show()
-        firstHandle()
-        removeTypeClass()
-        //$("#all").css('color','#FFFFFF')
-        categoryId=$(this).val();
-        if(categoryId=='0'){
-            categoryId="all";
-        }
-        $(this).addClass('active')
-        bindWxData('1',categoryId);
-        for(var i=0;i<=5;i++){
-            var num=i
-            $("li[flag='"+num+"']").show()
-        }
-        if(totalPage<5){
-            //if(totalPage==4){
-            //    $("li[flag='5']").hide()
-            //    return
-            //}
-            var i=totalPage
-            for(i;i<=5;i++){
-                var num=i+1
-                $("li[flag='"+num+"']").hide()
-            }
-            return
-
-        }
-
+        $("#dropDate").hide();
+        dealTypeClick($(this))
     })
+
+
 
     $("#first").click(function(){
+        $("#dropDate").hide();
         firstHandle()
 
     })
 
-    function firstHandle(){
-        removeCursor()
-        bindWxData(1,categoryId);
-        $.each($("li[name='num']"),function(index,item){
-            if(index==0){
-                $(this).addClass('active')
-            }
-            $(this).html(index+1)
-        });
-    }
+
 
     $("#next").click(function(){
-
+        $("#dropDate").hide();
         var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
         var curentHtml=$("[class='hand1 active']");
         var currentNum=parseInt(curentHtml.html())
@@ -179,7 +195,9 @@ $(function(){
 
 
     $.each($("li[name='num']"),function(index,item){
+
         $(this).click(function(){
+            $("#dropDate").hide();
             removeCursor();
             $(this).addClass("active")
             bindWxData($(this).text(),categoryId)
@@ -195,10 +213,14 @@ $(function(){
     $("#quaVector").tipsy({gravity:'s'});
     $("#influence").tipsy({gravity:'s'});
 
-    $('#selectDate').click(function () {
-        $(this).append('<div class="dropDate"> <div class="point"></div> <span id="s1">7月1日</span> <span id="s2">9月1日</span> </div></div>');
+
+    $("#selectDate").mouseenter(function () {
+        $("#dropDate").show();
     });
 
+    $("#dropDate").mouseleave(function () {
+        $("#dropDate").hide();
+    });
 //获取总页数
 //加载分页数
 //添加换页点击事件

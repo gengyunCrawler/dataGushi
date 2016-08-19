@@ -366,6 +366,7 @@ tbody tr {
   padding: 0 5px;
   background-color: #3091ff;
   width: 72px;
+
 }
 .dropDate span#s2 {
   margin: 0;
@@ -379,4 +380,5 @@ tbody tr {
   padding: 0 5px;
   background-color: #3091ff;
   width: 72px;
+  z-index: 1;
 }

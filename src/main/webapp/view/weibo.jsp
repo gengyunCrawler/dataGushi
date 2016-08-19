@@ -1,9 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+  String path = request.getContextPath();
+  String basePath = request.getScheme() + "://"
+          + request.getServerName() + ":" + request.getServerPort()
+          + path + "/";
+%>
 <html>
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <link rel="shortcut icon" href="<%=basePath%>view/plugin/images/favicon.png" type="image/png">
   <title>微博排行</title>
   <script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/deviceJudger.js"></script>

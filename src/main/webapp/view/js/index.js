@@ -195,14 +195,8 @@ $(function(){
     $("#quaVector").tipsy({gravity:'s'});
     $("#influence").tipsy({gravity:'s'});
 
-    var num;
-    $('.nav-main>li[id]').hover(function () {
-        var obj =$(this).attr('id');
-        num = obj.substring(3,obj.length);
-        $('#box-'+num).slideDown(300);
-    },function(){
-        /*下拉框消失*/
-        $('#box-'+num).hide();
+    $('#selectDate').click(function () {
+        $(this).append('<div class="dropDate"> <div class="point"></div> <span id="s1">7月1日</span> <span id="s2">9月1日</span> </div></div>');
     });
 
 //获取总页数

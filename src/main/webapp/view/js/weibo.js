@@ -185,7 +185,9 @@ $(function(){
         })
     });
 
-
+    $('#selectDate').click(function () {
+        $(this).append('<div class="dropDate"> <div class="point"></div> <span id="s1">7月1日</span> <span id="s2">9月1日</span> </div></div>');
+    });
 
 //获取总页数
 //加载分页数

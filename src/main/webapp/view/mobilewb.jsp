@@ -50,15 +50,11 @@
               <span class="fa fa-chevron-down"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <%--<ul class="dropdown-menu ul-font" role="menu">--%>
-              <%--<li><a href="#" class="a-font">8月1日</a></li>--%>
-              <%--<li class="divider"></li>--%>
-              <%--<li><a href="#" class="a-font">8月2日</a></li>--%>
-              <%--<li class="divider"></li>--%>
-              <%--<li><a href="#"class="a-font">8月3日</a></li>--%>
-              <%--<li class="divider"></li>--%>
-              <%--<li><a href="#" class="a-font">8月4日</a></li>--%>
-            <%--</ul>--%>
+            <ul class="dropdown-menu ul-font" role="menu">
+              <div class="point_mobile" ></div>
+              <li><a  href="#" class="a-font" style="font-size: 14px; margin-top:9px; margin-bottom: 9px; background-color: #3091ff;">7月1日</a></li>
+              <li><a  href="#" class="a-font" style="font-size: 14px; margin-bottom: 6px;background-color: #3091ff;">9月1日</a></li>
+            </ul>
           </div>
         </div>
         <div class="col-sm-12">

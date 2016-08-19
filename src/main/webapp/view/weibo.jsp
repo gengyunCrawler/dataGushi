@@ -42,7 +42,7 @@
       <div class="monitor-result">
         <span>出榜日期</span>
         <span>8月10日</span>
-        <span><i class="iconfont icon-xiasanjiao"></i></span>
+        <span><i id="selectDate" class="iconfont icon-xiasanjiao"></i></span>
       </div>
     </div>
   </div>

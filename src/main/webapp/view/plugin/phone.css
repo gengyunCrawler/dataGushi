@@ -1,6 +1,6 @@
 .but-font {
     background: #0079FD;
-    font-family: Î¢ÈíÑÅºÚ;
+    font-family: Î¢ï¿½ï¿½ï¿½Åºï¿½;
     font-size: 14px;
 }
 
@@ -8,7 +8,7 @@
     min-width: 92px;
     text-align: center;
     background-color: #3091ff;
-    font-family: Î¢ÈíÑÅºÚ;
+    font-family: Î¢ï¿½ï¿½ï¿½Åºï¿½;
     font-size: 12px;
     color: #d0e6ff;
 }
@@ -39,4 +39,25 @@
 
 .a-font:hover {
     background: #0258D8 !important;
+}
+.ul-font {
+    min-width: 93px;
+    text-align: center;
+    background-color: #0078ff;
+    font-family: Î¢ï¿½ï¿½ï¿½Åºï¿½;
+    font-size: 12px;
+    color: #d0e6ff;
+    top: 31px;
+}
+
+.point_mobile  {
+    width: 11px;
+    height: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    left: 72px;
+    background-color: #0078ff;
 }

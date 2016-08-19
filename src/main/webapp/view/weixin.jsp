@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <title>微信排行</title>
   <script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/deviceJudger.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />

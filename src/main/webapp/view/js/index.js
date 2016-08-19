@@ -1,3 +1,9 @@
+
+//判断设备是PC还是移动
+var url = window.location.href;
+redirectURL =url.replace('weixin','mobilewx');
+deviceJudge(redirectURL);
+
 //获取数据
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
@@ -161,7 +167,6 @@ $(function(){
         /*下拉框消失*/
         $('#box-'+num).hide();
     });
-
 
 //获取总页数
 //加载分页数

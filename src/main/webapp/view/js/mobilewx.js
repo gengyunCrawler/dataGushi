@@ -2,11 +2,11 @@
 var date=new Date()
 var year=date.getFullYear()
 var month=date.getMonth()
-alert(year+":"+month)
+// alert(year+":"+month)
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'/DataStory/wx/data/'+currentPage+'/'+pageSize+'/'+categoryId,
+        url:'/DataStory/wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/2016/8",
         async:false,
         success:function(data){
             wxData=data;

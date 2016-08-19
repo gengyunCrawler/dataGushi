@@ -1,3 +1,8 @@
+//判断设备是PC还是移动
+var url = window.location.href;
+redirectURL =url.replace('weibo','mobilewb');
+deviceJudge(redirectURL);
+
 //获取数据
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
@@ -66,6 +71,8 @@ function removeTypeClass(){
 function dealPageSizeWith(){
 
 }
+
+
 
 
 $(function(){
@@ -177,6 +184,7 @@ $(function(){
             bindWxData($(this).text(),categoryId)
         })
     });
+
 
 
 //获取总页数

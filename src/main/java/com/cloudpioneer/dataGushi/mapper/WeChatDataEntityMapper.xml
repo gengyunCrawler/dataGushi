@@ -14,7 +14,7 @@
     </insert>
 
     <select id="countAll" resultType="integer">
-        select count(*) from wechatdata
+        select count(*) from wechatdata WHERE  deleteflag=1
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">

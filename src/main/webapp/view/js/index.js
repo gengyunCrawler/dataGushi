@@ -19,6 +19,7 @@ function loadData(currentPage,pageSize,categoryId){
     })
     return wxData;
 }
+//如果当前出榜日期是八月，那么month1传入为7
 function changeDate(year1,month1){
 
     year=year1

@@ -46,7 +46,7 @@
             <div class="dropDate" id="dropDate">
                 <div class="point" ></div>
                 <span id="s1" onclick="changeDate(2016,7)">7月1日</span>
-                <span id="s2" onclick="changeDate(2016,8)">9月1日</span>
+                <span id="s2" onclick="changeDate(2016,8)">8月1日</span>
             </div>
         </i></span>
       </div>

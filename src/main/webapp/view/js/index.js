@@ -23,10 +23,17 @@ function changeDate(year1,month1){
 
     year=year1
     month=month1
-
+    changeDateForLable()
     dealTypeClick($("#all"))
 }
 
+function changeDateForLable(){
+    var start=month-1
+    var startHtml=start+"月1日"
+    var publishDate=month+"月1日"
+    $("#monitorRangeDate").html(startHtml+"-"+publishDate)
+    $("#publishDate").html(publishDate)
+}
 var categoryId="all";
 var totalPage;
 
@@ -127,7 +134,7 @@ function firstHandle(){
 $(function(){
     $("#dropDate").hide();
     bindWxData(1,"all");
-
+    changeDateForLable()
     //$("#all").click(function(){
     //    firstHandle()
     //    removeTypeClass()

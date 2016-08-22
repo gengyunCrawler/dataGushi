@@ -102,7 +102,13 @@ function removeTypeClass(){
 function dealPageSizeWith(){
 
 }
-
+function changeDateForLable(){
+    var start=month-1
+    var startHtml=start+"月1日"
+    var publishDate=month+"月1日"
+    $("#monitorRangeDate").html(startHtml+"-"+publishDate)
+    $("#publishDate").html(publishDate)
+}
 function firstHandle(){
     removeCursor()
     bindWxData(1,categoryId);
@@ -121,11 +127,12 @@ function changeDate(year1,month1){
     $("#dropDate").hide();
     //document.body.removeChild(document.getElementById("dropDate"))
     dealTypeClick($("#all"))
+    changeDateForLable()
 }
 $(function(){
     $("#dropDate").hide();
     bindWxData('1',"all");
-
+    changeDateForLable()
     //$("#all").click(function(){
     //    firstHandle()
     //    removeTypeClass()

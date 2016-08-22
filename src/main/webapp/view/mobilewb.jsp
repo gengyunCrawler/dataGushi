@@ -45,7 +45,7 @@
         <div class="col-sm-12">
           <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;">出榜日期 :  </span>
           <div class="btn-group mr5">
-            <button type="button" class="btn btn-xs btn-primary but-font">8月1日</button>
+            <button type="button" class="btn btn-xs btn-primary but-font" id="publish">8月1日</button>
             <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" style="width: 30px;background-color: #0258D8">
               <span class="fa fa-chevron-down"></span>
               <span class="sr-only">Toggle Dropdown</span>
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="col-sm-12">
-          <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;">监测时间范围 : 7月1日-7月31日</span>
+          <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;" id="monitorRangeDate">监测时间范围 : 7月1日-7月31日</span>
         </div>
       </div>
 

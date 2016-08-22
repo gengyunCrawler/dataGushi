@@ -96,14 +96,21 @@ function changeDate(year1,month1){
 
         bindWxData($("#"+item.key+""),data);
     })
+    changeDateForLable()
 }
-
+function changeDateForLable(){
+    var start=month-1
+    var startHtml=start+"月1日"
+    var publishDate=month+"月1日"
+    $("#monitorRangeDate").html(startHtml+"-"+publishDate)
+    $("#publish").html(publishDate)
+}
 $(function(){
 
 
     changeDate(year,month)
 
-
+    changeDateForLable()
 
 
 })

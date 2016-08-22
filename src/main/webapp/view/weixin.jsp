@@ -42,11 +42,11 @@
         </div>
         <div class="monitor-date">
           <span>监测范围</span>
-          <span>7月10日-8月08日</span>
+          <span id="monitorRangeDate">7月10日-8月08日</span>
         </div>
         <div class="monitor-result">
           <span>出榜日期</span>
-          <span>8月10日</span>
+          <span id="publishDate">8月10日</span>
           <span><i id="selectDate" class="iconfont icon-xiasanjiao">
               <div class="dropDate" id="dropDate">
                   <div class="point" ></div>
@@ -122,5 +122,6 @@
     </div>
 
   </div>
+    </div>
 </body>
 </html>

@@ -42,6 +42,7 @@
       <div class="monitor-result">
         <span>出榜日期</span>
         <span id="publishDate">8月10日</span>
+        <div id="skiptowx" class="skipTag"><span>去微信排行榜</span></div>
         <span><i id="selectDate" class="iconfont icon-xiasanjiao">
             <div class="dropDate" id="dropDate">
                 <div class="point" ></div>
@@ -66,7 +67,6 @@
         <li id="life" class="hand" value="233">生活资讯</li>
       </ul>
       <span class="arrow"><i></i></span>
-       <div class="skipTag"></div>
     </div>
     <div class="table-wrap">
       <table class="table-responsive">
@@ -86,17 +86,18 @@
         </tbody>
       </table>
     </div>
-    <div class="pagination">
-      <ul id="pagination">
-        <li class="hand" id="first">首页</li>
-        <li flag="1" class="hand1 active" name="num">1</li>
-        <li flag="2" class="hand1" name="num">2</li>
-        <li flag="3" class="hand1" name="num">3</li>
-        <li flag="4" class="hand1" name="num">4</li>
-        <li flag="5">...</li>
-        <li class="hand" id="next">后页</li>
-      </ul>
-    </div>
+
+  </div>
+  <div class="pagination">
+    <ul id="pagination">
+      <li class="hand" id="first">首页</li>
+      <li flag="1" class="hand1 active" name="num">1</li>
+      <li flag="2" class="hand1" name="num">2</li>
+      <li flag="3" class="hand1" name="num">3</li>
+      <li flag="4" class="hand1" name="num">4</li>
+      <li flag="5">...</li>
+      <li class="hand" id="next">后页</li>
+    </ul>
   </div>
   <div class="footer">
     <ul>

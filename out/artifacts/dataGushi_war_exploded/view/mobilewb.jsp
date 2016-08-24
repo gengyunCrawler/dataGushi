@@ -43,6 +43,8 @@
 
       <div class="row">
         <div class="col-sm-12">
+          <div class="skip-left"><span class="skipword">微博排行榜</span></div>
+          <div id="skiptowx" class="skip"><span class="skipword">微信排行榜</span></div>
           <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;">出榜日期 :  </span>
           <div class="btn-group mr5">
             <button type="button" class="btn btn-xs btn-primary but-font" id="publish">8月1日</button>

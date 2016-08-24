@@ -61,3 +61,43 @@
     left: 72px;
     background-color: #0078ff;
 }
+
+.skip-left {
+    position: absolute;
+    top: -45px;
+    width: 144px;
+    height: 31px;
+    left: 14px;
+    line-height: 70px;
+    background-image: url("../plugin/images/return.png");
+}
+.skip {
+      position: absolute;
+      top: -45px;
+      width: 144px;
+      height: 31px;
+      right: 14px;
+      line-height: 70px;
+      background-image: url("../plugin/images/mb_button_normal.png");
+  }
+
+.skip-clicked {
+    position: absolute;
+    top: -45px;
+    width: 144px;
+    height: 31px;
+    right: 14px;
+    line-height: 70px;
+    background-image: url("../plugin/images/mb_button_pressed.png");
+}
+
+.skipword   {
+    margin-top: 4px;
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Microsoft YaHei",sans-serif;
+}

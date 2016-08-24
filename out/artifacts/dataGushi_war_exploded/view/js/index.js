@@ -3,6 +3,7 @@
 var url = window.location.href;
 redirectURL =url.replace('weixin','mobilewx');
 deviceJudge(redirectURL);
+
 var date=new Date()
 var year=date.getFullYear();
 var month=date.getMonth()+1
@@ -225,6 +226,11 @@ $(function(){
 
     $("#dropDate").mouseleave(function () {
         $("#dropDate").hide();
+    });
+
+    $("#skiptowb").click(function () {
+        $(this).addClass('hand').removeClass('skipTag').addClass('skipTagClicked');
+        window.location.href=url.replace("weixin","weibo");
     });
 //获取总页数
 //加载分页数

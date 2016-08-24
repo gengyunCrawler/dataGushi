@@ -177,7 +177,6 @@ $(function(){
             var page=parseInt($("[class='hand1 active']").html())
             bindWxData(page,categoryId);
             return
-
         }
 
         if(currentNum<totalPage){
@@ -193,9 +192,6 @@ $(function(){
             alert("当前已是最后页")
             return
         }
-
-
-
     })
 
 
@@ -216,6 +212,10 @@ $(function(){
         $("#dropDate").hide();
     });
 
+    $("#skiptowx").click(function () {
+        $(this).addClass('hand').removeClass('skipTag').addClass('skipTagClicked');
+        window.location.href=url.replace("weibo","weixin");
+    });
 //获取总页数
 //加载分页数
 //添加换页点击事件

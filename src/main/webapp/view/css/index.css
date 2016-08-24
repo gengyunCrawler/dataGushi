@@ -386,13 +386,55 @@ tbody tr {
   padding: 0 5px;
   background-color: #3091ff;
   width: 72px;
-  z-index: 1;
+  z-index: 2;
 }
 
-.skipTag{
-    position: absolute;
-    margin-left: 91%;
-    line-height: 32px;
-    margin-top: -6%;
+.skipTag {
+  position: absolute;
+  top: 86px;
+  width: 144px;
+  height: 31px;
+  right: 225px;
+  line-height: 70px;
   background-image: url("../plugin/images/button_normal.png");
 }
+
+.skipTagClicked {
+  position: absolute;
+  top: 86px;
+  width: 144px;
+  height: 31px;
+  right: 225px;
+  line-height: 70px;
+  background-image: url("../plugin/images/button_pressed.png");
+}
+
+.skipTag span{
+  margin-top: 4px;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  padding: 0 5px;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Microsoft YaHei",sans-serif;
+}
+
+.skipTagClicked span{
+  margin-top: 4px;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  padding: 0 5px;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Microsoft YaHei",sans-serif;
+}
+.pagination{
+
+  width: 75.15625%;
+  padding: 0px;
+  margin: 0 auto;
+  min-width: 960px;
+}
+

@@ -107,7 +107,9 @@ $(function(){
     changeDateForLable()
     changeDate(year,month)
 
-
-
-
+    /*$("#skiptowb").click(function () {
+        $(this).removeClass('skip').addClass('skip-clicked');
+        alert("ok")
+        window.location.href=url.replace("mobilewx","mobilewb");
+    });*/
 })

@@ -112,5 +112,8 @@ $(function(){
 
     changeDateForLable()
 
-
+    $("#skiptowb").click(function () {
+        $(this).removeClass('skipTag').addClass('skipTagClicked');
+        window.location.href=url.replace("mobilewb","mobilewx");
+    });
 })

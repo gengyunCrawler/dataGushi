@@ -2,828 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fea024a1-5574-4dde-a87e-41db3d453fc7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/controller/DataStoryController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/dao/BaseDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/domain/WeChatDataEntity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/domain/WeiboCategorysEntity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/domain/WeiboDataEntity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/mapper/WeChatDataEntityMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/mapper/WeiboCategorysEntityMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/mapper/WeiboDataEntityMapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/parse/DataStoryParse.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/HttpService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/WeChatDataService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/WeiboCategorysService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/WeiboDataService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/impl/WeChatServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/impl/WeiboCategorysServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/service/impl/WeiboServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/util/FileUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/util/HttpUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/util/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/aspectjweaver-1.8.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/c3p0-0.9.1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/commons-codec-1.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/commons-logging-1.1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/fastjson-1.2.7.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/httpclient-4.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/httpcore-4.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/jackson-annotations-2.4.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/jackson-core-2.4.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/jackson-databind-2.4.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/jstl-api-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/mybatis-3.2.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/mybatis-spring-1.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.8.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-aop-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-aspects-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-beans-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-context-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-core-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-expression-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-jdbc-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-tx-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-web-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/lib/spring-webmvc-4.1.6.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/weibo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bla-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bla-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bla-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BlaIta-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BlaIta-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BlaIta-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bol-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bol-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bol-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BolIta-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BolIta-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BolIta-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Hai-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Hai-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Hai-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-HaiIta-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-HaiIta-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-HaiIta-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Lig-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Lig-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Lig-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-LigIta-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-LigIta-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-LigIta-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Reg-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Reg-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Reg-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-RegIta-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-RegIta-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-RegIta-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Black-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Black-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Black-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BlackItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BlackItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BlackItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Bold-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Bold-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Bold-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensed-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensed-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensed-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensedItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensedItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensedItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Condensed-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Condensed-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Condensed-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-CondensedItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-CondensedItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-CondensedItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Italic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Italic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Italic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Light-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Light-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Light-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-LightItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-LightItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-LightItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Medium-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Medium-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Medium-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-MediumItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-MediumItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-MediumItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Regular-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Regular-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Regular-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Thin-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Thin-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Thin-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-ThinItalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-ThinItalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-ThinItalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/weathericons-regular-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/weathericons-regular-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/weathericons-regular-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/button_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/calendar-arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/chosen-sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/chosen-sprite@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/clear.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/close-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/blank.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_hex.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_hsb_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_hsb_h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_hsb_s.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_indic.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_overlay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_rgb_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_rgb_g.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_rgb_r.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_select.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/colorpicker_submit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_hex.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_hsb_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_hsb_h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_hsb_s.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_indic.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_rgb_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_rgb_g.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_rgb_r.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/custom_submit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/select.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/select2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/slider.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/droparrows.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/dropdown-arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/dropdowntoggle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/hormenu.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/icon-search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/icon-search@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/is-document.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/is-money.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/is-user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader11.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader12.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader13.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader14.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader15.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader16.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader17.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader18.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader19.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader20.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader21.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader22.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader23.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader24.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader25.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader26.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader27.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader28.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader29.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader30.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/loader9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/locked.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/minus@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/blog1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/blog2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/blog3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/blog4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/loggeduser.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media-audio.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media-doc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/media7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/photo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/photo1@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/photo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/photo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/photo4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/profile-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/profilepic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/profilepic1@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/user1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/user2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/user3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/user4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/user5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/userprofile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/userprofile@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/plus-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/plus-white@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/plus@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/default_thumb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/sprite_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/sprite_prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/sprite_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/sprite_y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/select2-spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/select2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/select2x2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/sort_asc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/sort_desc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/spritemap.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/spritemap@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/themeforest.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/themepixels.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/uploadfile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/uploadfile@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/BashUpdateMavericks.dmg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/about/dialogs/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/fakeobjects/images/spacer.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/image/images/noimage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/link/images/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/link/images/hidpi/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/magicline/images/hidpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/magicline/images/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/assets/inlineall/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/assets/sample.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.fla" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/hidpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/hidpi/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/hidpi/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/hidpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/images/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/hidpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/hidpi/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/hidpi/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/hidpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/images/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/button_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/account.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/c3p0.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/mapper/WeChatDataEntityMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/mapper/WeiboCategorysEntityMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/com/cloudpioneer/dataGushi/mapper/WeiboDataEntityMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/spring-database.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/spring-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/deviceJudger.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/weibo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewb.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewx.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/ajax/accordion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/ajax/panel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/ajax/photo-viewer-rtl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/ajax/photo-viewer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/ajax/remote.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/ajax/tabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/animate.delay.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap-override-rtl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap-override.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap-rtl.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap-timepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap-wysihtml5.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/codemirror/codemirror.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/codemirror/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/codemirror/theme/ambiance.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/codemirror/theme/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/colorpicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/darktooltip.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/dropzone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/font.helvetica-neue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/font.roboto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/fullcalendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/jquery-jvectormap-1.2.2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/jquery-ui-1.10.3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/jquery.datatables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/jquery.gritter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/jquery.tagsinput.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/lato.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/morris.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/prettyPhoto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/roboto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/select2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.bluenav.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.darkknight.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.default-rtl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.dodgerblue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.greyjoy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.inverse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.katniss.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/tipsy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/toggles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/weather-icons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/wysiwyg-color.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bla-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BlaIta-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Bol-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-BolIta-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Hai-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-HaiIta-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Lig-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-LigIta-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-Reg-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/Lato-RegIta-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/SIL Open Font License 1.1.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/lato/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Google Android License.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Black-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BlackItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Bold-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensed-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldCondensedItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-BoldItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Condensed-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-CondensedItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Italic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Light-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-LightItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Medium-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-MediumItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Regular-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-Thin-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/Roboto-ThinItalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/roboto/roboto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/fonts/weathericons-regular-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/colorpicker/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/loaders/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/photos/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/prettyphoto/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/jquery-2.1.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap-datetimepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap-timepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap-wizard.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap-wysihtml5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/charts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/chosen.jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/adapters/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/build-config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/ckeditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/contents.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/en-au.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/en-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/fo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/gu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/mn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/sr-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/about/dialogs/about.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/clipboard/dialogs/paste.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/dialog/dialogDefinition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/image/dialogs/image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/link/dialogs/anchor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/link/dialogs/link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/pastefromword/filter/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/scayt/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/scayt/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/scayt/dialogs/options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/scayt/dialogs/toolbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/specialchar/dialogs/specialchar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/table/dialogs/table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/tabletools/dialogs/tableCell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/dialogs/ciframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/dialogs/tmp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/dialogs/wsc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/dialogs/wsc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/plugins/wsc/dialogs/wsc_ie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/api.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/appendto.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/assets/outputxhtml/outputxhtml.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/assets/posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/assets/sample.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/assets/uilanguages/languages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/datafiltering.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/divreplace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/inlineall.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/inlinebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/inlinetextarea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/jquery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/dialog/assets/my_dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/dialog/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/enterkey/enterkey.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/swfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/htmlwriter/outputforflash.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/htmlwriter/outputhtml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/magicline/magicline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/toolbar/toolbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/plugins/wysiwygarea/fullpage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/readonly.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/replacebyclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/replacebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/sample.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/sample_posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/tabindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/uicolor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/uilanguages.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/samples/xhtmlstyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/dialog_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/dialog_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/dialog_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/dialog_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/dialog_opera.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/editor_gecko.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/editor_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/editor_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/editor_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/editor_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/moono/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/dialog_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/dialog_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/dialog_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/dialog_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/dialog_opera.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/editor_gecko.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/editor_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/editor_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/editor_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/editor_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/skins/themepixels/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/ckeditor/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/codemirror.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/formatting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/mode/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/mode/javascript.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/mode/php.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/mode/python.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/codemirror/mode/xml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/colorpicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/dashboard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/dropzone.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.colorhelpers.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.canvas.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.categories.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.crosshair.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.errorbars.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.fillbetween.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.image.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.navigate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.pie.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.resize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.selection.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.spline.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.stack.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.symbol.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.threshold.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/flot/jquery.flot.time.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/fullcalendar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/gmaps.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/holder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery-1.11.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery-jvectormap-1.2.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery-jvectormap-us-aea-en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery-jvectormap-world-mill-en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery-migrate-1.2.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery-ui-1.10.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.autogrow-textarea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.cookies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.darktooltip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.datatables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.gritter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.maskedinput.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.mousewheel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.prettyPhoto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.sparkline.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.tagsinput.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.tipsy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.ui.touch-punch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/jquery.validate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/masonry.pkgd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/morris.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/raphael-2.1.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/retina.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/select2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/toggles.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/js/wysihtml5-0.3.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/addons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/bootstrap-override-rtl.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/bootstrap-override.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/bug-tracker.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/dashboard.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/email.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/general.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/headerpanel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/horizontal-menu.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/leftpanel-collapse.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/leftpanel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/mainpanel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/media-queries.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/pages.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/rightpanel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.bluenav.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.darkknight.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.default-rtl.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.default.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.dodgerblue.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.greyjoy.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.inverse.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/style.katniss.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/table.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/ui-elements.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/phone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/alerts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/blank.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/blog-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/blog-single.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/bug-issues.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/bug-tracker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/calendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/code-editor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/compose.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/email.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/extras.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/form-layouts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/form-validation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/form-wizards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/general-forms.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/graphs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/invoice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/locked.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/maps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/media-manager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/modals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/notfound.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/people-directory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/read.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/search-results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/signin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/signup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/sliders.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/tabs-accordions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/timeline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/typography.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/view-issue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/widgets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/rtl/wysiwyg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weibo.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weixin.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/dataGushi_war.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/dataGushi_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/dataGushi_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/button_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/mb_button_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/mb_button_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/return.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/button_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/mb_button_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/mb_button_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/return.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/c3p0.properties" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/c3p0.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/index.css" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/index.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewb.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewx.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/weibo.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/weibo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewb.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewb.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewx.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewx.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.default.css" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/phone.css" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/phone.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weibo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weibo.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weixin.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weixin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/c3p0.properties" afterPath="$PROJECT_DIR$/src/main/resources/c3p0.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/plugin/css/style.default.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/css/style.default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" />
     </list>
@@ -865,11 +74,21 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1235">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="171">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <marker date="1471840435791" expanded="true" signature="1607:1623" ph="..." />
+                <marker date="1472034642848" expanded="true" signature="1608:1624" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobilewx.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="40" column="31" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -884,44 +103,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/css/index.css">
+      <file leaf-file-name="mobilewb.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="387" column="0" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
+            <state relative-caret-position="247">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobilewb.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="649">
+              <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
               <folding>
-                <marker date="1472008229562" expanded="true" signature="5429:5631" ph="{...}" />
-                <marker date="1472008229562" expanded="true" signature="5866:5869" ph="{...}" />
+                <marker date="1472034642849" expanded="true" signature="1589:1614" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weibo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/weibo.jsp">
+      <file leaf-file-name="mobilewx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+            <state relative-caret-position="343">
+              <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="58" />
+              <folding>
+                <marker date="1472034642851" expanded="true" signature="1369:1394" ph="..." />
+                <marker date="1472034642851" expanded="true" signature="1502:1518" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataStoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/controller/DataStoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-89">
+              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weixin.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/weixin.jsp">
+      <file leaf-file-name="phone.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weibo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/weibo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
+            <state relative-caret-position="49">
+              <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="85" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -951,25 +182,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/domain/WeiboDataEntity.java" />
         <option value="$PROJECT_DIR$/src/main/test/com/gy/test/DateTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/controller/DataStoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/mapper/WeiboDataEntityMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/service/WeiboDataService.java" />
         <option value="$PROJECT_DIR$/src/main/test/com/gy/test/WeiboServiceTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/service/impl/WeiboServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/mapper/WeiboDataEntityMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/parse/DataStoryParse.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/plugin/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/js/deviceJudger.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/js/index.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/c3p0.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/plugin/css/style.default.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/c3p0.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
       </list>
     </option>
   </component>
@@ -1009,10 +241,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="342" />
+    <option name="width" value="1469" />
+    <option name="height" value="1002" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1057,6 +288,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -1079,9 +328,124 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\dataGushi\src\main\webapp\view\plugin\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\dataGushi\src\main\webapp\view\plugin\images" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/view/css/index.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/view/weibo.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/view/weixin.jsp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Tomcat Server.DataStory">
     <configuration default="false" name="DateTester.testDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -1759,7 +1123,7 @@
       <workItem from="1471834899779" duration="596000" />
       <workItem from="1471835992512" duration="8276000" />
       <workItem from="1472005370101" duration="206000" />
-      <workItem from="1472006605836" duration="2946000" />
+      <workItem from="1472006605836" duration="22235000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1471338087935</created>
@@ -1817,38 +1181,45 @@
       <option name="project" value="LOCAL" />
       <updated>1471591404732</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="another copy to gitlab by huanghai_2016-8-24 11:42:49">
+      <created>1472010238042</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1472010238042</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77159000" />
+    <option name="totallyTimeSpent" value="96448000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="342" y="0" width="1469" height="1002" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284091" sideWeight="0.4978678" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.4978678" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39198217" sideWeight="0.16950959" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.046375267" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25288683" sideWeight="0.7436034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328341" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34273317" sideWeight="0.48933902" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3421659" sideWeight="0.48933902" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21002132" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27892122" sideWeight="0.49288255" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27892122" sideWeight="0.50711745" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35343915" sideWeight="0.8304904" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35253456" sideWeight="0.8304904" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1901,7 +1272,8 @@
     <MESSAGE value="&#10;1、设备判断PCorMobile by huanghai" />
     <MESSAGE value="&#10;1、PC出榜日期下拉框（未绑定）" />
     <MESSAGE value="榜单下拉菜单_2016-8-19 15:23:08 by huanghai" />
-    <option name="LAST_COMMIT_MESSAGE" value="榜单下拉菜单_2016-8-19 15:23:08 by huanghai" />
+    <MESSAGE value="another copy to gitlab by huanghai_2016-8-24 11:42:49" />
+    <option name="LAST_COMMIT_MESSAGE" value="another copy to gitlab by huanghai_2016-8-24 11:42:49" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1924,7 +1296,7 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1933,20 +1305,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/util/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="125" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/weibo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2155,13 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/controller/DataStoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/com/gy/test/WeiboServiceTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
@@ -2186,24 +1537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="82" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-513">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/deviceJudger.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -2214,34 +1551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="50" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/c3p0.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -2249,20 +1558,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/aria.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="338" column="18" selection-start-line="338" selection-start-column="18" selection-end-line="338" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/deviceJudger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/weibo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
+        <state relative-caret-position="316">
+          <caret line="211" column="30" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/css/style.default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-379">
+          <caret line="833" column="17" selection-start-line="833" selection-start-column="17" selection-end-line="833" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/weibo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="406" column="2" selection-start-line="406" selection-start-column="2" selection-end-line="413" selection-end-column="44" />
+          <folding>
+            <marker date="1472034642911" expanded="true" signature="5524:5726" ph="{...}" />
+            <marker date="1472034642911" expanded="true" signature="5961:5964" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/weixin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudpioneer/dataGushi/controller/DataStoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1235">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="171">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1471840435791" expanded="true" signature="1607:1623" ph="..." />
+            <marker date="1472034642848" expanded="true" signature="1608:1624" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2275,29 +1643,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/weibo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+        <state relative-caret-position="49">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="85" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/weixin.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="286">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/css/index.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="387" column="0" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="58" />
           <folding>
-            <marker date="1472008229562" expanded="true" signature="5429:5631" ph="{...}" />
-            <marker date="1472008229562" expanded="true" signature="5866:5869" ph="{...}" />
+            <marker date="1472034642851" expanded="true" signature="1369:1394" ph="..." />
+            <marker date="1472034642851" expanded="true" signature="1502:1518" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
+          <folding>
+            <marker date="1472034642849" expanded="true" signature="1589:1614" ph="..." />
           </folding>
         </state>
       </provider>

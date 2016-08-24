@@ -47,6 +47,7 @@
         <div class="monitor-result">
           <span>出榜日期</span>
           <span id="publishDate">8月10日</span>
+          <div id="skiptowb" class="skipTag"><span>去微博排行榜</span></div>
           <span><i id="selectDate" class="iconfont icon-xiasanjiao">
               <div class="dropDate" id="dropDate">
                   <div class="point" ></div>
@@ -76,7 +77,7 @@
           <li id="life" class="hand" value="5054">生活资讯</li>
         </ul>
         <span class="arrow"><i></i></span>
-            <img class="skipTag" src="plugin/images/button_normal.png">
+
       </div>
       <div class="table-wrap">
         <table>

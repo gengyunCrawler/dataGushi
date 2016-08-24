@@ -42,6 +42,7 @@
       <div class="monitor-result">
         <span>出榜日期</span>
         <span id="publishDate">8月10日</span>
+        <div id="skiptowx" class="skipTag"><span>去微信排行榜</span></div>
         <span><i id="selectDate" class="iconfont icon-xiasanjiao">
             <div class="dropDate" id="dropDate">
                 <div class="point" ></div>
@@ -66,7 +67,6 @@
         <li id="life" class="hand" value="233">生活资讯</li>
       </ul>
       <span class="arrow"><i></i></span>
-       <div class="skipTag"></div>
     </div>
     <div class="table-wrap">
       <table class="table-responsive">

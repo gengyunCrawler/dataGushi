@@ -47,6 +47,7 @@
         <div class="monitor-result">
           <span>出榜日期</span>
           <span id="publishDate">8月10日</span>
+          <div id="skiptowb" class="skipTag"><span>去微博排行榜</span></div>
           <span><i id="selectDate" class="iconfont icon-xiasanjiao">
               <div class="dropDate" id="dropDate">
                   <div class="point" ></div>
@@ -62,7 +63,7 @@
         </div>--%>
       </div>
     </div>
-
+    </div>
     <div class="main">
       <div class="category">
         <%--<span class="active hand" id="all">全部</span>--%>
@@ -76,7 +77,7 @@
           <li id="life" class="hand" value="5054">生活资讯</li>
         </ul>
         <span class="arrow"><i></i></span>
-            <img class="skipTag" src="plugin/images/button_normal.png">
+
       </div>
       <div class="table-wrap">
         <table>
@@ -101,6 +102,8 @@
         </table>
       </div>
 
+
+    </div>
       <div class="pagination">
         <ul id="pagination">
           <li class="hand" id="first">首页</li>
@@ -109,10 +112,9 @@
           <li flag="3" class="hand1" name="num">3</li>
           <li flag="4" class="hand1" name="num">4</li>
           <li flag="5">...</li>
-           <li class="hand" id="next">后页</li>
+          <li class="hand" id="next">后页</li>
         </ul>
       </div>
-    </div>
     <div class="footer">
       <ul>
         <li>指导单位：贵州省互联网信息办公室</li>
@@ -122,7 +124,7 @@
       </ul>
     </div>
 
-  </div>
+
     </div>
 </body>
 </html>

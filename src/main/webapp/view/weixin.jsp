@@ -76,6 +76,7 @@
           <li id="life" class="hand" value="5054">生活资讯</li>
         </ul>
         <span class="arrow"><i></i></span>
+            <img class="skipTag" src="plugin/images/button_normal.png">
       </div>
       <div class="table-wrap">
         <table>

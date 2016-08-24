@@ -66,6 +66,7 @@
         <li id="life" class="hand" value="233">生活资讯</li>
       </ul>
       <span class="arrow"><i></i></span>
+       <div class="skipTag"></div>
     </div>
     <div class="table-wrap">
       <table class="table-responsive">

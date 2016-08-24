@@ -388,3 +388,11 @@ tbody tr {
   width: 72px;
   z-index: 1;
 }
+
+.skipTag{
+    position: absolute;
+    margin-left: 91%;
+    line-height: 32px;
+    margin-top: -6%;
+  background-image: url("../plugin/images/button_normal.png");
+}

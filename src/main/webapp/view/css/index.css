@@ -274,7 +274,13 @@ tbody tr {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+.pagination{
 
+    width: 75.15625%;
+    padding: 0px;
+    margin: 0 auto;
+  min-width: 960px;
+}
 .pagination ul {
   padding: 0;
   margin: 0;

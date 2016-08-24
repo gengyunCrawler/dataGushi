@@ -85,17 +85,18 @@
         </tbody>
       </table>
     </div>
-    <div class="pagination">
-      <ul id="pagination">
-        <li class="hand" id="first">首页</li>
-        <li flag="1" class="hand1 active" name="num">1</li>
-        <li flag="2" class="hand1" name="num">2</li>
-        <li flag="3" class="hand1" name="num">3</li>
-        <li flag="4" class="hand1" name="num">4</li>
-        <li flag="5">...</li>
-        <li class="hand" id="next">后页</li>
-      </ul>
-    </div>
+
+  </div>
+  <div class="pagination">
+    <ul id="pagination">
+      <li class="hand" id="first">首页</li>
+      <li flag="1" class="hand1 active" name="num">1</li>
+      <li flag="2" class="hand1" name="num">2</li>
+      <li flag="3" class="hand1" name="num">3</li>
+      <li flag="4" class="hand1" name="num">4</li>
+      <li flag="5">...</li>
+      <li class="hand" id="next">后页</li>
+    </ul>
   </div>
   <div class="footer">
     <ul>

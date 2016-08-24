@@ -62,7 +62,7 @@
         </div>--%>
       </div>
     </div>
-
+    </div>
     <div class="main">
       <div class="category">
         <%--<span class="active hand" id="all">全部</span>--%>
@@ -100,6 +100,8 @@
         </table>
       </div>
 
+
+    </div>
       <div class="pagination">
         <ul id="pagination">
           <li class="hand" id="first">首页</li>
@@ -108,10 +110,9 @@
           <li flag="3" class="hand1" name="num">3</li>
           <li flag="4" class="hand1" name="num">4</li>
           <li flag="5">...</li>
-           <li class="hand" id="next">后页</li>
+          <li class="hand" id="next">后页</li>
         </ul>
       </div>
-    </div>
     <div class="footer">
       <ul>
         <li>指导单位：贵州省互联网信息办公室</li>
@@ -121,7 +122,7 @@
       </ul>
     </div>
 
-  </div>
+
     </div>
 </body>
 </html>

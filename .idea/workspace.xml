@@ -2,39 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fea024a1-5574-4dde-a87e-41db3d453fc7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/button_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/mb_button_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/mb_button_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/images/return.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/button_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/mb_button_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/mb_button_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/images/return.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/c3p0.properties" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/WEB-INF/classes/c3p0.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/index.css" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/index.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewb.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewb.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewx.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/mobilewx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/weibo.js" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/js/weibo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewb.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewb.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewx.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/mobilewx.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.default.css" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/css/style.default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/phone.css" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/plugin/phone.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weibo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weibo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weixin.jsp" afterPath="$PROJECT_DIR$/out/artifacts/dataGushi_war_exploded/view/weixin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/c3p0.properties" afterPath="$PROJECT_DIR$/src/main/resources/c3p0.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" afterPath="$PROJECT_DIR$/src/main/webapp/view/js/weibo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/mobilewx.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/plugin/css/style.default.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/css/style.default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" afterPath="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/weibo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/weixin.jsp" />
     </list>
     <ignored path="dataGushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobilewb.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mobilewb.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="649">
@@ -125,14 +96,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobilewx.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobilewx.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="58" />
+            <state relative-caret-position="378">
+              <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
               <folding>
-                <marker date="1472034642851" expanded="true" signature="1369:1394" ph="..." />
-                <marker date="1472034642851" expanded="true" signature="1502:1518" ph="..." />
+                <marker date="1472036046042" expanded="true" signature="1369:1394" ph="..." />
+                <marker date="1472036046042" expanded="true" signature="1502:1518" ph="..." />
               </folding>
             </state>
           </provider>
@@ -151,8 +122,8 @@
       <file leaf-file-name="phone.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="85" selection-end-column="15" />
+            <state relative-caret-position="197">
+              <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -200,8 +171,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/c3p0.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js" />
       </list>
     </option>
   </component>
@@ -285,6 +256,114 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1123,7 +1202,7 @@
       <workItem from="1471834899779" duration="596000" />
       <workItem from="1471835992512" duration="8276000" />
       <workItem from="1472005370101" duration="206000" />
-      <workItem from="1472006605836" duration="22235000" />
+      <workItem from="1472006605836" duration="23497000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1471338087935</created>
@@ -1188,11 +1267,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472010238042</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="添加微博、微信跳转 by huanghai_2016-8-24 18:31:39">
+      <created>1472034715418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1472034715418</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96448000" />
+    <option name="totallyTimeSpent" value="97710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="342" y="0" width="1469" height="1002" extended-state="0" />
@@ -1200,15 +1286,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.4978678" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.4978678" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.046375267" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25288683" sideWeight="0.7436034" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328341" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25230414" sideWeight="0.7436034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328341" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3421659" sideWeight="0.48933902" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1273,7 +1359,8 @@
     <MESSAGE value="&#10;1、PC出榜日期下拉框（未绑定）" />
     <MESSAGE value="榜单下拉菜单_2016-8-19 15:23:08 by huanghai" />
     <MESSAGE value="another copy to gitlab by huanghai_2016-8-24 11:42:49" />
-    <option name="LAST_COMMIT_MESSAGE" value="another copy to gitlab by huanghai_2016-8-24 11:42:49" />
+    <MESSAGE value="添加微博、微信跳转 by huanghai_2016-8-24 18:31:39" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加微博、微信跳转 by huanghai_2016-8-24 18:31:39" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1635,18 +1722,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/c3p0.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="85" selection-end-column="15" />
+        <state relative-caret-position="649">
+          <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
+          <folding>
+            <marker date="1472034642849" expanded="true" signature="1589:1614" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/c3p0.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1659,31 +1756,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mobilewb.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/plugin/phone.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="197">
+          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewx.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="58" />
+        <state relative-caret-position="378">
+          <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
           <folding>
-            <marker date="1472034642851" expanded="true" signature="1369:1394" ph="..." />
-            <marker date="1472034642851" expanded="true" signature="1502:1518" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/js/mobilewb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
-          <folding>
-            <marker date="1472034642849" expanded="true" signature="1589:1614" ph="..." />
+            <marker date="1472036046042" expanded="true" signature="1369:1394" ph="..." />
+            <marker date="1472036046042" expanded="true" signature="1502:1518" ph="..." />
           </folding>
         </state>
       </provider>

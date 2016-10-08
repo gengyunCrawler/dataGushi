@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="<%=basePath%>view/plugin/images/favicon.png" type="image/png">
 
-  <title>贵州微信地区排行榜 </title>
+  <title>贵州地区微博排行榜 </title>
 
   <link href="<%=basePath%>view/plugin/css/style.default.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/css/jquery.datatables.css" rel="stylesheet">
@@ -43,8 +43,8 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <div class="skip-left"><span class="skipword">微博排行榜</span></div>
-          <div id="skiptowx" class="skip"><span class="skipword">微信排行榜</span></div>
+          <div id="skip-left" class="skip-left"><span class="skipword">微博排行榜</span></div>
+          <div id="skiptowx" class="skip"><span class="skipword">去微信排行榜</span></div>
           <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;">出榜日期 :  </span>
           <div class="btn-group mr5">
             <button type="button" class="btn btn-xs btn-primary but-font" id="publish">8月1日</button>
@@ -161,7 +161,7 @@
 
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px">
+          <table class="table table-striped table-bordered" style="font-size: 14px">
             <thead>
             <tr>
               <th style="color: #0057d3;font-weight: bold">序号</th>

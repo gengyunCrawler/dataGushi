@@ -1,3 +1,4 @@
+var url = window.location.href;
 //获取数据
 var date=new Date()
 var year=date.getFullYear();
@@ -65,19 +66,19 @@ function bindWxData(body,data){
         var sequenceHtml
         if(sequence<4){
             sequenceHtml='<tr>'+
-                '<td><span class="xh">'+sequence+'</span></td>'
+                '<td><span class="xh"">'+sequence+'</span></td>'
         }else{
             sequenceHtml='<tr>'+
-                '<td ><span class="xh" style="background-color: #9c98f0">'+sequence+'</span></td>'
+                '<td ><span class="xh" style="background-color: #9c98f0"">'+sequence+'</span></td>'
         }
         sequenceHtml+=
 
-            '<td class="nickname">'+item.nickName+'</td>'+
-            '<td>'+flollerStr+'</td>'+
+            '<td style="padding-top: 10px" class="nickname">'+item.nickName+'</td>'+
+            '<td style="padding-top: 10px">'+flollerStr+'</td>'+
 
-            '<td>'+newFollerStr+'</td>'+
-            '<td>'+item.rateActivity+'</td>'+
-            '<td>'+item.interactNum+'</td>'+
+            '<td style="padding-top: 10px">'+newFollerStr+'</td>'+
+            '<td style="padding-top: 10px">'+item.rateActivity+'</td>'+
+            '<td style="padding-top: 10px">'+item.interactNum+'</td>'+
 
 
             '</tr>'

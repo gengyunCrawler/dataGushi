@@ -22,7 +22,6 @@ function loadData(currentPage,pageSize,categoryId){
 }
 //如果当前出榜日期是八月，那么month1传入为7
 function changeDate(year1,month1){
-
     year=year1
     month=month1
     changeDateForLable()
@@ -121,6 +120,24 @@ function removeTypeClass(){
     })
 }
 
+//下拉自动添加新月份
+function addNewMonth() {
+    var now = new Date();
+    var year = now.getYear();
+    var month = now.getMonth();
+    var recentMonthString = $("#dropDate span:last-child").text();
+    var recentMonth = recentMonthString.substring(0,recentMonthString.indexOf("月"));
+    if(recentMonth != 12)   {
+        if(month+1 > recentMonth) {
+            $("#dropDate").append('<span id="s3" onclick="changeDate('+ year +','+ (month+1)+')">'+(month+1)+'月1日</span>');
+        }
+    }else {
+            $("#dropDate span")
+    }
+
+
+}
+
 function firstHandle(){
     removeCursor()
     bindWxData(1,categoryId);
@@ -135,6 +152,7 @@ function firstHandle(){
 
 $(function(){
     $("#dropDate").hide();
+    $("#point").hide();
     bindWxData(1,"all");
     changeDateForLable()
     //$("#all").click(function(){
@@ -221,17 +239,37 @@ $(function(){
 
 
     $("#selectDate").mouseenter(function () {
+        $("#point").show();
         $("#dropDate").show();
-    });
+        $("#dropDate").niceScroll(
+            {
+                cursorcolor: "#8096a8",
+                horizrailenabled: true,
+                cursorborderradius:'0px',
+                background:'#c3cfd6',
+                cursorminheight:50,
+                cursorwidth:'6px'
+            }
+        );
+     });
 
-    $("#dropDate").mouseleave(function () {
-        $("#dropDate").hide();
-    });
+     $("#dropDate").mouseleave(function () {
+     $("#point").hide();
+     $("#dropDate").hide();
+     });
+
+
 
     $("#skiptowb").click(function () {
         $(this).addClass('hand').removeClass('skipTag').addClass('skipTagClicked');
         window.location.href=url.replace("weixin","weibo");
     });
+
+    $("#skiptowb").hover(function () {
+        $(this).addClass('hand');
+    });
+
+    addNewMonth();
 //获取总页数
 //加载分页数
 //添加换页点击事件

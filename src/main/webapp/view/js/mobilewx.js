@@ -1,3 +1,5 @@
+var url = window.location.href;
+
 //获取数据
 var date=new Date()
 var year=date.getFullYear()

@@ -275,7 +275,6 @@ tbody tr {
   border-radius: 50%;
 }
 .pagination{
-
     width: 75.15625%;
     padding: 0px;
     margin: 0 auto;
@@ -335,7 +334,7 @@ tbody tr {
 
 .dropDate {
   position: absolute;
-  margin-top: 15px;
+  margin-top: 3px;
   margin-left: -22px;
   width: 100px;
   text-align: center;
@@ -347,17 +346,25 @@ tbody tr {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: #0078ff;
+  z-index: 1;
 }
 .point {
   width: 13px;
   height: 12px;
+
+
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  position: absolute;
-  top: -7px;
-  left: 42px;
+  position: relative;
+  top: 8px;
+  left: 19px;
   background-color: #0078ff;
+    overflow: auto;
+}
+
+.date-wrapper {
+    position: absolute;
 }
 
 .dropDate span#s1 {
@@ -386,7 +393,21 @@ tbody tr {
   padding: 0 5px;
   background-color: #3091ff;
   width: 72px;
-  z-index: 2;
+}
+
+.dropDate span#s3 {
+    margin: 0;
+    position: absolute;
+    display: block;
+    top: 82px;
+    left: 9px;
+    height: 25px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 5px;
+    background-color: #3091ff;
+    width: 72px;
+    margin-bottom: 15px;
 }
 
 .skipTag {

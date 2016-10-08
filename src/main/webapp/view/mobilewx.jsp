@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="<%=basePath%>view/plugin/images/favicon.png" type="image/png">
 
-  <title>贵州微信地区排行榜 </title>
+  <title>贵州地区微信排行榜 </title>
 
   <link href="<%=basePath%>view/plugin/css/style.default.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/css/jquery.datatables.css" rel="stylesheet">
@@ -37,8 +37,8 @@
 
       <div class="row">
           <div class="col-sm-12">
-              <div id="returnlast" class="skip-left"><span class="skipword">微信排行榜</span></div>
-              <div id="skiptowb" class="skip"><span class="skipword">微博排行榜</span></div>
+              <div id="skip-left" class="skip-left"><span class="skipword">微信排行榜</span></div>
+              <div id="skiptowb" class="skip"><span class="skipword">去微博排行榜</span></div>
             <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;">出榜日期 :  </span>
             <div class="btn-group mr5">
               <button type="button" class="btn btn-xs btn-primary but-font" id="publish">8月1日</button>
@@ -71,13 +71,13 @@
           <table class="table table-striped table-bordered" style="font-size: 10px">
             <thead>
             <tr>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px;">序号</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量</span><br>指数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响</span><br>力</th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
             </tr>
             </thead>
             <tbody style="color: #2845a0" id="provence">
@@ -102,11 +102,11 @@
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px; width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量</span><br>指数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响</span><br>力</th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
             </tr>
             </thead>
             <tbody style="color: #2845a0" id="media">
@@ -117,7 +117,7 @@
       </div><!-- row -->
 
 
-      <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 5px">
+      <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 20px">
         <div class="col-sm-12" style="text-align: center;">
           <img src="<%=basePath%>view/plugin/1.png" style="width: 37%">
           <span style="color: #706ad3;font-size: 16px;font-family: 微软雅黑;padding: 0 20px 0 20px;">旅游</span>
@@ -132,11 +132,11 @@
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量</span><br>指数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响</span><br>力</th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
             </tr>
             </thead>
             <tbody style="color: #2845a0" id="trip">
@@ -162,11 +162,11 @@
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞</span><br>数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量</span><br>指数</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响</span><br>力</th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
+                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
             </tr>
             </thead>
             <tbody style="color: #2845a0" id="life">

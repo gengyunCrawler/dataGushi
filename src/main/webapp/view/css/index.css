@@ -351,8 +351,6 @@ tbody tr {
 .point {
   width: 13px;
   height: 12px;
-
-
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -379,35 +377,8 @@ tbody tr {
   padding: 0 5px;
   background-color: #3091ff;
   width: 72px;
+  margin-bottom: 10px;
 
-}
-.dropDate span#s2 {
-  margin: 0;
-  position: absolute;
-  display: block;
-  top: 48px;
-  left: 9px;
-  height: 25px;
-  line-height: 28px;
-  text-align: center;
-  padding: 0 5px;
-  background-color: #3091ff;
-  width: 72px;
-}
-
-.dropDate span#s3 {
-    margin: 0;
-    position: absolute;
-    display: block;
-    top: 82px;
-    left: 9px;
-    height: 25px;
-    line-height: 28px;
-    text-align: center;
-    padding: 0 5px;
-    background-color: #3091ff;
-    width: 72px;
-    margin-bottom: 15px;
 }
 
 .skipTag {

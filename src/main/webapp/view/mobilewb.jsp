@@ -19,6 +19,7 @@
   <link href="<%=basePath%>view/plugin/css/style.default.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/css/jquery.datatables.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/phone.css" rel="stylesheet">
+  <link href="<%=basePath%>view/css/mobile.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -52,10 +53,9 @@
               <span class="fa fa-chevron-down"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <ul class="dropdown-menu ul-font" role="menu">
+            <ul id="dropDate" class="dropdown-menu ul-font" role="menu">
               <div class="point_mobile" ></div>
-              <li><span class="a-font" onclick="changeDate(2016,7)" style="cursor:pointer;font-size: 14px; margin-top:9px; margin-bottom: 9px; background-color: #3091ff;">7月1日</span></li>
-              <li><span   class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-bottom: 6px;background-color: #3091ff;">8月1日</span></li>
+                <li><span class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-top:9px; margin-bottom: 10px; background-color: #3091ff;">8月1日</span></li>
             </ul>
           </div>
         </div>
@@ -83,7 +83,6 @@
               <th style="color: #0057d3;font-weight: bold">新增粉</th>
               <th style="color: #0057d3;font-weight: bold">活跃度</th>
               <th style="color: #0057d3;font-weight: bold">互动数</th>
-
             </tr>
             </thead>
             <tbody style="color: #2845a0" id="provence">
@@ -206,5 +205,6 @@
 
 <script src="<%=basePath%>view/plugin/js/custom.js"></script>
 <script src="<%=basePath%>view/js/mobilewb.js"></script>
+<script src="<%=basePath%>view/plugin/js/jquery.nicescroll.js"></script>
 </body>
 </html>

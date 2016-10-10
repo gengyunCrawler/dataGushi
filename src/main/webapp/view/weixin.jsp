@@ -22,10 +22,6 @@
 
   <link rel="stylesheet" type="text/css" href="plugin/css/tipsy.css" />
   <script type="text/javascript" src="plugin/js/jquery.tipsy.js"></script>
-
-  <%--<link rel="stylesheet" type="text/css" href="plugin/css/darktooltip.min.css" />
-  <script type="text/javascript" src="plugin/js/jquery.darktooltip.min.js"></script>--%>
-
 </head>
 <body>
   <div class="main-container">
@@ -51,20 +47,12 @@
           <div id="skiptowb" class="skipTag"><span>去微博排行榜</span></div>
           <span><i id="selectDate" class="iconfont icon-xiasanjiao">
               <div class="date-wrapper">
-              <div class="point" id="point"></div>
-              <div class="dropDate" id="dropDate">
-                    <span id="s1" onclick="changeDate(2016,8)">8月1日</span>
-                    <span id="s2" onclick="changeDate(2016,9)">9月1日</span>
-                    <%--<span id="s3" onclick="changeDate(2016,10)">10月1日</span>--%>
-              </div>
+                <div class="point" id="point"></div>
+                <div class="dropDate" id="dropDate">
+                      <span id="s1" onclick="changeDate(2016,8)">8月1日</span>
+                </div>
               </div>
           </i></span>
-          <%--<div class="dropDate">
-            <div class="point"></div>
-            <span id="s1">7月1日</span>
-            <span id="s2">9月1日</span>
-          </div>
-        </div>--%>
       </div>
     </div>
     </div>

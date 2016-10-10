@@ -123,19 +123,47 @@ function removeTypeClass(){
 //下拉自动添加新月份
 function addNewMonth() {
     var now = new Date();
-    var year = now.getYear();
+    var year = now.getFullYear();
     var month = now.getMonth();
     var recentMonthString = $("#dropDate span:last-child").text();
-    var recentMonth = recentMonthString.substring(0,recentMonthString.indexOf("月"));
-    if(recentMonth != 12)   {
-        if(month+1 > recentMonth) {
-            $("#dropDate").append('<span id="s3" onclick="changeDate('+ year +','+ (month+1)+')">'+(month+1)+'月1日</span>');
-        }
-    }else {
-            $("#dropDate span")
+    var recentMonth = parseInt(recentMonthString.substring(0,recentMonthString.indexOf("月")));
+    var appendCss = {
+        "margin": 0,
+        position: 'absolute',
+        display: 'block',
+        left: '9px',
+        height: '25px',
+        'line-height': '28px',
+        'text-align': 'center',
+        padding: '0 5px',
+        'background-color': '#3091ff',
+        width: '72px',
+        'margin-bottom':'10px'
     }
+    if(recentMonth != 12)   {
+        var range = (month+1)-recentMonth;
+        var loading_month;
+        var i;
+        var top;
+        var top_value;
+        top = $(".dropDate span#s1").css('top');
+        if(month+1 > recentMonth) {
+            var loading_top;
+            for(i=0; i<range; i++)  {
+                top_value = parseInt(top.substring(0,top.indexOf("px")));
+                loading_top = top_value+30;
+                loading_month = recentMonth+1+i;
+                $("#dropDate").append('<span onclick="changeDate('+ year +','+ loading_month+')">'+loading_month+'月1日</span>');
 
+                $("#dropDate span:last-child").css(appendCss).css('top',loading_top+"px");
+                top = loading_top+'px';
+            }
+        }
+    }else if (recentMonth === 12) {
+            $("#dropDate span").remove();
+            $("#dropDate").append('<span id="s1" onclick="changeDate('+ (year+1) +',1)">1月1日</span>');
 
+    }
 }
 
 function firstHandle(){

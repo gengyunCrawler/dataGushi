@@ -19,11 +19,12 @@
   <link href="<%=basePath%>view/plugin/css/style.default.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/css/jquery.datatables.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/phone.css" rel="stylesheet">
-
+  <link href="<%=basePath%>view/css/mobile.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="<%=basePath%>view/plugin/js/html5shiv.js"></script>
   <script src="<%=basePath%>view/plugin/js/respond.min.js"></script>
+
   <![endif]-->
 </head>
 
@@ -46,19 +47,17 @@
                 <span class="fa fa-chevron-down"></span>
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
-              <ul class="dropdown-menu ul-font" role="menu">
+              <ul id="dropDate" class="dropdown-menu ul-font" role="menu">
                   <div class="point_mobile" ></div>
-                  <li><span class="a-font" onclick="changeDate(2016,7)" style="cursor:pointer;font-size: 14px; margin-top:9px; margin-bottom: 9px; background-color: #3091ff;">7月1日</span></li>
-                  <li><span   class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-bottom: 6px;background-color: #3091ff;">8月1日</span></li>
+                  <li><span class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-top:10px; margin-bottom: 10px; background-color: #3091ff;">8月1日</span></li>
               </ul>
-            </div>
         </div>
         <div class="col-sm-12">
-          <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;" id="monitorRangeDate">监测时间范围 : 7月1日-7月31日</span>
+          <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;margin-left: -10px" id="monitorRangeDate">监测时间范围 : 7月1日-7月31日</span>
         </div>
       </div>
 
-      <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 20px">
+      <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 70px">
         <div class="col-sm-12" style="text-align: center;">
           <img src="<%=basePath%>view/plugin/1.png" style="width: 35%">
           <span style="color: #706ad3;font-size: 16px;font-family: 微软雅黑;padding: 0 10px 0 10px;">省市发布</span>
@@ -68,7 +67,7 @@
 
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px">
+          <table class="table table-striped table-bordered" style="font-size: 10px;margin-left: 10px">
             <thead>
             <tr>
                 <th style="color: #0057d3;font-weight: bold;margin-top: 0px;">序号</th>
@@ -203,5 +202,6 @@
 
 <script src="<%=basePath%>view/plugin/js/custom.js"></script>
 <script src="<%=basePath%>view/js/mobilewx.js"></script>
+<script src="<%=basePath%>view/plugin/js/jquery.nicescroll.js"></script>
 </body>
 </html>

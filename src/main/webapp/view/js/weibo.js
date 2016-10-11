@@ -120,6 +120,52 @@ function firstHandle(){
     });
 }
 
+//下拉自动添加新月份
+function addNewMonth() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth();
+    var recentMonthString = $("#dropDate span:last-child").text();
+    var recentMonth = parseInt(recentMonthString.substring(0,recentMonthString.indexOf("月")));
+    var appendCss = {
+        "margin": 0,
+        position: 'absolute',
+        display: 'block',
+        left: '9px',
+        height: '25px',
+        'line-height': '28px',
+        'text-align': 'center',
+        padding: '0 5px',
+        'background-color': '#3091ff',
+        width: '72px',
+        'margin-bottom':'10px'
+    }
+    if(recentMonth != 12)   {
+        var range = (month+1)-recentMonth;
+        var loading_month;
+        var i;
+        var top;
+        var top_value;
+        top = $(".dropDate span#s1").css('top');
+        if(month+1 > recentMonth) {
+            var loading_top;
+            for(i=0; i<range; i++)  {
+                top_value = parseInt(top.substring(0,top.indexOf("px")));
+                loading_top = top_value+30;
+                loading_month = recentMonth+1+i;
+                $("#dropDate").append('<span onclick="changeDate('+ year +','+ loading_month+')">'+loading_month+'月1日</span>');
+
+                $("#dropDate span:last-child").css(appendCss).css('top',loading_top+"px");
+                top = loading_top+'px';
+            }
+        }
+    }else if (recentMonth === 12) {
+        $("#dropDate span").remove();
+        $("#dropDate").append('<span id="s1" onclick="changeDate('+ (year+1) +',1)">1月1日</span>');
+
+    }
+}
+
 function changeDate(year1,month1){
 
     year=year1
@@ -131,6 +177,7 @@ function changeDate(year1,month1){
 }
 $(function(){
     $("#dropDate").hide();
+    $("#point").hide();
     bindWxData('1',"all");
     changeDateForLable()
     //$("#all").click(function(){
@@ -205,10 +252,22 @@ $(function(){
     });
 
     $("#selectDate").mouseenter(function () {
+        $("#point").show();
         $("#dropDate").show();
+        $("#dropDate").niceScroll(
+            {
+                cursorcolor: "#8096a8",
+                horizrailenabled: true,
+                cursorborderradius:'0px',
+                background:'#c3cfd6',
+                cursorminheight:50,
+                cursorwidth:'6px'
+            }
+        );
     });
 
     $("#dropDate").mouseleave(function () {
+        $("#point").hide();
         $("#dropDate").hide();
     });
 
@@ -216,7 +275,9 @@ $(function(){
         $(this).addClass('hand').removeClass('skipTag').addClass('skipTagClicked');
         window.location.href=url.replace("weibo","weixin");
     });
+    addNewMonth();
 //获取总页数
 //加载分页数
 //添加换页点击事件
+
 })

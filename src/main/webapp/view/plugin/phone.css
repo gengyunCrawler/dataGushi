@@ -34,7 +34,8 @@
 
 .a-font {
     color: #d0e6ff !important;
-    padding: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
 }
 
 .a-font:hover {
@@ -100,4 +101,23 @@
     color: #fff;
     font-size: 12px;
     font-family: "Microsoft YaHei",sans-serif;
+}
+
+.table tbody > tr > td {
+    border-color: #eee;
+    padding: 1px;
+    font-size: 13px;
+    vertical-align: initial;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.table thead > tr > th {
+    border-color: #eee;
+    padding: 1px;
+    font-size: 13px;
+    vertical-align: top;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

@@ -14,6 +14,7 @@
   <title>微博排行</title>
   <script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/deviceJudger.js"></script>
+  <script type="text/javascript" src="plugin/js/jquery.nicescroll.js"></script>
   <script type="text/javascript" src="js/weibo.js"></script>
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -44,11 +45,12 @@
         <span id="publishDate">8月10日</span>
         <div id="skiptowx" class="skipTag"><span>去微信排行榜</span></div>
         <span><i id="selectDate" class="iconfont icon-xiasanjiao">
+          <div class="date-wrapper">
+            <div class="point" id="point" ></div>
             <div class="dropDate" id="dropDate">
-                <div class="point" ></div>
-                <span id="s1" onclick="changeDate(2016,7)">7月1日</span>
-                <span id="s2" onclick="changeDate(2016,8)">8月1日</span>
+                <span id="s1" onclick="changeDate(2016,8)">8月1日</span>
             </div>
+          </div>
         </i></span>
       </div>
     </div>

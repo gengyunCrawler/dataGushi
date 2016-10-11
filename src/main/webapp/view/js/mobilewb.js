@@ -1,3 +1,4 @@
+var url = window.location.href;
 //获取数据
 var date=new Date()
 var year=date.getFullYear();
@@ -65,19 +66,19 @@ function bindWxData(body,data){
         var sequenceHtml
         if(sequence<4){
             sequenceHtml='<tr>'+
-                '<td><span class="xh">'+sequence+'</span></td>'
+                '<td><span class="xh"">'+sequence+'</span></td>'
         }else{
             sequenceHtml='<tr>'+
-                '<td ><span class="xh" style="background-color: #9c98f0">'+sequence+'</span></td>'
+                '<td ><span class="xh" style="background-color: #9c98f0"">'+sequence+'</span></td>'
         }
         sequenceHtml+=
 
-            '<td class="nickname">'+item.nickName+'</td>'+
-            '<td>'+flollerStr+'</td>'+
+            '<td style="padding-top: 10px" class="nickname">'+item.nickName+'</td>'+
+            '<td style="padding-top: 10px">'+flollerStr+'</td>'+
 
-            '<td>'+newFollerStr+'</td>'+
-            '<td>'+item.rateActivity+'</td>'+
-            '<td>'+item.interactNum+'</td>'+
+            '<td style="padding-top: 10px">'+newFollerStr+'</td>'+
+            '<td style="padding-top: 10px">'+item.rateActivity+'</td>'+
+            '<td style="padding-top: 10px">'+item.interactNum+'</td>'+
 
 
             '</tr>'
@@ -105,6 +106,30 @@ function changeDateForLable(){
     $("#monitorRangeDate").html(startHtml+"-"+publishDate)
     $("#publish").html(publishDate)
 }
+
+//下拉自动添加新月份
+function addNewMonth() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth();
+    var recentMonthString = $("#dropDate li:last-child>span").text();
+    var recentMonth = parseInt(recentMonthString.substring(0,recentMonthString.indexOf("月")));
+    if(recentMonth != 12)   {
+        var range = (month+1)-recentMonth;
+        var loading_month;
+        var i;
+        if(month+1 > recentMonth) {
+            for(i=0;i<range;i++)    {
+                loading_month = recentMonth+1+i;
+                $("#dropDate").append('<li><span   class="a-font" onclick="changeDate('+ year +','+ loading_month+')" style="cursor:pointer;font-size: 14px; margin-bottom: 5px;background-color: #3091ff;">'+loading_month+'月1日</span></li>');
+            }
+        }
+    }else if (recentMonth === 12) {
+        $("#dropDate li").remove();
+        $("#dropDate").append('<li><span   class="a-font" onclick="changeDate('+ (year+1) +',1)" style="cursor:pointer;font-size: 14px; margin-bottom: 5px;background-color: #3091ff;">1月1日</span></li>');
+
+    }
+}
 $(function(){
 
 
@@ -116,4 +141,16 @@ $(function(){
         $(this).removeClass('skip').addClass('skip-clicked');
         window.location.href=url.replace("mobilewb","mobilewx");
     });
+
+    addNewMonth();
+    $("#dropDate").niceScroll(
+        {
+            cursorcolor: "#8096a8",
+            horizrailenabled: true,
+            cursorborderradius:'0px',
+            background:'#c3cfd6',
+            cursorminheight:50,
+            cursorwidth:'6px'
+        }
+    );
 })

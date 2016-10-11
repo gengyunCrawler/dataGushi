@@ -14,11 +14,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="<%=basePath%>view/plugin/images/favicon.png" type="image/png">
 
-  <title>贵州微信地区排行榜 </title>
+  <title>贵州地区微博排行榜 </title>
 
   <link href="<%=basePath%>view/plugin/css/style.default.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/css/jquery.datatables.css" rel="stylesheet">
   <link href="<%=basePath%>view/plugin/phone.css" rel="stylesheet">
+  <link href="<%=basePath%>view/css/mobile.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -43,8 +44,8 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <div class="skip-left"><span class="skipword">微博排行榜</span></div>
-          <div id="skiptowx" class="skip"><span class="skipword">微信排行榜</span></div>
+          <div id="skip-left" class="skip-left"><span class="skipword">微博排行榜</span></div>
+          <div id="skiptowx" class="skip"><span class="skipword">去微信排行榜</span></div>
           <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;">出榜日期 :  </span>
           <div class="btn-group mr5">
             <button type="button" class="btn btn-xs btn-primary but-font" id="publish">8月1日</button>
@@ -52,10 +53,9 @@
               <span class="fa fa-chevron-down"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <ul class="dropdown-menu ul-font" role="menu">
+            <ul id="dropDate" class="dropdown-menu ul-font" role="menu">
               <div class="point_mobile" ></div>
-              <li><span class="a-font" onclick="changeDate(2016,7)" style="cursor:pointer;font-size: 14px; margin-top:9px; margin-bottom: 9px; background-color: #3091ff;">7月1日</span></li>
-              <li><span   class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-bottom: 6px;background-color: #3091ff;">8月1日</span></li>
+                <li><span class="a-font" onclick="changeDate(2016,8)" style="cursor:pointer;font-size: 14px; margin-top:9px; margin-bottom: 10px; background-color: #3091ff;">8月1日</span></li>
             </ul>
           </div>
         </div>
@@ -83,7 +83,6 @@
               <th style="color: #0057d3;font-weight: bold">新增粉</th>
               <th style="color: #0057d3;font-weight: bold">活跃度</th>
               <th style="color: #0057d3;font-weight: bold">互动数</th>
-
             </tr>
             </thead>
             <tbody style="color: #2845a0" id="provence">
@@ -161,7 +160,7 @@
 
       <div class="row" style="margin-top: 20px">
         <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px">
+          <table class="table table-striped table-bordered" style="font-size: 14px">
             <thead>
             <tr>
               <th style="color: #0057d3;font-weight: bold">序号</th>
@@ -206,5 +205,6 @@
 
 <script src="<%=basePath%>view/plugin/js/custom.js"></script>
 <script src="<%=basePath%>view/js/mobilewb.js"></script>
+<script src="<%=basePath%>view/plugin/js/jquery.nicescroll.js"></script>
 </body>
 </html>

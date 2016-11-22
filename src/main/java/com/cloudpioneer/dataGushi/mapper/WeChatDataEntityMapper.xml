@@ -6,11 +6,11 @@
     <insert id="insert">
         INSERT INTO wechatdata (userId,accountId,categoryId,categoryType,groupName,headPicture,wxName,lastUpdateTime,payTime,expireTime,
                                 wxid,username,openid,wxBiz,rank,articlesNum,totalReadNum,totalLikeNum,avgReadNum,
-                                avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price,latestDate,deleteFlag)
+                                avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price,latestDate,deleteFlag,detail)
                                  VALUES
                               (#{userId},#{accountId},#{categoryId},#{categoryType},#{groupName},#{headPicture},#{wxName},#{lastUpdateTime},#{payTime},#{expireTime},
                                 #{wxid},#{username},#{openid},#{wxBiz},#{rank},#{articlesNum},#{totalReadNum},#{totalLikeNum},#{avgReadNum},
-                                #{avgLikeNum},#{qualityNum},#{influenceNum},#{activeNum},#{totalOriginalNum},#{avgHeadlineNum},#{confirm},#{tag},#{price},#{latestDate},#{deleteFlag})
+                                #{avgLikeNum},#{qualityNum},#{influenceNum},#{activeNum},#{totalOriginalNum},#{avgHeadlineNum},#{confirm},#{tag},#{price},#{latestDate},#{deleteFlag},#{detail})
     </insert>
 
     <select id="countAll" resultType="integer">

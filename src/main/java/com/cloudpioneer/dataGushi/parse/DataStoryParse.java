@@ -3,6 +3,7 @@ package com.cloudpioneer.dataGushi.parse;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.cloudpioneer.dataGushi.domain.ArticleEntity;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.domain.WeiboCategorysEntity;
 import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
@@ -133,5 +134,10 @@ public class DataStoryParse
         weiboCategorysEntity.setCategoryName("未分组");
         categorysEntities.add(weiboCategorysEntity);
         return categorysEntities;
+    }
+
+    public static List<ArticleEntity> parseWexinArticle(String articlesJson){
+        JSONObject jsonObject = JSON.parseObject(articlesJson);
+        return null;
     }
 }

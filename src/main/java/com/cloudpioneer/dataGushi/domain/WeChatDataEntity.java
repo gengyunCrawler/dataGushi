@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class WeChatDataEntity implements Serializable
 {
+    private int id;
     private String userId;
     private String accountId;
     private String categoryId;
@@ -37,6 +38,24 @@ public class WeChatDataEntity implements Serializable
     private String tag;
     private String price;
     private Date latestDate;
+    private String detail;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
     private boolean deleteFlag;
 
     public String getUserId() {

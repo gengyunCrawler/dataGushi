@@ -79,9 +79,9 @@ public class DataStoryController
     }
 
     @RequestMapping("data/weixin/gain")
-    public String wxDataGain() throws Exception
+    public String wxDataGain(String username,String password,String type) throws Exception
     {
-        weChatDataService.gainData();
+        weChatDataService.gainData(username,password,type);
         return "success";
     }
 }

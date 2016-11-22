@@ -1,5 +1,6 @@
 package com.cloudpioneer.dataGushi.service;
 
+import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.util.FileUtil;
 import com.cloudpioneer.dataGushi.util.HttpUtil;
 import org.apache.http.HttpResponse;
@@ -10,6 +11,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -22,12 +24,15 @@ public class HttpService
     public static final String DATA_WEIBO="WEIBO";
     public static final String DATA_WEIXIN="WEIXIN";
 
-    public static String dataStoryJSON(String weiboOrWeixin) throws IOException
-    {
+    private static String url2="http://service.datastory.com.cn/account/loginAccount";
+
+
+
+    public static String dataStoryJSON(String username,String password,String weiboOrWeixin) throws IOException, ParseException {
         String url1="http://service.datastory.com.cn/account/login?finalurl=http://f.datastory.com.cn";
         HttpGet disID=new HttpGet(url1);
         CloseableHttpClient client = HttpClients.custom().setDefaultCookieStore(null).build();
-        HttpResponse response = excuteHttpMethod(client);
+        HttpResponse response = login(username,password,client);
 
         //微博排行
         String weiboUrl="http://f.datastory.com.cn/list/getRivalUser?random="+Math.random();
@@ -58,7 +63,7 @@ public class HttpService
     private static HttpResponse excuteHttpMethod(CloseableHttpClient client) throws IOException
     {
         //执行登陆操作
-        String url2="http://service.datastory.com.cn/account/loginAccount";
+
         Map<String,String> param=new HashMap<String, String>();
 
         Properties properties= FileUtil.getResourcePropertiesByName("/account.properties");
@@ -101,4 +106,52 @@ public class HttpService
         return EntityUtils.toString(response.getEntity());
 
     }
+
+    /**
+     * 登陆账号
+     * @param username
+     * @param password
+     * @param client
+     * @return
+     * @throws IOException
+     */
+    public static HttpResponse login(String username,String password,CloseableHttpClient client) throws IOException {
+        Map<String,String> param = new HashMap<>();
+        param.put("emailOrPhone",username);
+        param.put("pwd",password);
+        HttpPost post= HttpUtil.postForm(url2, param);
+        HttpResponse response=client.execute(post);
+        String url3="http://f.datastory.com.cn/";
+        HttpGet get1=new HttpGet(url3);
+        response=client.execute(get1);
+        return response;
+    }
+    public static void ajaxEx(CloseableHttpClient client) throws IOException {
+        String ajaxAccountUrl = "http://social.datastory.com.cn/account/ajax/accountInfo?random="+Math.random();
+
+        HttpGet get = HttpUtil.getMethd(ajaxAccountUrl);
+        client.execute(get);
+    }
+    /**
+     * 获取微信号详情页数据
+     * @param entity
+     * @param client
+     * @return
+     * @throws IOException
+     */
+
+    public static String wxArticlesJson(WeChatDataEntity entity,CloseableHttpClient client) throws IOException {
+
+        String detailUrl = "http://social.datastory.com.cn/detail/getDetail";
+        Map<String,String> param = new HashMap<>();
+        param.put("wxBiz",entity.getWxBiz());
+        param.put("type","30");
+        HttpPost post = HttpUtil.postForm(detailUrl,param);
+        post.setHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
+        HttpResponse  response = client.execute(post);
+        return EntityUtils.toString(response.getEntity());
+    }
+
+
+
 }

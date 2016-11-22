@@ -7,6 +7,7 @@ import java.util.Date;
  */
 public class WeiboDataEntity
 {
+    private  int id;
     private String uid;
 
     private String nickName;//微博昵称
@@ -17,6 +18,14 @@ public class WeiboDataEntity
 
 
     private float rateActivity;//活跃度
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     private  int interactNum;//互动数
 

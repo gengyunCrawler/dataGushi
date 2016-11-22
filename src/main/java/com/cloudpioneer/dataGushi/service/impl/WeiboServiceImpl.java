@@ -76,7 +76,7 @@ public class WeiboServiceImpl implements WeiboDataService
     {
 
 
-        String json=HttpService.dataStoryJSON(HttpService.DATA_WEIBO);
+        String json=HttpService.dataStoryJSON(null,null,HttpService.DATA_WEIBO);
         List<WeiboDataEntity> weiboDataEntities=DataStoryParse.parseJson4Weibo(json);
 
         if (weiboDataEntities!=null&&weiboDataEntities.size()>0){

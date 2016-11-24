@@ -26,7 +26,7 @@ public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
     void updateDate(@Param("beforeDate") Date beforeDate, @Param("currentDate") Date currentDate,@Param("username")String username) throws Exception;
 
 
-    String findDetail(@Param("year") int year, @Param("month") int month,@Param("wxBiz")String wxBiz);
+    WeChatDataEntity findWeChatDataEntity(@Param("year") int year, @Param("month") int month,@Param("wxBiz")String wxBiz);
 
     List<WeChatDataEntity> findAll(@Param("year")int year,@Param("month")int month);
 }

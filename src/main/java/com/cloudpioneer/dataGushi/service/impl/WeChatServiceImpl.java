@@ -163,8 +163,8 @@ public class WeChatServiceImpl implements WeChatDataService{
      * @return
      */
     @Override
-    public String findWxDetail(int year, int month, String wxBiz) {
-        return weChatDataEntityMapper.findDetail(year,month,wxBiz);
+    public WeChatDataEntity findWxDetail(int year, int month, String wxBiz) {
+        return weChatDataEntityMapper.findWeChatDataEntity(year,month,wxBiz);
     }
 
     @Override
@@ -183,7 +183,7 @@ public class WeChatServiceImpl implements WeChatDataService{
      * @param entity
      * @return
      */
-    private List<ArticleEntity> parseDetail(WeChatDataEntity entity)  {
+    public List<ArticleEntity> parseDetail(WeChatDataEntity entity)  {
         List<ArticleEntity> articles= new ArrayList<>();
         if (entity == null||entity.getDetail()==null||entity.getDetail().equals("")){
             throw  new RuntimeException("WechatDataEntity can not be null or detail cannot be null");
@@ -198,7 +198,7 @@ public class WeChatServiceImpl implements WeChatDataService{
                 articleEntity.setWxBiz(entity.getWxBiz());
                 articleEntity.setGroupName(obj.getString("groupName"));
 
-                articleEntity.setTitle(obj.getString("title").replace("\uD83D\uDC47",""));
+                articleEntity.setTitle(JSONObject.toJSONString(obj.get("title")));
                 articleEntity.setUrl(obj.getString("url"));
                 articleEntity.setDate(obj.getDate("date"));
                 articleEntity.setPublishTime(obj.getDate("publishTime"));
@@ -219,9 +219,7 @@ public class WeChatServiceImpl implements WeChatDataService{
     private void batchAarticles(List<ArticleEntity> articles){
      for (ArticleEntity entity :articles){
          System.out.println(entity.getTitle());
-         try {
              articleEntityMapper.insert(entity);
-         }catch (Exception e){}
 
      }
     }

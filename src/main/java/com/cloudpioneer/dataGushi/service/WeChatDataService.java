@@ -17,7 +17,7 @@ public interface WeChatDataService {
 
     public void gainData(String username,String password,String type)throws Exception;
 
-    String findWxDetail(int year, int month,String wxBiz);
+    WeChatDataEntity findWxDetail(int year, int month,String wxBiz);
 
     void wxDetailToArticles(int year,int month);
 }

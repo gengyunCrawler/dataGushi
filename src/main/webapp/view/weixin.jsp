@@ -49,7 +49,7 @@
               <div class="date-wrapper">
                 <div class="point" id="point"></div>
                 <div class="dropDate" id="dropDate">
-                      <span id="s1" onclick="changeDate(2016,8)">8月1日</span>
+                      <span id="s1" onclick="changeDate(2016,11)">8月1日</span>
                 </div>
               </div>
           </i></span>
@@ -87,6 +87,7 @@
               <th id="aveTopReadNo"  original-title="30天的平均头条阅读数">平均头条阅读数<span  class="questionmark">[?]</span></th>
               <th id="quaVector"  original-title="平均阅读数、平均点赞数和点赞率的加权">质量指数<span  class="questionmark">[?]</span></th>
               <th id="influence"  original-title="总阅读数和总点赞数的加权">影响力<span  class="questionmark">[?]</span></th>
+              <th id="operation"  original-title="总阅读数和总点赞数的加权">操作<span  class="questionmark">[?]</span></th>
             </tr>
           </thead>
           <tbody>

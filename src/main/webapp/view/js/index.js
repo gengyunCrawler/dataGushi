@@ -13,10 +13,13 @@ function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
         url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
+        type:"get",
         async:false,
+        dataType:"json",
         success:function(data){
             wxData=data;
         }
+
     })
     return wxData;
 }
@@ -69,6 +72,7 @@ function bindWxData(currentPage,categoryId){
             '<td>'+item.avgHeadlineNum+'</td>'+
             '<td>'+item.qualityNum+'</td>'+
             '<td>'+item.influenceNum+'</td>'+
+            '<td><a href=\'../wx/detail/'+year+'/'+month+'/'+item.wxBiz+'\'>查看详情</a></td>'+
             '</tr>'
         html+=sequenceHtml
         sequence++;

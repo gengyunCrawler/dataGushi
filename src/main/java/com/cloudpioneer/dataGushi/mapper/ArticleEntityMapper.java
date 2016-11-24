@@ -4,6 +4,8 @@ import com.cloudpioneer.dataGushi.domain.ArticleEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by Tijun on 2016/11/22.
  * @author TijunWang
@@ -16,4 +18,6 @@ public interface ArticleEntityMapper {
     void updateDeleteFlag(@Param("year")int year,@Param("month")int month,@Param("wxBiz")String wxBiz);
 
     void deleteByWxBizDate(@Param("year")int year,@Param("month")int month,@Param("wxBiz")String wxBiz);
+
+    List<ArticleEntity> findByWxBizAndDate(@Param("year")int year, @Param("month")int month, @Param("wxBiz")String wxBiz);
 }

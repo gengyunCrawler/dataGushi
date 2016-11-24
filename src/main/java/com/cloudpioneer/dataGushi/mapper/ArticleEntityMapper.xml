@@ -14,4 +14,9 @@
         DELETE FROM wxArticle WHERE YEAR(lastDate)=#{year} AND MONTH(lastDate)=#{month} AND wxBiz = #{wxBiz}
     </delete>
 
+    <select id="findByWxBizAndDate">
+        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,lastDate,wxHeadPicture) WHERE
+        YEAR(latestDate)=#{year} AND MONTH(latestDate) =#{month} AND wxBiz =#{wxBiz}
+    </select>
+
 </mapper>

@@ -18,7 +18,7 @@
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
         where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
 
@@ -39,8 +39,8 @@
         update wechatdata set deleteflag=0 where deleteflag=1 and latestDate between #{beforeDate} and #{currentDate} AND account =#{username}
     </update>
 
-    <select id="findDetail" resultType="string">
-        SELECT detail FROM wechatdata WHERE  deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz} limit 0,1
+    <select id="findWeChatDataEntity" resultType="WeChatDataEntity">
+        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate, detail FROM wechatdata WHERE  deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz} limit 0,1
     </select>
 
     <select id="findAll" resultType="WeChatDataEntity">

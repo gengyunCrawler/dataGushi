@@ -28,6 +28,9 @@
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.7" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.1" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.3.1" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.3" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.3" />

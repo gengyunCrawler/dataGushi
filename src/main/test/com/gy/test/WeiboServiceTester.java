@@ -1,7 +1,10 @@
 package com.gy.test;
 
 
+import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
+import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
 import com.cloudpioneer.dataGushi.mapper.WeiboDataEntityMapper;
+import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.service.WeiboCategorysService;
 import com.cloudpioneer.dataGushi.service.WeiboDataService;
 import org.junit.Test;
@@ -29,7 +32,13 @@ public class WeiboServiceTester
     private WeiboDataEntityMapper weiboDataEntityMapper;
 
     @Autowired
+    WeChatDataEntityMapper weChatDataEntityMapper;
+
+    @Autowired
     WeiboCategorysService categorysService;
+
+    @Autowired
+    WeChatDataService weChatDataService;
     @Test
     public void testDataStore() throws Exception
     {
@@ -50,6 +59,16 @@ public class WeiboServiceTester
         System.out.println(set);
     }
 
+    @Test
+    public void testFindByWxBiz(){
+      String str=  weChatDataService.findWxDetail(2016,11,"MjM5ODI2MzgzMA==");
+        System.out.println(str);
+    }
+
+    @Test
+    public void testDataTransfer(){
+        weChatDataService.wxDetailToArticles(2016,11);
+    }
 //    @Test
 //    public void testDataF4WeChat() throws IOException, ParseException
 //    {

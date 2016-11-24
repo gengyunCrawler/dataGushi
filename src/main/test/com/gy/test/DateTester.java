@@ -2,10 +2,7 @@ package com.gy.test;
 
 import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.util.HttpUtil;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FileStatus;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -14,9 +11,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -43,15 +38,7 @@ public class DateTester
 
     @Test
     public void testConnectHDFS() throws IOException {
-        String uri = "108.108.108.15:9000";
-        Configuration config = new Configuration();
-        config.set("hadoop.home.dir","D:\\Tool\\hadoop2.6_Win_x64");
-        FileSystem fs = FileSystem.get(URI.create("/user"), config);
-        // 列出hdfs上/user/fkong/目录下的所有文件和目录
-        FileStatus[] statuses = fs.listStatus(new Path("/user"));
-        for (FileStatus status : statuses) {
-            System.out.println(status);
-        }
+
 
     }
     @Test
@@ -82,6 +69,10 @@ public class DateTester
     public void testGenerateNum(){
         double s= Math.random();
         System.out.println(s);
+    }
+
+    public void testRegx(){
+
     }
 
 }

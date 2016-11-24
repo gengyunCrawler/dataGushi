@@ -39,6 +39,16 @@ public class WeChatDataEntity implements Serializable
     private String price;
     private Date latestDate;
     private String detail;
+    //获取数据的账号名称
+    private String account;
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
 
     public int getId() {
         return id;

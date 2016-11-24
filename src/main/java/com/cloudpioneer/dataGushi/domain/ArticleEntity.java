@@ -35,6 +35,40 @@ public class ArticleEntity {
 
     private String articleId;
 
+    private String wxName;
+
+    private Date lastDate;
+
+    private String wxHeadPicture;
+
+    private String account;
+
+
+
+    public String getWxHeadPicture() {
+        return wxHeadPicture;
+    }
+
+    public void setWxHeadPicture(String wxHeadPicture) {
+        this.wxHeadPicture = wxHeadPicture;
+    }
+
+    public String getWxName() {
+        return wxName;
+    }
+
+    public void setWxName(String wxName) {
+        this.wxName = wxName;
+    }
+
+    public Date getLastDate() {
+        return lastDate;
+    }
+
+    public void setLastDate(Date lastDate) {
+        this.lastDate = lastDate;
+    }
+
     public String getOpenid() {
         return openid;
     }

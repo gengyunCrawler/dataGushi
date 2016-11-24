@@ -1,15 +1,23 @@
 package com.cloudpioneer.dataGushi.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.service.WeiboDataService;
 import com.cloudpioneer.dataGushi.util.Page;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Created by tijun on 2016/8/9.
@@ -24,10 +32,13 @@ public class DataStoryController
     @Autowired
     private WeiboDataService weiboDataService;
     @RequestMapping(value = "index")
-    public String index(int current){
+    public Object index(int current){
 
-        //weChatDataService.findIimitPage()
-        return "index";
+       ModelAndView modelAndView = new ModelAndView();
+        Map<String,String> map = new HashMap<>();
+        modelAndView.addObject("data","this is a test data");
+        modelAndView.setViewName("test");
+        return modelAndView;
     }
 
 
@@ -39,6 +50,40 @@ public class DataStoryController
      }
         Page<WeChatDataEntity> page= weChatDataService.findIimitPage(year,month,currentPage, pageSize, categoryId);
         return page;
+    }
+
+    @RequestMapping("wx/detail/{year}/{month}/{wxBiz}")
+    public Object getDetail(@PathVariable("year") Integer year, @PathVariable("month") Integer month, @PathVariable("wxBiz") String wxBiz, HttpSession session){
+        session.setAttribute("year",year);
+        session.setAttribute("month",month);
+        session.setAttribute("wxBiz",wxBiz);
+        //返回到页面
+        return  "";
+    }
+
+    @RequestMapping("wx/detail/get")
+    public Object detailGet(HttpSession session){
+        if (session ==null){
+            return "session dated";
+        }
+        Integer year = (Integer) session.getAttribute("year");
+        Integer month = (Integer) session.getAttribute("month");
+        String wxBiz = (String) session.getAttribute("wxBiz");
+        if (year == null || month == null || wxBiz == null || wxBiz.equals("")){
+            return "param in session error";
+        }
+
+        String detail =   weChatDataService.findWxDetail(year,month,wxBiz);
+        JSONObject map = new JSONObject();
+        JSONObject detailObj = JSON.parseObject(detail);
+        JSONObject items = detailObj.getJSONObject("items");
+        JSONArray articleNumPerHour = items.getJSONObject("publishtrend").getJSONArray("articleNumPerHour");
+        map.put("articleNumPerHour",articleNumPerHour);
+        JSONObject userInfo = items.getJSONObject("userInfo");
+        map.put("userInfo",userInfo);
+        JSONArray articles = items.getJSONArray("articles");
+        map.put("articles",articles);
+        return  map;
     }
 
     /**
@@ -78,10 +123,10 @@ public class DataStoryController
         return "success";
     }
 
-    @RequestMapping("data/weixin/gain")
-    public String wxDataGain(String username,String password,String type) throws Exception
+    @RequestMapping("data/weixin/gain/{username}/{password}")
+    public String wxDataGain(@PathVariable("username") String username,@PathVariable("password") String password) throws Exception
     {
-        weChatDataService.gainData(username,password,type);
+        weChatDataService.gainData(username,password,null);
         return "success";
     }
 }

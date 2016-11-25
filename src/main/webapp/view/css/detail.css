@@ -191,6 +191,7 @@
 .main-index,.main-tendency,.main-frame,.main-article{
   width: 100%;
   height: auto;
+    position: relative;
 }
 .main-index{
   overflow: hidden;
@@ -253,7 +254,6 @@
 .article-chart table tr{
   height: 35px;
   line-height: 35px;
-  border-bottom: 1px solid #E9E9E9;
 }
 .article-chart table tr:hover{
   background-color: #F2F2F2;
@@ -262,7 +262,7 @@
   border-top: 1px solid #FFF;
   border-left: 1px solid #FFF;
   border-right: 1px solid #FFF;
-
+    border-bottom: 1px solid #E9E9E9;
 }
 .article-chart table tr a{
   text-decoration: none;
@@ -288,10 +288,19 @@
   background-color: #CCD5EF;
   color: #000;
 }
+.article-dot{
+    background-color:#FF6600;
+}
 .number{
   color:#3F5362;
   font-size: 20px;
   font-weight: bold;
+}
+#pagination{
+    position: absolute;
+    bottom: 20px;
+    right:30px;
+
 }
 
 

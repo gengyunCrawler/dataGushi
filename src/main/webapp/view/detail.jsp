@@ -17,9 +17,9 @@
     <script type="text/javascript" src="<%=basePath%>view/plugin/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>view/plugin/js/jquery.nicescroll.js"></script>
     <script type="text/javascript" src="<%=basePath%>view/plugin/echarts.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>view/plugin/kkPager/kkpager.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>view/plugin/kkPager/kkpager_blue.css"></script>
-    <script type="text/javascript" src="<%=basePath%>view/plugin/kkPager/kkpager_orange.css"></script>
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>view/plugin/css/pagination.css">
+
+
     <title>微信排行</title>
 </head>
 <body>
@@ -94,11 +94,11 @@
     		<div class="article-chart">
     			<table>
     				<thead>
-    					<th>排序</th>
-    					<th>发布时间</th>
+    					<th style="width:50px;">排序</th>
+    					<th style="width:165px;">发布时间</th>
     					<th>文章标题</th>
-    					<th>阅读数</th>
-    					<th>点赞数</th>
+    					<th style="width: 65px;">阅读数</th>
+    					<th style="width: 65px;">点赞数</th>
     				</thead>
     				<tbody id="tbody-articles">
     					<tr>
@@ -127,7 +127,8 @@
     				</tbody>
 
     			</table>
-                <div id="kkpager"></div>
+                <div id="data"></div>
+                <div id="pagination"></div>
     		</div>
     	</div>
     </div>
@@ -135,6 +136,7 @@
 
 
   <script type="text/javascript" src="<%=basePath%>view/js/detail.js"></script>
+<script type="text/javascript" src="<%=basePath%>view/plugin/pagination/pagination.min.js"></script>
 
 
 

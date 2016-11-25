@@ -1,5 +1,6 @@
 package com.cloudpioneer.dataGushi.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.util.Page;
 import org.apache.ibatis.annotations.Param;
@@ -18,6 +19,8 @@ public interface WeChatDataService {
     public void gainData(String username,String password,String type)throws Exception;
 
     WeChatDataEntity findWxDetail(int year, int month,String wxBiz);
+
+    JSONObject findArticles(int year, int month, String wxBiz);
 
     void wxDetailToArticles(int year,int month);
 }

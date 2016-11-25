@@ -167,13 +167,18 @@ function bindHead(userInfo) {
     //headPicture and two
 }
 
-function bindArticleList(articles) {
+function bindArticleList(articles,number) {
     var html = ''
-
     $.each(articles,function (index,item) {
-
+        number = number+1
+        var seriaHtml=''
+        if (number<4){
+            seriaHtml='<td><span class="serial">'+number+'</span></td> '
+        }else {
+            seriaHtml= '<td><span class="serial-common">'+number+'</span></td> '
+        }
        html+=' <tr>'+
-           '<td><span class="serial-common">'+index+1+'</span></td> ' +
+           seriaHtml +
            '<td>'+item.date+'</td>'+
            '<td><a target=\"_blank\" href=\"'+item.url+'\">'+item.title+'</a></td>'+
            '<td>'+item.readNum+'</td>'+
@@ -182,6 +187,7 @@ function bindArticleList(articles) {
     })
     $("#tbody-articles").empty()
     $("#tbody-articles").append(html)
+    return number
     
 }
 
@@ -195,55 +201,31 @@ function  bindStatistic(statistics) {
 
 }
 
-function bindPageData() {
 
-        //生成分页
-        //有些参数是可选的，比如lang，若不传有默认值
-        kkpager.generPageHtml({
-            pno : pageNo,
-            //总页码
-            total : totalPage,
-            //总数据条数
-            totalRecords : totalRecords,
-            //链接前部
-            hrefFormer : 'pager_test',
-            //链接尾部
-            hrefLatter : '.html',
-            getLink : function(n){
-                return this.hrefFormer + this.hrefLatter + "?pno="+n;
-            }
-            /*
-             ,lang				: {
-             firstPageText			: '首页',
-             firstPageTipText		: '首页',
-             lastPageText			: '尾页',
-             lastPageTipText			: '尾页',
-             prePageText				: '上一页',
-             prePageTipText			: '上一页',
-             nextPageText			: '下一页',
-             nextPageTipText			: '下一页'
-             }*/
 
-            //,
-            //mode : 'click',//默认值是link，可选link或者click
-            //click : function(n){
-            //	this.selectPage(n);
-            //  return false;
-            //}
-        });
+function bindPageData(articles) {
+
+    $('#pagination').pagination({
+        dataSource: articles,
+        pageSize: 20,
+        pageNumber: 1,
+        callback: function(data, pagination) {
+       bindArticleList(data,(pagination.pageNumber-1)*pagination.pageSize)
+
+    }
+})
+
 }
 /**
  * when page loaded start to bind data
  */
 $(function () {
- var obj = ajaxDetailData()
+    var obj = ajaxDetailData()
     bindOperationIndex(obj.userInfo)
     bindHead(obj.userInfo)
     createFrame(obj.articleNumPerHour)
-
-   // bindArticleList(obj.articles)
     bindStatistic(obj.articleStatistics)
-    bindPageData
+    bindPageData(obj.articles)
 })
 
 

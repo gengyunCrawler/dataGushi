@@ -73,95 +73,9 @@ public class DataStoryController
         if (year == null || month == null || wxBiz == null || wxBiz.equals("")){
             return "param in session error";
         }
-
-        WeChatDataEntity entity =   weChatDataService.findWxDetail(year,month,wxBiz);
-        String detail = entity.getDetail();
-        JSONObject map = new JSONObject();
-        JSONObject detailObj = JSON.parseObject(detail);
-        JSONObject items = detailObj.getJSONObject("items");
-        JSONArray articleNumPerHour = items.getJSONObject("publishtrend").getJSONArray("articleNumPerHour");
-        map.put("articleNumPerHour",articleNumPerHour);
-        JSONObject userInfo = items.getJSONObject("userInfo");
-        userInfo.put("descrition",items.getString("descrition"));
-        userInfo.put("headPicture",entity.getHeadPicture());
-        map.put("userInfo",userInfo);
-        JSONArray articles = items.getJSONArray("articles");
-        map.put("articles",articles);
-        map.put("articleStatistics",dealStatistic(statisticsArticles(articles)));
-        return  map;
+        return  weChatDataService.findArticles(year,month,wxBiz);
     }
 
-    private Map<Date,Map<String,Integer>>  statisticsArticles(JSONArray articles){
-        if (articles==null||articles.size()==0){
-            return null;
-        }
-        Map<Date,Map<String,Integer>> statistics = new HashMap<>();
-        for (int i = 0;i<articles.size();i++){
-            JSONObject article = articles.getJSONObject(i);
-
-            String dateStr = article.getString("date");
-            String day=dateStr.split(" ")[0];
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            Date date=null;
-            try {
-                 date = sdf.parse(day);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
-            Integer readNum = article.getInteger("readNum");
-            Integer likeNum = article.getInteger("likeNum");
-            Integer articleNum = 1;
-
-            Map<String,Integer> articleStatistic = statistics.get(date);
-
-            if (articleStatistic!=null){
-               Integer oldReadNum = articleStatistic.get("readNum");
-               Integer oldLikeNum = articleStatistic.get("likeNum");
-               Integer oldArticleNum = articleStatistic.get("articleNum");
-               articleStatistic.put("readNum",readNum+oldReadNum);
-               articleStatistic.put("likeNum",likeNum+oldLikeNum);
-               articleStatistic.put("articleNum",articleNum+oldArticleNum);
-           }else {
-               articleStatistic = new HashMap<>();
-               articleStatistic.put("readNum",readNum);
-               articleStatistic.put("likeNum",likeNum);
-               articleStatistic.put("articleNum",articleNum);
-
-           }
-
-            statistics.put(date,articleStatistic);
-
-        }
-
-        return statistics;
-    }
-    private Map<String,Object> dealStatistic(Map<Date,Map<String,Integer>> statistic){
-        List<String> days=new ArrayList<>();
-        List<Integer> readNums = new ArrayList<>();
-        List<Integer> likeNums = new ArrayList<>();
-        List<Integer> articleNums = new ArrayList<>();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-
-       Set<Date> set =statistic.keySet();
-        List<Date> dateList= new ArrayList<>(set);
-        Collections.sort(dateList);
-
-        for (Date date:dateList){
-            sdf.format(date);
-            Map<String,Integer> statisticMap= statistic.get(date);
-            days.add(sdf.format(date));
-            readNums.add(statisticMap.get("readNum"));
-            articleNums.add(statisticMap.get("articleNum"));
-            likeNums.add(statisticMap.get("likeNum"));
-        }
-        Map<String,Object> statisMap = new HashMap<>();
-        statisMap.put("days",days);
-        statisMap.put("readNum",readNums);
-        statisMap.put("likeNum",likeNums);
-        statisMap.put("articleNum",articleNums);
-        return statisMap;
-    }
 
 
     /**

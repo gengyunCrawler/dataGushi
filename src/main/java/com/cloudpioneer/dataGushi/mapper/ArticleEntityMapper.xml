@@ -2,20 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper" >
     <insert id="insert">
-        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,lastDate,wxHeadPicture,categoryId,categoryType)
-                    VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{lastDate},#{wxHeadPicture},#{categoryId},#{categoryType})
+        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId,categoryType)
+                    VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{latestDate},#{wxHeadPicture},#{categoryId},#{categoryType})
     </insert>
 
     <update id="updateDeleteFlag">
-        UPDATE  wxArticle SET  deleteflag = 1 WHERE YEAR(lastDate)=#{year} AND MONTH(lastDate)=#{month} AND wxBiz = #{wxBiz}
+        UPDATE  wxArticle SET  deleteflag = 1 WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}
     </update>
 
     <delete id="deleteByWxBizDate">
-        DELETE FROM wxArticle WHERE YEAR(lastDate)=#{year} AND MONTH(lastDate)=#{month} AND wxBiz = #{wxBiz}
+        DELETE FROM wxArticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}
     </delete>
 
-    <select id="findByWxBizAndDate" resultType="ArticleEntity">
-        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture FROM  wxarticle
+    <select id="findByCategoryId" resultType="ArticleEntity">
+        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
+        FROM  wxarticle
+        WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  AND categoryId=#{categoryId} ORDER BY readNum DESC limit #{start},#{size}
+    </select>
+
+    <select id="findAllByPage" resultType="ArticleEntity">
+         SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
+        FROM  wxarticle
+        WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  ORDER BY readNum DESC limit #{start},#{size}
+    </select>
+
+    <select id="countByCategoryId" resultType="int">
+        SELECT  COUNT(*)
+        FROM wxarticle
+        WHERE  categoryId=#{categoryId}
+    </select>
+
+    <select id="countAll" resultType="int">
+        SELECT COUNT(*)
+        FROM wxarticle
     </select>
 
 </mapper>

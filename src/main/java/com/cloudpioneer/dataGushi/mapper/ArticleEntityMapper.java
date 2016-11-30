@@ -21,5 +21,11 @@ public interface ArticleEntityMapper {
 
     List<ArticleEntity> findByWxBizAndDate(@Param("year")int year, @Param("month")int month, @Param("wxBiz")String wxBiz);
 
-    List<ArticleEntity> findArticles(@Param("year")int year,@Param("month")int month,@Param("limit") int limit,@Param("size")int size);
+    List<ArticleEntity> findByCategoryId(@Param("year")int year,@Param("month")int month,@Param("start") int start,@Param("size")int size,@Param("categoryId")String categoryId);
+
+    List<ArticleEntity> findAllByPage(@Param("year")int year,@Param("month")int month,@Param("start") int start,@Param("size")int size);
+
+    Integer countByCategoryId(@Param("year")int year,@Param("month") int month,@Param("categoryId") String categoryId);
+
+    Integer countAll(@Param("year")int year,@Param("month")int month);
 }

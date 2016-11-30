@@ -296,8 +296,7 @@ public class WeChatServiceImpl implements WeChatDataService{
                 articleEntity.setOpenid(obj.getString("openid"));
                 articleEntity.setWxBiz(entity.getWxBiz());
                 articleEntity.setGroupName(obj.getString("groupName"));
-
-                articleEntity.setTitle(JSONObject.toJSONString(obj.get("title")));
+                articleEntity.setTitle(obj.getString("title"));
                 articleEntity.setUrl(obj.getString("url"));
                 articleEntity.setDate(obj.getDate("date"));
                 articleEntity.setPublishTime(obj.getDate("publishTime"));
@@ -311,6 +310,7 @@ public class WeChatServiceImpl implements WeChatDataService{
                 articleEntity.setWxHeadPicture(entity.getHeadPicture());
                 articleEntity.setCategoryId(entity.getCategoryId());
                 articleEntity.setCategoryType(entity.getCategoryType());
+                articleEntity.setLatestDate(entity.getLatestDate());
                 articles.add(articleEntity);
             }
         }
@@ -319,7 +319,6 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     private void batchAarticles(List<ArticleEntity> articles){
      for (ArticleEntity entity :articles){
-         System.out.println(entity.getTitle());
              articleEntityMapper.insert(entity);
 
      }

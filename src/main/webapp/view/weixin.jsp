@@ -31,8 +31,12 @@
       <div class="logo">
         <i class="iconfont icon-weixin"></i>
       </div>
-      <div class="logo-title">
+      <div class="logo-title" id="weixin">
         <span>微信</span>
+        <span>排行榜</span>
+      </div>
+      <div class="logo-title" id="article">
+        <span>文章</span>
         <span>排行榜</span>
       </div>
       <div class="title-right">
@@ -85,21 +89,7 @@
       <div class="table-wrap">
         <table>
           <thead>
-            <tr>
-              <th>序号</th>
-              <th>头像</th>
-              <th>昵称</th>
-              <th>文章数</th>
-              <th id="origin" original-title="带原创标识的文章数" >原创数<span class="questionmark">[?]</span></th>
-              <th id="readNo" original-title="30天所有文章阅读总数">阅读数<span class="questionmark">[?]</span></th>
-              <th id="likeNo"  original-title="30天所有文章点赞总数">点赞数<span class="questionmark" >[?]</span></th>
-              <th id="aveReadNo"  original-title="30天的平均阅读数">平均阅读数<span  class="questionmark">[?]</span></th>
-              <th id="aveLikeNo"  original-title="30天的平均点赞数">平均点赞数<span  class="questionmark">[?]</span></th>
-              <th id="aveTopReadNo"  original-title="30天的平均头条阅读数">平均头条阅读数<span  class="questionmark">[?]</span></th>
-              <th id="quaVector"  original-title="平均阅读数、平均点赞数和点赞率的加权">质量指数<span  class="questionmark">[?]</span></th>
-              <th id="influence"  original-title="总阅读数和总点赞数的加权">影响力<span  class="questionmark">[?]</span></th>
-              <th id="operation"  original-title="总阅读数和总点赞数的加权">操作<span  class="questionmark">[?]</span></th>
-            </tr>
+
           </thead>
           <tbody>
           </tbody>

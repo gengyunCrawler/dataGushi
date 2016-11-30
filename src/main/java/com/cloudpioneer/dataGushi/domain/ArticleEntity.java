@@ -37,7 +37,7 @@ public class ArticleEntity {
 
     private String wxName;
 
-    private Date lastDate;
+    private Date latestDate;
 
     private String wxHeadPicture;
 
@@ -86,12 +86,12 @@ public class ArticleEntity {
         this.wxName = wxName;
     }
 
-    public Date getLastDate() {
-        return lastDate;
+    public Date getLatestDate() {
+        return latestDate;
     }
 
-    public void setLastDate(Date lastDate) {
-        this.lastDate = lastDate;
+    public void setLatestDate(Date latestDate) {
+        this.latestDate = latestDate;
     }
 
     public String getOpenid() {

@@ -7,12 +7,26 @@ deviceJudge(redirectURL);
 var date=new Date()
 var year=date.getFullYear();
 var month=date.getMonth()+1
-
+var wxOrArticle = 'wx'// if value is article/wx
 //获取数据
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
         url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
+        type:"get",
+        async:false,
+        dataType:"json",
+        success:function(data){
+            wxData=data;
+        }
+
+    })
+    return wxData;
+}
+function loadArticles(currentPage,pageSize,categoryId) {
+    var wxData;
+    $.ajax({
+        url:'../wx/article/'+year+'/'+month+'/'+currentPage+"/"+pageSize+"/"+categoryId,
         type:"get",
         async:false,
         dataType:"json",
@@ -42,12 +56,30 @@ var categoryId="all";
 var totalPage;
 function bindWx(data,pageNo) {
     var html="";
+    var theadHtml =
+    '<tr>'+
+    '<th>序号</th>'+
+    '<th>头像</th>'+
+    '<th>昵称</th>'+
+    '<th>文章数</th>'+
+    '<th id="origin" original-title="带原创标识的文章数" >原创数<span class="questionmark">[?]</span></th>'+
+        '<th id="readNo" original-title="30天所有文章阅读总数">阅读数<span class="questionmark">[?]</span></th>'+
+        '<th id="likeNo"  original-title="30天所有文章点赞总数">点赞数<span class="questionmark" >[?]</span></th>'+
+        '<th id="aveReadNo"  original-title="30天的平均阅读数">平均阅读数<span  class="questionmark">[?]</span></th>'+
+        '<th id="aveLikeNo"  original-title="30天的平均点赞数">平均点赞数<span  class="questionmark">[?]</span></th>'+
+        '<th id="aveTopReadNo"  original-title="30天的平均头条阅读数">平均头条阅读数<span  class="questionmark">[?]</span></th>'+
+        '<th id="quaVector"  original-title="平均阅读数、平均点赞数和点赞率的加权">质量指数<span  class="questionmark">[?]</span></th>'+
+        '<th id="influence"  original-title="总阅读数和总点赞数的加权">影响力<span  class="questionmark">[?]</span></th>'+
+        '<th id="operation"  original-title="总阅读数和总点赞数的加权">操作<span  class="questionmark">[?]</span></th>'+
+        '</tr>'
 
-    $('tbody').empty();
+    $('thead').empty();
+    $('thead').append(theadHtml)
+    $('tbody').empty()
     $.each(data,function(index,item){
 
         var sequence=(pageNo-1)*10+index+1
-        var sequenceHtml
+        var sequenceHtml =''
         if(sequence<4){
             sequenceHtml='<tr>'+
                 '<td class="font-3"><span>'+sequence+'</span></td>'
@@ -72,16 +104,74 @@ function bindWx(data,pageNo) {
         html+=sequenceHtml
         sequence++;
     })
-    $('table').append(html)
-}function pageselectCallback(page_index, jq) {
-   var data = loadData(page_index+1,10,categoryId)
-    bindWx(data.datas,data.currentPage)
+
+    $('tbody').append(html)
+}
+
+function bindWxArticle(data,pageNo) {
+    var theadHtml =
+        '<tr>'+
+        '<th>序号</th>'+
+        '<th>标题</th>'+
+        '<th>公众号来源</th>'+
+        '<th>阅读数</th>'+
+        '<th >点赞数</th>'+
+        '<th >爆文指数</th>'+
+        '</tr>'
+
+    $('thead').empty();
+    $('thead').append(theadHtml)
+    $('tbody').empty()
+    var html=''
+    $.each(data,function(index,item){
+
+        var sequence=(pageNo-1)*10+index+1
+        var sequenceHtml =''
+        if(sequence<4){
+            sequenceHtml='<tr>'+
+                '<td class="font-3"><span>'+sequence+'</span></td>'
+        }else{
+            sequenceHtml='<tr>'+
+                '<td class="behind-7"><span>'+sequence+'</span></td>'
+        }
+        sequenceHtml+=
+            '<td>'+item.title+'</td>'+
+            '<td>'+item.wxName+'</td>'+
+            '<td>'+item.readNum+'</td>'+
+            '<td>'+item.likeNum+'</td>'+
+            '<td>'+'88'+'</td>'+
+
+            '</tr>'
+        html+=sequenceHtml
+        sequence++;
+    })
+
+    $('tbody').append(html)
+}
+
+function pageselectCallback(page_index, jq) {
+  /* var data = loadData(page_index+1,10,categoryId)
+    bindWx(data.datas,data.currentPage)*/
+    if(wxOrArticle == 'wx'){
+         data = loadData(page_index+1,10,categoryId)
+         bindWx(data.datas,data.currentPage)
+    }else if(wxOrArticle =='article'){
+        data = loadArticles(page_index+1,10,categoryId)
+        bindWxArticle(data.datas,data.currentPage)
+    }
+
 }
 //数据绑定
 function bindWxData(data,categoryId){
-
-   var data = loadData(1,10,categoryId)
-    bindWx(data.datas,data.currentPage)
+   //这里添加对微信还是微博的判断
+  var  data
+    if(wxOrArticle == 'wx'){
+         data = loadData(1,10,categoryId)
+         bindWx(data.datas,data.currentPage)
+    }else {
+        data = loadArticles(1,10,categoryId)
+        bindWxArticle(data.datas,data.currentPage)
+    }
     $("#pagination").pagination(data.totalPage, {
         num_edge_entries: 0,
         num_display_entries: 4,
@@ -215,7 +305,17 @@ $(function(){
 
     })
 
+    $("#weixin").click(function () {
+        wxOrArticle = 'wx'
+        categoryId = 'all'
+        bindWxData(1,categoryId);
+    })
 
+    $('#article').click(function () {
+        wxOrArticle = 'article'
+        categoryId = 'all'
+        bindWxData(1,categoryId);
+    })
 
 
     $.each($("li[name='num']"),function(index,item){

@@ -44,7 +44,7 @@
     </select>
 
     <select id="findAll" resultType="WeChatDataEntity">
-        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,detail FROM wechatdata
+        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,detail,categoryId,categoryType FROM wechatdata
         WHERE deleteflag=1 AND YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
 
     </select>

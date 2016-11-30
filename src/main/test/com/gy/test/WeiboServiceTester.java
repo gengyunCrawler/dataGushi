@@ -75,36 +75,13 @@ public class WeiboServiceTester
         List<ArticleEntity> list = articleEntityMapper.findByWxBizAndDate(2011,6,"MjM5MjQ1NTM0MA==");
     }
 
+    @Test
+    public void testGainArticles(){
+        List<ArticleEntity> lists = articleEntityMapper.findByCategoryId(2016,11,0,10,"5578");
+    }
 
 
-//    @Test
-//    public void testDataF4WeChat() throws IOException, ParseException
-//    {
-//        String json=HttpService.dataStoryJSON(HttpService.DATA_WEIXIN);
-//       List<WeChatDataEntity> list= DataStoryParse.parseWeChatJSONData(json);
-//        System.out.println(list);
-//    }
-//
-//    @Test
-//    public void testGetPropertiesFile() throws IOException
-//    {
-//      Properties properties= FileUtil.getResourcePropertiesByName("/account.properties");
-//    }
-//
-//    @Test
-//    public void testPage() throws Exception
-//    {
-//        Page<WeiboDataEntity> page=weiboDataService.findPageBycategoryId("186",0,4);
-//    }
-//
-//    @Test
-//    public void testGetCategory4weibo() throws Exception
-//    {
-//
-//       String s= HttpService.getDatastoryCategory(HttpService.DATA_WEIBO);
-//        List<WeiboCategorysEntity> categorysEntities=DataStoryParse.parseWeiboCategory(s);
-//        categorysService.insertByList(categorysEntities);
-//    }
+
 
       @Test
       public void testSetFalse() throws Exception

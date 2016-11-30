@@ -41,7 +41,7 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     private ExecutorService executorService = Executors.newFixedThreadPool(15);
 
-    private BlockingQueue<CloseableHttpClient> clientBlockingQueue = new LinkedBlockingQueue<>();
+    private final BlockingQueue<CloseableHttpClient> clientBlockingQueue = new LinkedBlockingQueue<>();
     @Autowired
     private ArticleEntityMapper articleEntityMapper;
 
@@ -113,13 +113,15 @@ public class WeChatServiceImpl implements WeChatDataService{
     {
         this.username = username;
         this.password = password;
-        String json=HttpService.dataStoryJSON(username,password,HttpService.DATA_WEIXIN);
+        final String json=HttpService.dataStoryJSON(username,password,HttpService.DATA_WEIXIN);
+        threadSleep2Sec();
         List<WeChatDataEntity> dataEntityList=DataStoryParse.parseWeChatJSONData(json);
 
         List<ArticleEntity> articleEntityList = null;
         if (clientBlockingQueue.size() == 0){
             for (int i=0;i<10;i++){
                 clientBlockingQueue.put(prepareClient());
+
             }
         }
         //用多线程处理此处慢的问题
@@ -141,6 +143,8 @@ public class WeChatServiceImpl implements WeChatDataService{
         for (Future future:futures){
             if (future.isDone()){//when the thread throw a exception ,this may result in a serious problem
                 i++;
+
+              //  futures.remove(future.get());
             }
         }
         if (i==futures.size()){
@@ -305,6 +309,8 @@ public class WeChatServiceImpl implements WeChatDataService{
                 articleEntity.setArticleId(obj.getString("articleId"));
                 articleEntity.setWxName(entity.getWxName());
                 articleEntity.setWxHeadPicture(entity.getHeadPicture());
+                articleEntity.setCategoryId(entity.getCategoryId());
+                articleEntity.setCategoryType(entity.getCategoryType());
                 articles.add(articleEntity);
             }
         }
@@ -358,7 +364,7 @@ public class WeChatServiceImpl implements WeChatDataService{
     }
     private void threadSleep2Sec(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

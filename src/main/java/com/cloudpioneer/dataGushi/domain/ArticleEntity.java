@@ -42,8 +42,33 @@ public class ArticleEntity {
     private String wxHeadPicture;
 
     private String account;
+    private String categoryId;
 
+    private String categoryType;
 
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public String getCategoryType() {
+        return categoryType;
+    }
+
+    public void setCategoryType(String categoryType) {
+        this.categoryType = categoryType;
+    }
 
     public String getWxHeadPicture() {
         return wxHeadPicture;

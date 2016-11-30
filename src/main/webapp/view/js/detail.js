@@ -1,5 +1,8 @@
 
 //生成运营趋势图标与文章发布时段图表
+var date=new Date()
+var year=date.getFullYear();
+var month=date.getMonth()+1
 
 function createFrame(data){
     var frameChat = echarts.init(document.getElementById('frame'))
@@ -157,7 +160,21 @@ function bindOperationIndex(userInfo) {
     $("#influenceNum").html(userInfo.influenceNum)
     
 }
-
+function changeDateForLable(){
+    var start=month-1
+    var startHtml=start+"月1日"
+    var publishDate=month+"月1日"
+    $("#monitorRangeDate").html(startHtml+"-"+publishDate)
+    $("#publishDate").html(publishDate)
+    $("#dateRange").html("(30天)"+start+"."+"1"+"-"+month+".1")
+}
+//如果当前出榜日期是八月，那么month1传入为7
+function changeDate(year1,month1){
+    year=year1
+    month=month1
+    changeDateForLable()
+    dealTypeClick($("#all"))
+}
 function bindHead(userInfo) {
     $("#wxName").html(userInfo.wxName)
     $("#descrition").html(userInfo.descrition)
@@ -177,10 +194,18 @@ function bindArticleList(articles,number) {
         }else {
             seriaHtml= '<td><span class="serial-common">'+number+'</span></td> '
         }
+
+        var titleHtml=""
+        if(item.headLineNum>0){
+           titleHtml = '<td><span class="article-tag">头条</span><a target=\"_blank\" href=\"'+item.url+'\">'+item.title+'</a></td>'
+        }
+        else {
+            titleHtml = '<td><a target=\"_blank\" href=\"'+item.url+'\">'+item.title+'</a></td>';
+        }
        html+=' <tr>'+
            seriaHtml +
            '<td>'+item.date+'</td>'+
-           '<td><a target=\"_blank\" href=\"'+item.url+'\">'+item.title+'</a></td>'+
+           titleHtml+
            '<td>'+item.readNum+'</td>'+
            '<td>'+item.likeNum+'</td>'+
            '</tr>'
@@ -216,6 +241,9 @@ function bindPageData(articles) {
 })
 
 }
+function bindDataLable(){
+
+}
 /**
  * when page loaded start to bind data
  */
@@ -226,6 +254,7 @@ $(function () {
     createFrame(obj.articleNumPerHour)
     bindStatistic(obj.articleStatistics)
     bindPageData(obj.articles)
+    changeDateForLable()
 })
 
 

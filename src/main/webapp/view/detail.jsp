@@ -65,20 +65,20 @@
     		<img src="img/qrcode.jpg" id="qrcode">
     	</div>
     	<div class="main-time">
-    		<span class="quantum">30天(10.01-10.31)</span> <span class="zidingyi">自定义</span> <span id="start-time">2016-10-01</span> - <span class="end-time">2016-10-31</span>
+    		<span class="quantum" id="dateRange">30天(10.23-11.01)</span><%-- <span class="zidingyi">自定义</span> <span id="start-time">2016-10-23</span> - <span class="end-time">2016-11-01</span>--%>
     	</div>
     	<div class="main-index">
     		<div class="column">运营指数</div>
-    		<div class="index-detail">文章数 <br> <span class="number" id="articlesNum">64</span></div>
-    		<div class="index-detail">累计阅读数 <br> <span class="number" id="totalReadNum">64</span></div>
-    		<div class="index-detail">平均阅读数 <br> <span class="number" id="avgReadNum">64</span></div>
-    		<div class="index-detail">累计点赞数 <br> <span class="number" id="totalLikeNum">64</span></div>
-    		<div class="index-detail">平均点赞数 <br> <span class="number" id="avgLikeNum">64</span></div>
-    		<div class="index-detail">平均头条阅读数 <br> <span class="number" id="avgHeadlineNum">64</span></div>
-        <div class="index-detail">原创文章数 <br> <span class="number" id="activeNum">64</span></div>
-        <div class="index-detail">质量指数 <br> <span class="number" id="qualityNum">64</span></div>
-        <div class="index-detail">影响力 <br> <span class="number" id="influenceNum">64</span></div>
-        <div class="index-detail">行业影响排名 <br> <span class="number"></span></div>
+    		<div class="index-detail">文章数 <br> <span class="number" id="articlesNum">无</span></div>
+    		<div class="index-detail">累计阅读数 <br> <span class="number" id="totalReadNum">无</span></div>
+    		<div class="index-detail">平均阅读数 <br> <span class="number" id="avgReadNum">无</span></div>
+    		<div class="index-detail">累计点赞数 <br> <span class="number" id="totalLikeNum">无</span></div>
+    		<div class="index-detail">平均点赞数 <br> <span class="number" id="avgLikeNum">无</span></div>
+    		<div class="index-detail">平均头条阅读数 <br> <span class="number" id="avgHeadlineNum">无</span></div>
+        <div class="index-detail">原创文章数 <br> <span class="number" id="activeNum">无</span></div>
+        <div class="index-detail">质量指数 <br> <span class="number" id="qualityNum">无</span></div>
+        <div class="index-detail">影响力 <br> <span class="number" id="influenceNum">无</span></div>
+        <%--<div class="index-detail">行业影响排名 <br> <span class="number"></span></div>--%>
     	</div>
 
     	<div class="main-tendency">
@@ -90,7 +90,7 @@
     		<div class="frame-chart" id="frame"></div>
     	</div>
     	<div class="main-article">
-    		<div class="column">文章(10.01-10.31)</div>
+    		<div class="column">文章(10.23-11.01)</div>
     		<div class="article-chart">
     			<table>
     				<thead>
@@ -101,29 +101,6 @@
     					<th style="width: 65px;">点赞数</th>
     				</thead>
     				<tbody id="tbody-articles">
-    					<tr>
-    						<td><span class="serial">1</span></td>
-    						<td>2016-11-18 11:28:54</td>
-    						<td><a href="#">黔西县召开森林防火工作会</a></td>
-    						<td>15</td>
-    						<td>95</td>
-    					</tr>
-    					<tr>
-    						<td><span class="serial-common">1</span></td>
-    						<td>2016-11-18 11:28:54</td>
-    						<td><a href="#">黔西县召开森林防火工作会</a></td>
-    						<td>15</td>
-    						<td>95</td>
-
-    					</tr>
-    					<tr>
-    						<td><span class="serial-common">12</span></td>
-    						<td>2016-11-18 11:28:54</td>
-    						<td><a href="#">黔西县召开森林防火工作会</a></td>
-    						<td>15</td>
-    						<td>95</td>
-
-    					</tr>
     				</tbody>
 
     			</table>

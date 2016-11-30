@@ -1,6 +1,7 @@
 package com.gy.test;
 
 
+import com.cloudpioneer.dataGushi.domain.ArticleEntity;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
@@ -14,10 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Administrator on 2016/8/9.
@@ -73,8 +71,11 @@ public class WeiboServiceTester
     }
     @Test
     public void testGetArticle(){
-        articleEntityMapper.findByWxBizAndDate(2011,6,"");
+
+        List<ArticleEntity> list = articleEntityMapper.findByWxBizAndDate(2011,6,"MjM5MjQ1NTM0MA==");
     }
+
+
 
 //    @Test
 //    public void testDataF4WeChat() throws IOException, ParseException

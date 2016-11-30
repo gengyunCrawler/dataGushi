@@ -48,4 +48,9 @@
         WHERE deleteflag=1 AND YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
 
     </select>
+
+    <select id="findById" resultType="WeChatDataEntity">
+         select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+        where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY influenceNum DESC limit #{start},#{pageSize}
+    </select>
 </mapper>

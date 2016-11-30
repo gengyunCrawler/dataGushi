@@ -52,6 +52,15 @@ public class DataStoryController
         return page;
     }
 
+    @RequestMapping("wx/data/{categoryId}/{year}/{month}")
+    public  Object wxData(Integer currentPage,Integer pageSize,@PathVariable("categoryId")String categoryId,
+                              @PathVariable("year")int year,@PathVariable("month")int month) throws Exception {
+        if(categoryId.equals("all")){
+            categoryId="";
+        }
+        Page<WeChatDataEntity> page= weChatDataService.findIimitPage(year,month,currentPage, pageSize, categoryId);
+        return page;
+    }
     @RequestMapping("wx/detail/{year}/{month}/{wxBiz}")
     public Object getDetail(@PathVariable("year") Integer year, @PathVariable("month") Integer month, @PathVariable("wxBiz") String wxBiz, HttpSession session){
         session.setAttribute("year",year);

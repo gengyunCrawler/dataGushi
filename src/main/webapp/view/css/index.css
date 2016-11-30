@@ -422,11 +422,25 @@ tbody tr {
   font-size: 12px;
   font-family: "Microsoft YaHei",sans-serif;
 }
-.pagination{
+/*.pagination{*/
 
-  width: 75.15625%;
-  padding: 0px;
-  margin: 0 auto;
-  min-width: 960px;
+  /*width: 75.15625%;*/
+  /*padding: 0px;*/
+  /*margin: 0 auto;*/
+  /*min-width: 960px;*/
+/*}*/
+
+.newPage{
+    width: 90%;
+    height:50px;
+    position: relative;
+    margin-top: 40px;
+    margin-right: 100px;
 }
-
+.newPage > .pagination{
+    position: absolute !important;
+    float: right !important;
+    right: 0px !important;
+    width: 300px !important;
+    min-width: inherit;
+}

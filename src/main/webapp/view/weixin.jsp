@@ -15,10 +15,12 @@
   <script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/deviceJudger.js"></script>
     <script type="text/javascript" src="plugin/js/jquery.nicescroll.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/weixin.js"></script>
+  <script type="text/javascript" src="plugin/jpagination/jquery.pagination.js"></script>
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+  <link rel="stylesheet" type="text/css" href="plugin/jpagination/pagination.css">
 
   <link rel="stylesheet" type="text/css" href="plugin/css/tipsy.css" />
   <script type="text/javascript" src="plugin/js/jquery.tipsy.js"></script>
@@ -63,10 +65,19 @@
         <ul id="type">
           <li class="active hand" id="all" value="all">全部</li>
           <li class="hand" style="width: 2px"> <span class="line" style="margin-top: 8px;padding: 0px;margin-left: 4px"></span></li>
-          <li id="provence" class="hand" value="5051">省市发布</li>
-          <li id="media" class="hand" value="5052">文化传媒</li>
-          <li id="trip" class="hand" value="5053">旅游</li>
-          <li id="life" class="hand" value="5054">生活资讯</li>
+          <li id="provence" class="hand" value="5578">娱乐</li>
+          <li id="media" class="hand" value="5579">文化艺术</li>
+          <li id="trip" class="hand" value="5580">生活百科</li>
+          <li id="business" class="hand" value="5581">商业/贸易</li>
+          <li class="hand" value="5583">民生服务</li>
+          <li  class="hand" value="5585">媒体</li>
+          <li  class="hand" value="5586">旅游</li>
+          <li  class="hand" value="5587">楼市地产</li>
+          <li  class="hand" value="5589">教育培训</li>
+          <li  class="hand" value="5590">健康/医疗</li>
+          <li  class="hand" value="5591">餐饮</li>
+          <li  class="hand" value="5592">财富金融</li>
+          <li  class="hand" value="5582">其他</li>
         </ul>
         <span class="arrow"><i></i></span>
 
@@ -97,16 +108,8 @@
 
 
     </div>
-      <div class="pagination">
-        <ul id="pagination">
-          <li class="hand" id="first">首页</li>
-          <li flag="1" class="hand1 active" name="num">1</li>
-          <li flag="2" class="hand1" name="num">2</li>
-          <li flag="3" class="hand1" name="num">3</li>
-          <li flag="4" class="hand1" name="num">4</li>
-          <li flag="5">...</li>
-          <li class="hand" id="next">后页</li>
-        </ul>
+      <div  id="pagination" class="newPage">
+
       </div>
     <div class="footer">
       <ul>

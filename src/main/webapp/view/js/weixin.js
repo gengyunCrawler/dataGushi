@@ -40,16 +40,11 @@ function changeDateForLable(){
 }
 var categoryId="all";
 var totalPage;
-
-//数据绑定
-function bindWxData(currentPage,categoryId){
-    var data =loadData(currentPage,10,categoryId);
+function bindWx(data,pageNo) {
     var html="";
 
-    totalPage=data.totalPage
-    var pageNo=data.currentPage
     $('tbody').empty();
-    $.each(data.datas,function(index,item){
+    $.each(data,function(index,item){
 
         var sequence=(pageNo-1)*10+index+1
         var sequenceHtml
@@ -78,6 +73,24 @@ function bindWxData(currentPage,categoryId){
         sequence++;
     })
     $('table').append(html)
+}function pageselectCallback(page_index, jq) {
+   var data = loadData(page_index+1,10,categoryId)
+    bindWx(data.datas,data.currentPage)
+}
+//数据绑定
+function bindWxData(data,categoryId){
+
+   var data = loadData(1,10,categoryId)
+    bindWx(data.datas,data.currentPage)
+    $("#pagination").pagination(data.totalPage, {
+        num_edge_entries: 0,
+        num_display_entries: 4,
+        callback: pageselectCallback,
+        items_per_page:1,
+        prev_text:'上一页',
+        next_text:'下一页'
+
+    });
 }
 
 function dealTypeClick(obj){
@@ -164,8 +177,8 @@ function addNewMonth() {
             }
         }
     }else if (recentMonth === 12) {
-            $("#dropDate span").remove();
-            $("#dropDate").append('<span id="s1" onclick="changeDate('+ (year+1) +',1)">1月1日</span>');
+        $("#dropDate span").remove();
+        $("#dropDate").append('<span id="s1" onclick="changeDate('+ (year+1) +',1)">1月1日</span>');
 
     }
 }
@@ -183,17 +196,11 @@ function firstHandle(){
 
 
 $(function(){
-    $("#dropDate").hide();
     $("#point").hide();
+    $("#dropDate").hide();
     bindWxData(1,"all");
     changeDateForLable()
-    //$("#all").click(function(){
-    //    firstHandle()
-    //    removeTypeClass()
-    //    $(this).addClass('active')
-    //    categoryId="all";
-    //    bindWxData(1,categoryId)
-    //})
+
 
     $("#type li").click(function(){
         $("#dropDate").hide();
@@ -209,45 +216,6 @@ $(function(){
     })
 
 
-
-    $("#next").click(function(){
-        $("#dropDate").hide();
-        var lastNum=parseInt($("#pagination > li:nth-child(5)").html());
-        var curentHtml=$("[class='hand1 active']");
-        var currentNum=parseInt(curentHtml.html())
-        var flagNum=parseInt($("[class='hand1 active']").attr("flag"))
-        if(totalPage<5){
-
-        }
-
-        if(totalPage-currentNum<=4-flagNum){
-            $("li[flag='5']").hide()
-            if(currentNum==totalPage){
-                alert("当前已是最后页")
-                return
-            }
-            curentHtml.next().addClass("active")
-            curentHtml.removeClass("active")
-            var page=parseInt($("[class='hand1 active']").html())
-            bindWxData(page,categoryId);
-            return
-
-        }
-
-        if(currentNum<totalPage){
-            $.each($("li[name='num']"),function(index,item){
-                var  value=$(this).text();
-                value= parseInt(value)
-                $(this).html(parseInt(value)+1)
-                var page=parseInt($("[class='hand1 active']").html())
-                bindWxData(page,categoryId);
-            });
-
-        }else{
-            alert("当前已是最后页")
-            return
-        }
-    })
 
 
     $.each($("li[name='num']"),function(index,item){
@@ -283,12 +251,12 @@ $(function(){
                 cursorwidth:'6px'
             }
         );
-     });
+    });
 
-     $("#dropDate").mouseleave(function () {
-     $("#point").hide();
-     $("#dropDate").hide();
-     });
+    $("#dropDate").mouseleave(function () {
+        $("#point").hide();
+        $("#dropDate").hide();
+    });
 
 
 
@@ -302,10 +270,6 @@ $(function(){
     });
 
     addNewMonth();
-//获取总页数
-//加载分页数
-//添加换页点击事件
+
 })
 
-// ---------------------
-//替换原有的分页方式：

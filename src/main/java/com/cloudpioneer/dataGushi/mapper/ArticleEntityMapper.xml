@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper" >
     <insert id="insert">
-        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,lastDate,wxHeadPicture)
-                    VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{lastDate},#{wxHeadPicture})
+        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,lastDate,wxHeadPicture,categoryId,categoryType)
+                    VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{lastDate},#{wxHeadPicture},#{categoryId},#{categoryType})
     </insert>
 
     <update id="updateDeleteFlag">
@@ -14,9 +14,8 @@
         DELETE FROM wxArticle WHERE YEAR(lastDate)=#{year} AND MONTH(lastDate)=#{month} AND wxBiz = #{wxBiz}
     </delete>
 
-    <select id="findByWxBizAndDate">
-        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,lastDate,wxHeadPicture) WHERE
-        YEAR(latestDate)=#{year} AND MONTH(latestDate) =#{month} AND wxBiz =#{wxBiz}
+    <select id="findByWxBizAndDate" resultType="ArticleEntity">
+        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture FROM  wxarticle
     </select>
 
 </mapper>

@@ -189,9 +189,10 @@
 }
 
 .main-index,.main-tendency,.main-frame,.main-article{
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
     position: relative;
+    margin-top: 8px;
 }
 .main-index{
   overflow: hidden;
@@ -213,6 +214,7 @@
   background-color: #C2C2C2;
   font-size: 14px;
   color: #000;
+
 
 }
 
@@ -302,8 +304,18 @@
     right:30px;
 
 }
+.pagination-element{
+  background-color: #0000cc;
+}
 
-
+.article-tag {
+  background: rgb(255, 255, 255);
+  color: rgb(160, 148, 148);
+  border: solid 1px rgb(168, 157, 157);
+  border-radius: 10px;
+  padding: 2px 7px;
+  margin: 0 5px 0 0;
+}
 
 
 

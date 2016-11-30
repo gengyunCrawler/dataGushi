@@ -20,4 +20,6 @@ public interface ArticleEntityMapper {
     void deleteByWxBizDate(@Param("year")int year,@Param("month")int month,@Param("wxBiz")String wxBiz);
 
     List<ArticleEntity> findByWxBizAndDate(@Param("year")int year, @Param("month")int month, @Param("wxBiz")String wxBiz);
+
+    List<ArticleEntity> findArticles(@Param("year")int year,@Param("month")int month,@Param("limit") int limit,@Param("size")int size);
 }

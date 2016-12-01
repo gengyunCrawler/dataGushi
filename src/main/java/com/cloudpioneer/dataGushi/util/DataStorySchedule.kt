@@ -12,6 +12,6 @@ class DataStorySchedule {
     // 每五秒执行一次
     @Scheduled(cron = "0/5 * * * * ?")
     fun TaskJob() {
-        System.out.print("job start");
+        //System.out.print("job start");
     }
 }

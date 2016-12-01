@@ -67,7 +67,7 @@ public class WeiboServiceTester
 
     @Test
     public void testDataTransfer(){
-        weChatDataService.wxDetailToArticles(2016,11);
+        weChatDataService.wxDetailToArticles(2016,12);
     }
     @Test
     public void testGetArticle(){

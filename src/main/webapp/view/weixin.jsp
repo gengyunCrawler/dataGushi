@@ -31,11 +31,11 @@
       <div class="logo">
         <i class="iconfont icon-weixin"></i>
       </div>
-      <div class="logo-title" id="weixin">
+      <div class="logo-title hand" id="weixin">
         <span>微信</span>
         <span>排行榜</span>
       </div>
-      <div class="logo-title" id="article">
+      <div class="logo-title hand" id="article">
         <span>文章</span>
         <span>排行榜</span>
       </div>

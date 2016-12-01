@@ -135,8 +135,8 @@ function bindWxArticle(data,pageNo) {
                 '<td class="behind-7"><span>'+sequence+'</span></td>'
         }
         sequenceHtml+=
-            '<td>'+item.title+'</td>'+
-            '<td>'+item.wxName+'</td>'+
+            '<td><a href="'+item.url+'" target="_blank">'+item.title+'</a></td>'+
+            '<td> <img class="wx-img" src="'+item.wxHeadPicture+'">'+item.wxName+'</td>'+
             '<td>'+item.readNum+'</td>'+
             '<td>'+item.likeNum+'</td>'+
             '<td>'+'88'+'</td>'+
@@ -290,7 +290,8 @@ $(function(){
     $("#dropDate").hide();
     bindWxData(1,"all");
     changeDateForLable()
-
+    $("#weixin").css('color','#fff')
+    $('#article').css('color','#ADADAD')
 
     $("#type li").click(function(){
         $("#dropDate").hide();
@@ -309,12 +310,20 @@ $(function(){
         wxOrArticle = 'wx'
         categoryId = 'all'
         bindWxData(1,categoryId);
+        $(this).removeClass('hand')
+        $("#article").addClass("hand")
+        $(this).css('color','#fff')
+        $('#article').css('color','#ADADAD')
     })
 
     $('#article').click(function () {
         wxOrArticle = 'article'
         categoryId = 'all'
         bindWxData(1,categoryId);
+        $(this).removeClass('hand')
+        $('#weixin').addClass('hand')
+        $(this).css('color','#fff')
+        $("#weixin").css('color',"#ADADAD")
     })
 
 

@@ -444,3 +444,15 @@ tbody tr {
     width: 300px !important;
     min-width: inherit;
 }
+.wx-img{
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+a:link,a:visited{
+  text-decoration:none;  /*超链接无下划线*/
+}
+a:hover{
+  text-decoration:underline;  /*鼠标放上去有下划线*/
+}

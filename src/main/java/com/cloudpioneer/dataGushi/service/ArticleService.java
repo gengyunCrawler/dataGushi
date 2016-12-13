@@ -17,4 +17,6 @@ public interface ArticleService {
 
     Page<ArticleEntity> findAll(Integer year, Integer month, Integer pageNo, Integer size);
 
+    void transformArticlesToContents();
+
 }

@@ -12,6 +12,7 @@ import com.cloudpioneer.dataGushi.service.WeiboDataService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -42,7 +43,7 @@ public class WeiboServiceTester
     @Test
     public void testDataStore() throws Exception
     {
-        weiboDataService.gainData4DB();
+        weiboDataService.gainData4DB("","");
     }
 
     @Test
@@ -63,11 +64,15 @@ public class WeiboServiceTester
     public void testFindByWxBiz(){
      // String str=  weChatDataService.findWxDetail(2016,11,"MjM5ODI2MzgzMA==");
      //   System.out.println(str);
+        List<String> list =null;
+        for (String s:list){
+            System.out.println("tttt");
+        }
     }
 
     @Test
     public void testDataTransfer(){
-        weChatDataService.wxDetailToArticles(2016,12);
+      //  weChatDataService.wxDetailToArticles(2016,12);
     }
     @Test
     public void testGetArticle(){
@@ -81,7 +86,13 @@ public class WeiboServiceTester
     }
 
 
-
+    @Test
+    public void testGetDat(){
+        Date latestDate = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(latestDate);
+        System.out.println("year: "+ calendar.get(Calendar.YEAR)+"---  Month: " + (calendar.get(Calendar.MONTH)+1));
+    }
 
       @Test
       public void testSetFalse() throws Exception
@@ -91,8 +102,6 @@ public class WeiboServiceTester
           System.out.println(currentDate);
           cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), 1, 0, 0, 0);
           Date startDate=cal.getTime();
-
-
           weiboDataEntityMapper.setDeleteFlagByMonth(startDate, currentDate,"true");
 
       }

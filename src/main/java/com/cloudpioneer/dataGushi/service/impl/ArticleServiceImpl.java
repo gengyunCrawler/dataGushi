@@ -1,6 +1,8 @@
 package com.cloudpioneer.dataGushi.service.impl;
 
 import com.cloudpioneer.dataGushi.domain.ArticleEntity;
+import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
+import com.cloudpioneer.dataGushi.domain.WxArticle;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.service.ArticleService;
 import com.cloudpioneer.dataGushi.util.Page;
@@ -57,4 +59,18 @@ public class ArticleServiceImpl implements ArticleService {
         page.setTotalRecord(totalRecourd);
         return page;
     }
+
+    @Override
+    public void transformArticlesToContents() {
+        /**
+         * 1.找出未下载的文章，根据文章title来判断文章是否相同（数据库中完成）
+         * 2.下载文章
+         * 3.解析文章
+         * 4.存储文章
+         */
+
+    }
+//    private WxArticle singleArtcleTransform(WeChatDataEntity entity){
+//
+//    }
 }

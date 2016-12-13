@@ -99,7 +99,7 @@ function bindWx(data,pageNo) {
             '<td>'+item.avgHeadlineNum+'</td>'+
             '<td>'+item.qualityNum+'</td>'+
             '<td>'+item.influenceNum+'</td>'+
-            '<td><a href=\'../wx/detail/'+year+'/'+month+'/'+item.wxBiz+'\'>查看详情</a></td>'+
+            '<td><a target=\'_blank\' href=\'../wx/detail/'+year+'/'+month+'/'+item.wxBiz+'\'>查看详情</a></td>'+
             '</tr>'
         html+=sequenceHtml
         sequence++;
@@ -124,7 +124,7 @@ function bindWxArticle(data,pageNo) {
     $('tbody').empty()
     var html=''
     $.each(data,function(index,item){
-
+        var hotNum =  item.readNum + item.likeNum
         var sequence=(pageNo-1)*10+index+1
         var sequenceHtml =''
         if(sequence<4){
@@ -139,7 +139,7 @@ function bindWxArticle(data,pageNo) {
             '<td> <img class="wx-img" src="'+item.wxHeadPicture+'">'+item.wxName+'</td>'+
             '<td>'+item.readNum+'</td>'+
             '<td>'+item.likeNum+'</td>'+
-            '<td>'+'88'+'</td>'+
+            '<td>'+hotNum+'</td>'+
 
             '</tr>'
         html+=sequenceHtml

@@ -46,6 +46,16 @@ public class ArticleEntity {
 
     private String categoryType;
 
+    private int deleteFlag;
+
+    public int getDeleteFlag() {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(int deleteFlag) {
+        this.deleteFlag = deleteFlag;
+    }
+
     public String getAccount() {
         return account;
     }

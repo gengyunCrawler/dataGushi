@@ -50,7 +50,7 @@
         <div class="monitor-result">
           <span>出榜日期</span>
           <span id="publishDate">8月10日</span>
-          <div id="skiptowb" class="skipTag"><span>去微博排行榜</span></div>
+          <%--<div id="skiptowb" class="skipTag"><span>去微博排行榜</span></div>--%>
           <span><i id="selectDate" class="iconfont icon-xiasanjiao">
               <div class="date-wrapper">
                 <div class="point" id="point"></div>
@@ -64,24 +64,24 @@
     </div>
     <div class="main">
       <div class="category">
-        <%--<span class="active hand" id="all">全部</span>--%>
-        <%--<span class="line"></span>--%>
+
+
         <ul id="type">
           <li class="active hand" id="all" value="all">全部</li>
           <li class="hand" style="width: 2px"> <span class="line" style="margin-top: 8px;padding: 0px;margin-left: 4px"></span></li>
-          <li id="provence" class="hand" value="5578">娱乐</li>
-          <li id="media" class="hand" value="5579">文化艺术</li>
-          <li id="trip" class="hand" value="5580">生活百科</li>
+          <li class="hand" value="5585">媒体/新闻</li>
+          <li class="hand" value="5590">健康/医疗</li>
+          <li class="hand" value="5589">教育培训</li>
+          <li class="hand" value="5586">旅游</li>
+          <li class="hand" value="5583">本地生活</li>
+          <li class="hand" value="5591">餐饮</li>
+          <li class="hand" value="5587">楼市地产</li>
           <li id="business" class="hand" value="5581">商业/贸易</li>
-          <li class="hand" value="5583">民生服务</li>
-          <li  class="hand" value="5585">媒体</li>
-          <li  class="hand" value="5586">旅游</li>
-          <li  class="hand" value="5587">楼市地产</li>
-          <li  class="hand" value="5589">教育培训</li>
-          <li  class="hand" value="5590">健康/医疗</li>
-          <li  class="hand" value="5591">餐饮</li>
-          <li  class="hand" value="5592">财富金融</li>
-          <li  class="hand" value="5582">其他</li>
+          <li class="hand" value="5592">财富金融</li>
+          <li id="media" class="hand" value="5579">文化艺术</li>
+          <li id="provence" class="hand" value="5578">娱乐</li>
+          <li id="trip" class="hand" value="5580">生活百科</li>
+          <li class="hand" value="5582">其他</li>
         </ul>
         <span class="arrow"><i></i></span>
 

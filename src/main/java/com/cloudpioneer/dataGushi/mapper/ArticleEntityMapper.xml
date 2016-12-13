@@ -16,25 +16,29 @@
 
     <select id="findByCategoryId" resultType="ArticleEntity">
         SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
-        FROM  wxarticle
-        WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  AND categoryId=#{categoryId} ORDER BY readNum DESC limit #{start},#{size}
+          FROM  wxarticle
+          WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  AND categoryId=#{categoryId} ORDER BY readNum DESC limit #{start},#{size}
     </select>
 
     <select id="findAllByPage" resultType="ArticleEntity">
          SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
-        FROM  wxarticle
-        WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  ORDER BY readNum DESC limit #{start},#{size}
+          FROM  wxarticle
+          WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  ORDER BY readNum DESC limit #{start},#{size}
     </select>
 
     <select id="countByCategoryId" resultType="int">
         SELECT  COUNT(*)
-        FROM wxarticle
-        WHERE  categoryId=#{categoryId}
+          FROM wxarticle
+          WHERE  categoryId=#{categoryId}
     </select>
 
     <select id="countAll" resultType="int">
         SELECT COUNT(*)
-        FROM wxarticle
+          FROM wxarticle
     </select>
 
+    <select id="">
+       SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
+          FROM wxarticle LEFT JOIN article ON wxarticle.title=article.title WHERE month(latestDate)=12 AND year(latestDate)=2016 AND article.title is null
+    </select>
 </mapper>

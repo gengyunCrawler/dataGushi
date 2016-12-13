@@ -1,6 +1,7 @@
 package com.cloudpioneer.dataGushi.mapper;
 
 import com.cloudpioneer.dataGushi.domain.ArticleEntity;
+import com.cloudpioneer.dataGushi.domain.WxArticle;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -28,4 +29,6 @@ public interface ArticleEntityMapper {
     Integer countByCategoryId(@Param("year")int year,@Param("month") int month,@Param("categoryId") String categoryId);
 
     Integer countAll(@Param("year")int year,@Param("month")int month);
+
+  //  List<WxArticle> findByPage("")
 }

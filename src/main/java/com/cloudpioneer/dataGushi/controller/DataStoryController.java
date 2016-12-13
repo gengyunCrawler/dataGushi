@@ -117,10 +117,10 @@ public class DataStoryController
        return new ModelAndView(type);
     }
 
-    @RequestMapping("data/weibo/gain")
-    public String wbDataGain() throws Exception
+    @RequestMapping("data/weibo/gain/{username}/{password}")
+    public String wbDataGain(@PathVariable  String username, @PathVariable String password) throws Exception
     {
-            weiboDataService.gainData4DB();
+            weiboDataService.gainData4DB(username,password);
         return "success";
     }
 

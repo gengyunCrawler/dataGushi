@@ -72,11 +72,11 @@ public class WeiboServiceImpl implements WeiboDataService
     }
 
     @Override
-    public void gainData4DB() throws Exception
+    public void gainData4DB(String username,String password) throws Exception
     {
 
 
-        String json=HttpService.dataStoryJSON(null,null,HttpService.DATA_WEIBO);
+        String json=HttpService.dataStoryJSON(username,password,HttpService.DATA_WEIBO);
         List<WeiboDataEntity> weiboDataEntities=DataStoryParse.parseJson4Weibo(json);
 
         if (weiboDataEntities!=null&&weiboDataEntities.size()>0){

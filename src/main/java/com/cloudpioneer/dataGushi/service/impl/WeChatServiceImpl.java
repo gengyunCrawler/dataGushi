@@ -11,6 +11,7 @@ import com.cloudpioneer.dataGushi.parse.DataStoryParse;
 import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.util.Page;
+import com.sun.xml.internal.ws.api.server.SDDocument;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.ibatis.annotations.Param;
@@ -72,6 +73,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             Date currentDate = weChatDataEntityList.get(0).getLatestDate();
             weChatDataEntityMapper.updateDate(beginMonth,currentDate,username);
             for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
+                this.wxDetailToArticles(weChatDataEntity);
                 weChatDataEntityMapper.insert(weChatDataEntity);
             }
         }
@@ -267,13 +269,16 @@ public class WeChatServiceImpl implements WeChatDataService{
 
 
     @Override
-    public void wxDetailToArticles(int year, int month) {
-        List<WeChatDataEntity> entities = weChatDataEntityMapper.findAll(year,month);
-        //before here deleteAll articles in table article"👇"
-        for (WeChatDataEntity entity : entities){
+    public void wxDetailToArticles(WeChatDataEntity entity) {
              List<ArticleEntity> articles = this.parseDetail(entity);
+             Date latestDate = entity.getLatestDate();
+           Calendar calendar = Calendar.getInstance();
+           calendar.setTime(latestDate);
+            //delete wxartices by wxBiz
+            if (articles!=null &&articles.size()>0){
+                articleEntityMapper.deleteByWxBizDate(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH)+1,entity.getWxBiz());
+            }
              this.batchAarticles(articles);
-        }
 
     }
 
@@ -363,7 +368,7 @@ public class WeChatServiceImpl implements WeChatDataService{
     }
     private void threadSleep2Sec(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

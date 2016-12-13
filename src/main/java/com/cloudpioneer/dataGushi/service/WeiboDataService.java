@@ -17,7 +17,7 @@ public interface WeiboDataService
 
     Page<WeiboDataEntity> findPageBycategoryId(String categoryId, int pageNo, int pageSize,int year,int month) throws Exception;
 
-    public void gainData4DB() throws Exception;
+    public void gainData4DB(String username,String password) throws Exception;
 
     Set<Map<String,String>> dateList()throws Exception;
 

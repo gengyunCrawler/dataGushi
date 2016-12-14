@@ -19,4 +19,8 @@ public interface ArticleService {
 
     void transformArticlesToContents();
 
+    List<String> findUrlByMonth(int year,int month);
+
+    Page<String> findUrlByPage(int year,int month,int pageNo,int pageSize);
+
 }

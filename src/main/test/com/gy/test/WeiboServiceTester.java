@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import us.codecraft.webmagic.downloader.HttpClientDownloader;
+import us.codecraft.webmagic.selector.Html;
 
 import java.util.*;
 
@@ -71,8 +73,20 @@ public class WeiboServiceTester
     }
 
     @Test
+    public void testDownloader(){
+        HttpClientDownloader downloader = new HttpClientDownloader();
+        Html html = downloader.download("http://mp.weixin.qq.com/s?__biz=MjM5NDUwMzY2MA==&mid=2650410704&idx=8&sn=82a256e14f6add8616a22f60746e8701");
+        System.out.println(html.xpath("//div[@id='js_content']"));
+    }
+    @Test
+    public void testInsertArticle(){
+        ArticleEntity articleEntity = new ArticleEntity();
+        articleEntity.setContent("dfdfdfd");
+        articleEntityMapper.insert(articleEntity);
+    }
+    @Test
     public void testDataTransfer(){
-      //  weChatDataService.wxDetailToArticles(2016,12);
+        weChatDataService.exDetailToArticles();
     }
     @Test
     public void testGetArticle(){
@@ -85,6 +99,17 @@ public class WeiboServiceTester
         List<ArticleEntity> lists = articleEntityMapper.findByCategoryId(2016,11,0,10,"5578");
     }
 
+    @Test
+    public void testGetWxData(){
+        ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
+        try {
+          //  String datastr = this.currentTime();
+           // System.out.println(datastr+"  start to gain wechat data from datastory");
+            weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void testGetDat(){
@@ -97,15 +122,21 @@ public class WeiboServiceTester
       @Test
       public void testSetFalse() throws Exception
       {
-          Calendar cal=Calendar.getInstance();
-          Date currentDate=cal.getTime();
-          System.out.println(currentDate);
-          cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), 1, 0, 0, 0);
-          Date startDate=cal.getTime();
-          weiboDataEntityMapper.setDeleteFlagByMonth(startDate, currentDate,"true");
+//          Calendar cal=Calendar.getInstance();
+//          Date currentDate=cal.getTime();
+//          System.out.println(currentDate);
+//          cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), 1, 0, 0, 0);
+//          Date startDate=cal.getTime();
+//          weiboDataEntityMapper.setDeleteFlagByMonth(startDate, currentDate,"true");
 
       }
 
-
+      @Test
+       public void testDate(){
+           int a= 6;
+          int c =a;
+          a = 4;
+          System.out.println(c);
+       }
 
 }

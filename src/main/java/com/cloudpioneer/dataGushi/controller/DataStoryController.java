@@ -130,4 +130,14 @@ public class DataStoryController
         weChatDataService.gainData(username,password,null);
         return "success";
     }
+    @RequestMapping("data/weixin/dealArticle")
+    public void dealWxArticle(){
+        weChatDataService.exDetailToArticles();
+    }
+    @RequestMapping("data/weixin/gain/All")
+    public Object gainAllData() throws Exception {
+        ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
+        weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),null);
+        return "success";
+    }
 }

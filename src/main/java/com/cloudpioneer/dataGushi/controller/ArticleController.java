@@ -23,4 +23,15 @@ public class ArticleController {
       }
        return articleService.findAllByCategoryId(year,month,categoryId,pageNo,size);
     }
+
+    @RequestMapping("wx/artilceUrls/{year}/{month}")
+    public Object getUrlByMonth(@PathVariable("year")int year,@PathVariable("month")Integer month){
+      return   articleService.findUrlByMonth(year,month);
+    }
+    @RequestMapping("wx/artilceUrls/page/{year}/{month}/{pageNo}/{size}")
+    public Object getUrlByPage(@PathVariable Integer year,@PathVariable Integer month,@PathVariable Integer pageNo,@PathVariable Integer size){
+     return   articleService.findUrlByPage(year,month,pageNo,size);
+    }
+
+
 }

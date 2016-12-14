@@ -23,4 +23,6 @@ public interface WeChatDataService {
     JSONObject findArticles(int year, int month, String wxBiz);
 
     void wxDetailToArticles(WeChatDataEntity entity);
+
+    void exDetailToArticles();
 }

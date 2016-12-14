@@ -2,7 +2,6 @@ package com.cloudpioneer.dataGushi.parse;
 
 import static com.google.common.base.Preconditions.*;
 
-import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
 import us.codecraft.webmagic.selector.Html;
 

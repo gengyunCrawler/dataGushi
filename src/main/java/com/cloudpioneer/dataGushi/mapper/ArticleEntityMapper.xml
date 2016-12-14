@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper" >
     <insert id="insert">
-        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId,categoryType)
-                    VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{latestDate},#{wxHeadPicture},#{categoryId},#{categoryType})
+        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId,categoryType,content)
+                    VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{latestDate},#{wxHeadPicture},#{categoryId},#{categoryType},#{content})
     </insert>
 
     <update id="updateDeleteFlag">
@@ -40,5 +40,16 @@
     <select id="">
        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
           FROM wxarticle LEFT JOIN article ON wxarticle.title=article.title WHERE month(latestDate)=12 AND year(latestDate)=2016 AND article.title is null
+    </select>
+    <select id="findUrlByAll" resultType="string">
+        SELECT  url FROM  wxarticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
+    </select>
+
+    <select id="findUrlByPage" resultType="string">
+         SELECT  url FROM  wxarticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} limit #{start},#{size}
+    </select>
+
+    <select id="countByMonth" resultType="string">
+        SELECT COUNT(*) FROM  wxarticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
     </select>
 </mapper>

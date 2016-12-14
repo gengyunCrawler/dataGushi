@@ -8,16 +8,24 @@ import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
 import com.cloudpioneer.dataGushi.parse.DataStoryParse;
+import com.cloudpioneer.dataGushi.parse.WxArticleParser;
 import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
+import com.cloudpioneer.dataGushi.util.HttpUtil;
 import com.cloudpioneer.dataGushi.util.Page;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 import com.sun.xml.internal.ws.api.server.SDDocument;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import us.codecraft.webmagic.downloader.HttpClientDownloader;
+import us.codecraft.webmagic.selector.Html;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -40,8 +48,11 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     private  String password = "";
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(15);
+    private final ExecutorService executorService = Executors.newFixedThreadPool(15);
 
+    private final ExecutorService articleExecutorService = Executors.newFixedThreadPool(15);
+
+    private final HttpClientDownloader downloader = new HttpClientDownloader();
     private final BlockingQueue<CloseableHttpClient> clientBlockingQueue = new LinkedBlockingQueue<>();
     @Autowired
     private ArticleEntityMapper articleEntityMapper;
@@ -71,9 +82,10 @@ public class WeChatServiceImpl implements WeChatDataService{
             Date beginMonth = calendar.getTime();
             //获得插入数据时的时间
             Date currentDate = weChatDataEntityList.get(0).getLatestDate();
+
             weChatDataEntityMapper.updateDate(beginMonth,currentDate,username);
             for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
-                this.wxDetailToArticles(weChatDataEntity);
+              //  this.wxDetailToArticles(weChatDataEntity);
                 weChatDataEntityMapper.insert(weChatDataEntity);
             }
         }
@@ -94,7 +106,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             resultList = weChatDataEntityMapper.findIimitPage(year, month, start, pageSize);
         }
         else{
-            countRecord=weChatDataEntityMapper.countByCategory(categoryId);
+            countRecord=weChatDataEntityMapper.countByCategory(categoryId,year,month);
             resultList=weChatDataEntityMapper.findByCategoryId(year, month,start, pageSize,categoryId);
         }
         countPage = ((countRecord % pageSize) != 0 ? (countRecord / pageSize + 1) : (countRecord / pageSize));
@@ -271,17 +283,39 @@ public class WeChatServiceImpl implements WeChatDataService{
     @Override
     public void wxDetailToArticles(WeChatDataEntity entity) {
              List<ArticleEntity> articles = this.parseDetail(entity);
-             Date latestDate = entity.getLatestDate();
+           Date latestDate = entity.getLatestDate();
            Calendar calendar = Calendar.getInstance();
            calendar.setTime(latestDate);
             //delete wxartices by wxBiz
             if (articles!=null &&articles.size()>0){
                 articleEntityMapper.deleteByWxBizDate(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH)+1,entity.getWxBiz());
             }
+
              this.batchAarticles(articles);
 
     }
-
+    @Override
+    public void exDetailToArticles(){
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH)+1;
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        List<WeChatDataEntity> entities = weChatDataEntityMapper.findAll(year,month);
+        boolean isNew=false;
+        if (entities!=null&&entities.size()>0){
+            WeChatDataEntity entity =  entities.get(0);
+            calendar.setTime(entity.getLatestDate());
+            int oldDay =calendar.get(Calendar.DAY_OF_MONTH);
+            isNew = day == oldDay ? true:false;
+        }
+        if (isNew){
+            for(WeChatDataEntity entity : entities){
+                if (entity!=null){
+                    this.wxDetailToArticles(entity);
+                }
+            }
+        }
+    }
     /**
      * 将详细信息转换为具体的文章列表
      * @param entity
@@ -316,7 +350,9 @@ public class WeChatServiceImpl implements WeChatDataService{
                 articleEntity.setCategoryId(entity.getCategoryId());
                 articleEntity.setCategoryType(entity.getCategoryType());
                 articleEntity.setLatestDate(entity.getLatestDate());
+
                 articles.add(articleEntity);
+
             }
         }
         return articles;
@@ -324,7 +360,12 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     private void batchAarticles(List<ArticleEntity> articles){
      for (ArticleEntity entity :articles){
+         try {
              articleEntityMapper.insert(entity);
+         }catch (Exception e){
+             System.out.println(e.getMessage());
+         }
+
 
      }
     }
@@ -366,6 +407,7 @@ public class WeChatServiceImpl implements WeChatDataService{
 
 
     }
+
     private void threadSleep2Sec(){
         try {
             Thread.sleep(5000);
@@ -373,5 +415,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             e.printStackTrace();
         }
     }
+
+
 
 }

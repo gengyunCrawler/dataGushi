@@ -30,5 +30,8 @@ public interface ArticleEntityMapper {
 
     Integer countAll(@Param("year")int year,@Param("month")int month);
 
+    List<String> findUrlByAll(@Param("year")int year,@Param("month")int month);
+
+    List<String> findUrlByPage(@Param("year")int year,@Param("month")int month,@Param("start") int start,@Param("size") int size );
   //  List<WxArticle> findByPage("")
 }

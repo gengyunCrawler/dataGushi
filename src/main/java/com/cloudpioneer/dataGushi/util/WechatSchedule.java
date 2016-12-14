@@ -18,7 +18,7 @@ public class WechatSchedule {
     @Autowired
     WeChatDataService  weChatDataService;
 
-    @Scheduled(cron = "0 15 5 ? * *")
+    @Scheduled(cron = "0 15 6 ? * *")
   //  @Scheduled(cron = "2 * * * * *")
     public void gainWxData(){
         ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
@@ -30,11 +30,12 @@ public class WechatSchedule {
             e.printStackTrace();
         }
     }
-    @Scheduled(cron = "0 15 6 ? * *")
+    @Scheduled(cron = "0 15 7 ? * *")
     public void parseArticle(){
         try {
           String datastr = this.currentTime();
             System.out.println(datastr+"  start to refresh weChat article");
+            weChatDataService.exDetailToArticles();
         } catch (Exception e) {
 
             e.printStackTrace();

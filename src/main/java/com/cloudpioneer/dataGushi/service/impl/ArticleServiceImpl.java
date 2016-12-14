@@ -1,14 +1,17 @@
 package com.cloudpioneer.dataGushi.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cloudpioneer.dataGushi.domain.ArticleEntity;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.domain.WxArticle;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.service.ArticleService;
 import com.cloudpioneer.dataGushi.util.Page;
+import com.google.common.base.Preconditions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -70,7 +73,52 @@ public class ArticleServiceImpl implements ArticleService {
          */
 
     }
-//    private WxArticle singleArtcleTransform(WeChatDataEntity entity){
-//
-//    }
+
+    @Override
+    public List<String> findUrlByMonth(int year, int month) {
+        return articleMapper.findUrlByAll(year,month);
+    }
+
+    @Override
+    public Page<String> findUrlByPage(int year, int month, int pageNo, int pageSize) {
+//        if (year < 1 || month < 1 || pageNo<1||pageSize<1){
+//            throw new IllegalArgumentException("")
+//        }
+
+        Page<String> page = new Page<>();
+        int start = (pageNo-1) * pageSize;
+        int total = articleMapper.countAll(year,month);
+        int totalPage = (total+1)/pageSize;
+        List<String> urls = articleMapper.findUrlByPage(year,month,start,pageSize);
+        page.setPageSize(pageSize);
+        page.setTotalRecord(total);
+        page.setCurrentPage(pageNo);
+        page.setDatas(urls);
+        page.setTotalPage(totalPage);
+        return page;
+    }
+
+    /**
+     * 下载文章原文并解析
+     */
+    private WxArticle singleArtcleTransform(ArticleEntity entity){
+        if (entity==null){
+            throw  new IllegalArgumentException("entity cannot be null");
+        }
+        WxArticle wxArticle = new WxArticle();
+        List<String> tags = new ArrayList<>();
+        if (entity.getIsOriginal()>0){
+            tags.add("原创");
+        }
+        if (entity.getHeadLineNum()>0){
+            tags.add("头条");
+        }
+        wxArticle.setTags(JSONObject.toJSONString(tags));
+        wxArticle.setWxBiz(entity.getWxBiz());
+        wxArticle.setTitle(entity.getTitle());
+
+
+
+        return null;
+    }
 }

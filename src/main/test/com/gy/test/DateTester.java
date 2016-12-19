@@ -71,8 +71,9 @@ public class DateTester
         System.out.println(s);
     }
 
+    @Test
     public void testRegx(){
-
+        System.out.println(Math.log10(1));
     }
 
 }

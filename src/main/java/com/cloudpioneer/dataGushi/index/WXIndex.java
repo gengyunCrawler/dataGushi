@@ -4,7 +4,7 @@ package com.cloudpioneer.dataGushi.index;
  * Created by Tijun on 2016/12/19.
  * 基数
  */
-public abstract class WXBase {
+public abstract class WXIndex {
 
     /**发文总基数*/
     private static final int DB = 30<<3;
@@ -34,11 +34,11 @@ public abstract class WXBase {
     private static final float WLE = 0.50F;
     /**
      *
-     * @param dayNum 每天发文总数
+     * @param articlesNum 每天发文总数
      * @return
      */
-    private static final double D1(int dayNum){
-        return WXBase.CALLOG(dayNum,WXBase.DB);
+    private static final double D1(int articlesNum){
+        return WXIndex.CALLOG(articlesNum, WXIndex.DB);
     }
 
     /**
@@ -47,7 +47,7 @@ public abstract class WXBase {
      * @return
      */
     private static final double ED1(int everageDayNum){
-        return WXBase.CALLOG(everageDayNum,EDB);
+        return WXIndex.CALLOG(everageDayNum,EDB);
     }
 
     /**
@@ -56,18 +56,18 @@ public abstract class WXBase {
      * @return
      */
     private static final double R1(int readNum){
-        return WXBase.CALLOG(readNum,RB);
+        return WXIndex.CALLOG(readNum,RB);
     }
 
     private static final double ER1(int evgReadNum){
-        return WXBase.CALLOG(evgReadNum,ERB);
+        return WXIndex.CALLOG(evgReadNum,ERB);
     }
 
     private static final double L1(int likeNum){
-        return WXBase.CALLOG(likeNum,LB);
+        return WXIndex.CALLOG(likeNum,LB);
     }
     private static final double EL1(int evgLikeNum){
-        return WXBase.CALLOG(evgLikeNum,ELB);
+        return WXIndex.CALLOG(evgLikeNum,ELB);
     }
     /**
      *
@@ -82,12 +82,12 @@ public abstract class WXBase {
 
     /**
      *
-     * @param readNum
+     * @param dayNum
      * @param evgPublishNum
      * @return
      */
-    public static double DI(int readNum,int evgPublishNum){
-       return WDA*D1(readNum) + WDE * evgPublishNum;
+    public static double DI(int dayNum,int evgPublishNum){
+       return WDA*D1(dayNum) + WDE * evgPublishNum;
     }
 
     public static double RI(int readNum,int evgReadNum){

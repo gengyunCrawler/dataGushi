@@ -5,30 +5,21 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cloudpioneer.dataGushi.domain.ArticleEntity;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
+import com.cloudpioneer.dataGushi.index.WXIndex;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
 import com.cloudpioneer.dataGushi.parse.DataStoryParse;
-import com.cloudpioneer.dataGushi.parse.WxArticleParser;
 import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
-import com.cloudpioneer.dataGushi.util.HttpUtil;
 import com.cloudpioneer.dataGushi.util.Page;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
-import com.sun.xml.internal.ws.api.server.SDDocument;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import us.codecraft.webmagic.downloader.HttpClientDownloader;
-import us.codecraft.webmagic.selector.Html;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -116,10 +107,26 @@ public class WeChatServiceImpl implements WeChatDataService{
         resultPage.setCurrentPage(newPage);
         resultPage.setPageSize(pageSize);
         resultPage.setTotalPage(countPage);
-        resultPage.setDatas(resultList);
+        resultPage.setDatas(calInex(resultList));
 
 
         return resultPage;
+    }
+    private List<WeChatDataEntity> calInex(List<WeChatDataEntity> entitys){
+        List<WeChatDataEntity> entitieList = null;
+        if (entitys!=null){
+            entitieList = new ArrayList<>();
+            for (WeChatDataEntity entity:entitys){
+                double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
+                double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
+                double LI = WXIndex.LI(entity.getTotalLikeNum(),entity.getAvgLikeNum());
+                entity.setDI(DI);
+                entity.setRI(RI);
+                entity.setLI(LI);
+                entitieList.add(entity);
+            }
+        }
+       return entitieList;
     }
 
     @Override

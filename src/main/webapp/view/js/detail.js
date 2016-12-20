@@ -156,7 +156,7 @@ function bindOperationIndex(userInfo) {
     $("#avgLikeNum").html(userInfo.avgLikeNum)
     $("#avgHeadlineNum").html(userInfo.avgHeadlineNum)
     $("#activeNum").html(userInfo.activeNum)
-    $("#qualityNum").html(userInfo.qualityNum)
+    $("#qualityNum").html(userInfo.li)
     $("#influenceNum").html(userInfo.influenceNum)
     
 }

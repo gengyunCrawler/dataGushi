@@ -316,6 +316,12 @@ public class WeChatServiceImpl implements WeChatDataService{
             }
         }
     }
+
+    @Override
+    public void deleteNoGovType() {
+        weChatDataEntityMapper.deleteNoGov();
+    }
+
     /**
      * 将详细信息转换为具体的文章列表
      * @param entity

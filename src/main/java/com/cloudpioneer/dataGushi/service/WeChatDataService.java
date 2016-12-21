@@ -25,4 +25,6 @@ public interface WeChatDataService {
     void wxDetailToArticles(WeChatDataEntity entity);
 
     void exDetailToArticles();
+
+    void deleteNoGovType();
 }

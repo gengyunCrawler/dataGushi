@@ -33,4 +33,6 @@ public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
     List<WeChatDataEntity> findById(@Param("year")int year,@Param("month")int month,@Param("id") String Id);
 
     List<WeChatDataEntity> findBySimilarName(@Param("year")int year,@Param("month")int month,@Param("name") String name);
+
+    void deleteNoGov();
 }

@@ -4,7 +4,7 @@
 
 
     <insert id="insert">
-        INSERT INTO wechatdata (userId,accountId,categoryId,categoryType,groupName,headPicture,wxName,lastUpdateTime,payTime,expireTime,
+        INSERT INTO wechatdata_copy (userId,accountId,categoryId,categoryType,groupName,headPicture,wxName,lastUpdateTime,payTime,expireTime,
                                 wxid,username,openid,wxBiz,rank,articlesNum,totalReadNum,totalLikeNum,avgReadNum,
                                 avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price,latestDate,deleteFlag,detail,account)
                                  VALUES
@@ -14,43 +14,48 @@
     </insert>
 
     <select id="countAll" resultType="integer">
-        select count(*) from wechatdata WHERE  deleteflag=1
+        select count(*) from wechatdata_copy WHERE  deleteflag=1
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata_copy
         where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata_copy
         where categoryId=#{categoryId} and deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER BY  influenceNum DESC limit #{start},#{pageSize}
     </select>
 
     <select id="countByCategory" resultType="integer">
-        select count(*) from wechatdata where categoryId=#{categoryId} and deleteflag=1 AND  YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month}
+        select count(*) from wechatdata_copy where categoryId=#{categoryId} and deleteflag=1 AND  YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month}
     </select>
 
     <delete id="deleteAll">
-        DELETE FROM wechatdata
+        DELETE FROM wechatdata_copy
     </delete>
 
     <update id="updateDate">
-        update wechatdata set deleteflag=0 where deleteflag=1 and latestDate between #{beforeDate} and #{currentDate} AND account =#{username}
+        update wechatdata_copy set deleteflag=0 where deleteflag=1 and latestDate between #{beforeDate} and #{currentDate} AND account =#{username}
     </update>
 
     <select id="findWeChatDataEntity" resultType="WeChatDataEntity">
-        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate, detail FROM wechatdata WHERE  deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz} limit 0,1
+        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate, detail FROM wechatdata_copy WHERE  deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz} limit 0,1
     </select>
 
     <select id="findAll" resultType="WeChatDataEntity">
-        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,detail,categoryId,categoryType FROM wechatdata
+        SELECT headPicture,wxid,wxBiz,wxName,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,detail,categoryId,categoryType FROM wechatdata_copy
         WHERE deleteflag=1 AND YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
 
     </select>
 
     <select id="findById" resultType="WeChatDataEntity">
-         select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata
+         select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate from wechatdata_copy
         where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
+
+    <delete id="deleteNoGov">
+        DELETE FROM  wechatdata_copy
+        WHERE categoryid in (5052,5053,5054)
+    </delete>
 </mapper>

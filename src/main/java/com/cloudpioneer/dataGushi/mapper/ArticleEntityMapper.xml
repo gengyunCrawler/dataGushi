@@ -2,54 +2,54 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper" >
     <insert id="insert">
-        INSERT INTO wxArticle(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId,categoryType,content)
+        INSERT ignore INTO wxarticle_copy(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId,categoryType,content)
                     VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{latestDate},#{wxHeadPicture},#{categoryId},#{categoryType},#{content})
     </insert>
 
     <update id="updateDeleteFlag">
-        UPDATE  wxArticle SET  deleteflag = 1 WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}
+        UPDATE  wxarticle_copy SET  deleteflag = 1 WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}
     </update>
 
     <delete id="deleteByWxBizDate">
-        DELETE FROM wxArticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}
+        DELETE FROM wxarticle_copy WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}
     </delete>
 
     <select id="findByCategoryId" resultType="ArticleEntity">
         SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
-          FROM  wxarticle
+          FROM  wxarticle_copy
           WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  AND categoryId=#{categoryId} ORDER BY readNum DESC limit #{start},#{size}
     </select>
 
     <select id="findAllByPage" resultType="ArticleEntity">
          SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
-          FROM  wxarticle
+          FROM  wxarticle_copy
           WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}  ORDER BY readNum DESC limit #{start},#{size}
     </select>
 
     <select id="countByCategoryId" resultType="int">
         SELECT  COUNT(*)
-          FROM wxarticle
+          FROM wxarticle_copy
           WHERE  categoryId=#{categoryId}
     </select>
 
     <select id="countAll" resultType="int">
         SELECT COUNT(*)
-          FROM wxarticle
+          FROM wxarticle_copy
     </select>
 
     <select id="">
        SELECT openid,wxBiz,`hour`,groupName,CAST(title AS CHAR CHARACTER SET utf8) as title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId, categoryType
-          FROM wxarticle LEFT JOIN article ON wxarticle.title=article.title WHERE month(latestDate)=12 AND year(latestDate)=2016 AND article.title is null
+          FROM wxarticle_copy LEFT JOIN article ON wxarticle_copy.title=article.title WHERE month(latestDate)=12 AND year(latestDate)=2016 AND article.title is null
     </select>
     <select id="findUrlByAll" resultType="string">
-        SELECT  url FROM  wxarticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
+        SELECT  url FROM  wxarticle_copy WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
     </select>
 
     <select id="findUrlByPage" resultType="string">
-         SELECT  url FROM  wxarticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} limit #{start},#{size}
+         SELECT  url FROM  wxarticle_copy WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} limit #{start},#{size}
     </select>
 
     <select id="countByMonth" resultType="string">
-        SELECT COUNT(*) FROM  wxarticle WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
+        SELECT COUNT(*) FROM  wxarticle_copy WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month}
     </select>
 </mapper>

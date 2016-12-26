@@ -42,6 +42,44 @@ public class WeChatDataEntity implements Serializable
     //获取数据的账号名称
     private String account;
 
+    private double di;
+    private  double ri;
+    private  double li;
+
+    public double getGwi() {
+        return gwi;
+    }
+
+    public void setGwi(double gwi) {
+        this.gwi = gwi;
+    }
+
+    private double gwi;
+
+    public double getDi() {
+        return di;
+    }
+
+    public void setDi(double di) {
+        this.di = di;
+    }
+
+    public double getRi() {
+        return ri;
+    }
+
+    public void setRi(double ri) {
+        this.ri = ri;
+    }
+
+    public double getLi() {
+        return li;
+    }
+
+    public void setLi(double li) {
+        this.li = li;
+    }
+
     public String getAccount() {
         return account;
     }

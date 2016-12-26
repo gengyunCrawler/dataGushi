@@ -4,7 +4,7 @@
     <insert id="insert">
         INSERT ignore INTO wxarticle_copy(openid,wxBiz,`hour`,groupName,title,url,`date`,publishTime,author,readNum,likeNum,headLineNum,isOriginal,articleId,wxName,latestDate,wxHeadPicture,categoryId,categoryType,content)
                     VALUES (#{openid},#{wxBiz},#{hour},#{groupName},#{title},#{url},#{date},#{publishTime},#{author},#{readNum},#{likeNum},#{headLineNum},#{isOriginal},#{articleId},#{wxName},#{latestDate},#{wxHeadPicture},#{categoryId},#{categoryType},#{content})
-    </insert>
+     </insert>
 
     <update id="updateDeleteFlag">
         UPDATE  wxarticle_copy SET  deleteflag = 1 WHERE YEAR(latestDate)=#{year} AND MONTH(latestDate)=#{month} AND wxBiz = #{wxBiz}

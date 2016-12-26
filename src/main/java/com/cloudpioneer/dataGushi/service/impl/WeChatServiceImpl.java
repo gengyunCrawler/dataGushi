@@ -5,30 +5,21 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cloudpioneer.dataGushi.domain.ArticleEntity;
 import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
+import com.cloudpioneer.dataGushi.index.WXIndex;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
 import com.cloudpioneer.dataGushi.parse.DataStoryParse;
-import com.cloudpioneer.dataGushi.parse.WxArticleParser;
 import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
-import com.cloudpioneer.dataGushi.util.HttpUtil;
 import com.cloudpioneer.dataGushi.util.Page;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
-import com.sun.xml.internal.ws.api.server.SDDocument;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import us.codecraft.webmagic.downloader.HttpClientDownloader;
-import us.codecraft.webmagic.selector.Html;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -86,6 +77,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             weChatDataEntityMapper.updateDate(beginMonth,currentDate,username);
             for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
               //  this.wxDetailToArticles(weChatDataEntity);
+                weChatDataEntity = calIndex4Entity(weChatDataEntity);
                 weChatDataEntityMapper.insert(weChatDataEntity);
             }
         }
@@ -116,10 +108,40 @@ public class WeChatServiceImpl implements WeChatDataService{
         resultPage.setCurrentPage(newPage);
         resultPage.setPageSize(pageSize);
         resultPage.setTotalPage(countPage);
-        resultPage.setDatas(resultList);
+        resultPage.setDatas(calInex(resultList));
 
 
         return resultPage;
+    }
+    private List<WeChatDataEntity> calInex(List<WeChatDataEntity> entitys){
+        List<WeChatDataEntity> entitieList = null;
+        if (entitys!=null&&entitys.size()>0){
+            WeChatDataEntity entity1 = entitys.get(0);
+            if (entity1.getLi()==0&&entity1.getDi()==0&&entity1.getRi()==0){
+                if (entitys!=null){
+                    entitieList = new ArrayList<>();
+                    for (WeChatDataEntity entity:entitys){
+                        entitieList.add(calIndex4Entity(entity));
+                    }
+                }
+            }else {
+                entitieList= entitys;
+            }
+        }else {
+            entitieList = entitys;
+        }
+
+
+       return entitieList;
+    }
+    private WeChatDataEntity calIndex4Entity(WeChatDataEntity entity){
+        double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
+        double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
+        double LI = WXIndex.LI(entity.getTotalLikeNum(),entity.getAvgLikeNum());
+        entity.setDi(DI);
+        entity.setRi(RI);
+        entity.setLi(LI);
+        return entity;
     }
 
     @Override
@@ -200,6 +222,7 @@ public class WeChatServiceImpl implements WeChatDataService{
         JSONObject userInfo = items.getJSONObject("userInfo");
         userInfo.put("descrition",items.getString("descrition"));
         userInfo.put("headPicture",entity.getHeadPicture());
+        userInfo.put("li",entity.getLi());
         map.put("userInfo",userInfo);
         JSONArray articles = items.getJSONArray("articles");
 

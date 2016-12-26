@@ -36,6 +36,13 @@ public abstract class WXIndex {
 
     private static  float WLE = 0.50F;
 
+    private static  float WD = 0.30F;
+
+    private static  float WR = 0.40F;
+
+    private static  float WL = 0.30F;
+
+
     static {
         ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
         WDA = Float.parseFloat(bundle.getString("WDA"));
@@ -115,6 +122,8 @@ public abstract class WXIndex {
         return  WLA * L1(likeNum) + WLE * EL1(everageReadNum);
     }
 
-
+   public static double GWI(double di,double ri,double li){
+       return WD*di+WR*ri+WL*li;
+   }
 
 }

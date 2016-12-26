@@ -138,9 +138,11 @@ public class WeChatServiceImpl implements WeChatDataService{
         double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
         double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
         double LI = WXIndex.LI(entity.getTotalLikeNum(),entity.getAvgLikeNum());
+        double GWI = WXIndex.GWI(DI,RI,LI);
         entity.setDi(DI);
         entity.setRi(RI);
         entity.setLi(LI);
+        entity.setGwi(GWI);
         return entity;
     }
 

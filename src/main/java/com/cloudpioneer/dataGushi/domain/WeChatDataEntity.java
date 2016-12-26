@@ -46,6 +46,16 @@ public class WeChatDataEntity implements Serializable
     private  double ri;
     private  double li;
 
+    public double getGwi() {
+        return gwi;
+    }
+
+    public void setGwi(double gwi) {
+        this.gwi = gwi;
+    }
+
+    private double gwi;
+
     public double getDi() {
         return di;
     }

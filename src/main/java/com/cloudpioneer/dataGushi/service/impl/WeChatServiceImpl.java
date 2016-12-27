@@ -77,8 +77,13 @@ public class WeChatServiceImpl implements WeChatDataService{
             weChatDataEntityMapper.updateDate(beginMonth,currentDate,username);
             for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
               //  this.wxDetailToArticles(weChatDataEntity);
-                weChatDataEntity = calIndex4Entity(weChatDataEntity);
-                weChatDataEntityMapper.insert(weChatDataEntity);
+                try {
+                    weChatDataEntity = calIndex4Entity(weChatDataEntity);
+                    weChatDataEntityMapper.insert(weChatDataEntity);
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
+
             }
         }
     }
@@ -141,6 +146,7 @@ public class WeChatServiceImpl implements WeChatDataService{
         entity.setDi(DI);
         entity.setRi(RI);
         entity.setLi(LI);
+        entity.setGwi(WXIndex.GWI(DI,RI,LI));
         return entity;
     }
 

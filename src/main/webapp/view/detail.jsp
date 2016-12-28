@@ -75,7 +75,7 @@
     		<div class="index-detail">累计点赞数 <br> <span class="number" id="totalLikeNum">无</span></div>
     		<div class="index-detail">平均点赞数 <br> <span class="number" id="avgLikeNum">无</span></div>
     		<div class="index-detail">平均头条阅读数 <br> <span class="number" id="avgHeadlineNum">无</span></div>
-        <div class="index-detail">原创文章数 <br> <span class="number" id="activeNum">无</span></div>
+        <div class="index-detail">原创文章数 <br> <span class="number" id="originalArticle">无</span></div>
         <div class="index-detail">质量指数 <br> <span class="number" id="qualityNum">无</span></div>
         <div class="index-detail">影响力 <br> <span class="number" id="influenceNum">无</span></div>
         <%--<div class="index-detail">行业影响排名 <br> <span class="number"></span></div>--%>

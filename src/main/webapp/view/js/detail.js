@@ -155,8 +155,8 @@ function bindOperationIndex(userInfo) {
     $("#totalLikeNum").html(userInfo.totalLikeNum)
     $("#avgLikeNum").html(userInfo.avgLikeNum)
     $("#avgHeadlineNum").html(userInfo.avgHeadlineNum)
-    $("#activeNum").html(userInfo.activeNum)
-    $("#qualityNum").html(userInfo.qualityNum)
+    $("#originalArticle").html(userInfo.totalOriginalNum)
+    $("#qualityNum").html(userInfo.li)
     $("#influenceNum").html(userInfo.influenceNum)
     
 }
@@ -249,7 +249,7 @@ function bindDataLable(){
  */
 $(function () {
     var obj = ajaxDetailData()
-    bindOperationIndex(obj.userInfo)
+    bindOperationIndex(obj.baseInfo)
     bindHead(obj.userInfo)
     createFrame(obj.articleNumPerHour)
     bindStatistic(obj.articleStatistics)

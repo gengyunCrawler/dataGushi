@@ -120,9 +120,9 @@ public class WeChatServiceImpl implements WeChatDataService{
                 double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
                 double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
                 double LI = WXIndex.LI(entity.getTotalLikeNum(),entity.getAvgLikeNum());
-                entity.setDI(DI);
-                entity.setRI(RI);
-                entity.setLI(LI);
+                entity.setDi(DI);
+                entity.setRi(RI);
+                entity.setLi(LI);
                 entitieList.add(entity);
             }
         }
@@ -180,7 +180,7 @@ public class WeChatServiceImpl implements WeChatDataService{
 
             dataEntityList.add(entity);
         }
-        this.insertByList(dataEntityList);
+        this.insertByList(calInex(dataEntityList));
     }
 
     /**
@@ -207,6 +207,7 @@ public class WeChatServiceImpl implements WeChatDataService{
         JSONObject userInfo = items.getJSONObject("userInfo");
         userInfo.put("descrition",items.getString("descrition"));
         userInfo.put("headPicture",entity.getHeadPicture());
+        map.put("baseInfo",entity);
         map.put("userInfo",userInfo);
         JSONArray articles = items.getJSONArray("articles");
 

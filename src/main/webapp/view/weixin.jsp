@@ -69,8 +69,8 @@
         <ul id="type">
           <li class="active hand" id="all" value="all">全部</li>
           <li class="hand" style="width: 2px"> <span class="line" style="margin-top: 8px;padding: 0px;margin-left: 4px"></span></li>
-          <li class="hand" value="5585">媒体/新闻</li>
-          <li class="hand" value="5590">健康/医疗</li>
+          <li class="hand" value="5664">时政新闻</li>
+          <li class="hand" value="5663">非时政新闻</li>
           <li class="hand" value="5589">教育培训</li>
           <li class="hand" value="5586">旅游</li>
           <li class="hand" value="5583">本地生活</li>

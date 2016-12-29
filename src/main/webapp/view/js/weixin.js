@@ -71,7 +71,7 @@ function bindWx(data,pageNo) {
         '<th id="quaVector"  original-title="平均发文总数和发文数的加权">活跃指数<span  class="questionmark">[?]</span></th>'+
         '<th id="influence"  original-title="总点赞数和平均点赞数的加权">质量指数<span  class="questionmark">[?]</span></th>'+
         '<th id="operation"  original-title="总阅读数和平均阅读数的加权">传播指数<span  class="questionmark">[?]</span></th>'+
-        '<th id="operation"  original-title="总阅读数和总点赞数的加权">操作<span  class="questionmark">[?]</span></th>'+
+        '<th id="operation"  original-title="操作">操作<span  class="questionmark">[?]</span></th>'+
         '</tr>'
 
     $('thead').empty();

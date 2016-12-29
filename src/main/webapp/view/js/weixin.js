@@ -68,8 +68,9 @@ function bindWx(data,pageNo) {
         '<th id="aveReadNo"  original-title="30天的平均阅读数">平均阅读数<span  class="questionmark">[?]</span></th>'+
         '<th id="aveLikeNo"  original-title="30天的平均点赞数">平均点赞数<span  class="questionmark">[?]</span></th>'+
         '<th id="aveTopReadNo"  original-title="30天的平均头条阅读数">平均头条阅读数<span  class="questionmark">[?]</span></th>'+
-        '<th id="quaVector"  original-title="平均阅读数、平均点赞数和点赞率的加权">质量指数<span  class="questionmark">[?]</span></th>'+
-        '<th id="influence"  original-title="总阅读数和总点赞数的加权">影响力<span  class="questionmark">[?]</span></th>'+
+        '<th id="quaVector"  original-title="平均发文总数和发文数的加权">活跃指数<span  class="questionmark">[?]</span></th>'+
+        '<th id="influence"  original-title="总点赞数和平均点赞数的加权">质量指数<span  class="questionmark">[?]</span></th>'+
+        '<th id="operation"  original-title="总阅读数和平均阅读数的加权">传播指数<span  class="questionmark">[?]</span></th>'+
         '<th id="operation"  original-title="总阅读数和总点赞数的加权">操作<span  class="questionmark">[?]</span></th>'+
         '</tr>'
 
@@ -97,8 +98,9 @@ function bindWx(data,pageNo) {
             '<td>'+item.avgReadNum+'</td>'+
             '<td>'+item.avgLikeNum+'</td>'+
             '<td>'+item.avgHeadlineNum+'</td>'+
-            '<td>'+item.qualityNum+'</td>'+
-            '<td>'+item.influenceNum+'</td>'+
+            '<td>'+item.di.toFixed(2)+'</td>'+
+            '<td>'+item.li.toFixed(2)+'</td>'+
+            '<td>'+item.ri.toFixed(2)+'</td>'+
             '<td><a target=\'_blank\' href=\'../wx/detail/'+year+'/'+month+'/'+item.wxBiz+'\'>查看详情</a></td>'+
             '</tr>'
         html+=sequenceHtml

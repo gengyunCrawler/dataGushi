@@ -75,30 +75,37 @@ public class WeChatServiceImpl implements WeChatDataService{
             Date currentDate = weChatDataEntityList.get(0).getLatestDate();
 
             weChatDataEntityMapper.updateDate(beginMonth,currentDate,username);
+            Calendar calendarT = Calendar.getInstance();
+            calendarT.setTime(currentDate);
+            int day = calendarT.get(Calendar.DAY_OF_MONTH);
+            int month = calendarT.get(Calendar.MONTH)+1;
+            int year = calendarT.get(Calendar.YEAR);
+            weChatDataEntityMapper.deleteByDay(year,month,day);
             for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
               //  this.wxDetailToArticles(weChatDataEntity);
                 weChatDataEntityMapper.insert(weChatDataEntity);
+
             }
         }
     }
 
     @Override
-    public Page<WeChatDataEntity> findIimitPage(int year, int month, int newPage,int pageSize,String categoryId) throws Exception {
+    public Page<WeChatDataEntity> findIimitPage(int year, int month,int newPage,int pageSize,String categoryId) throws Exception {
 
 
         int countPage;// 共有多少页
         int start;  //从数据库取数据的起始位置
         int countRecord;//根据条件查询的数据库记录数
-
+        int day = getDay(year,month);
         start = (newPage - 1) * pageSize;
         List<WeChatDataEntity> resultList;
         if(categoryId==null||categoryId==""){
             countRecord=weChatDataEntityMapper.countAll();
-            resultList = weChatDataEntityMapper.findIimitPage(year, month, start, pageSize);
+            resultList = weChatDataEntityMapper.findIimitPage(year, month, day,start, pageSize);
         }
         else{
             countRecord=weChatDataEntityMapper.countByCategory(categoryId,year,month);
-            resultList=weChatDataEntityMapper.findByCategoryId(year, month,start, pageSize,categoryId);
+            resultList=weChatDataEntityMapper.findByCategoryId(year,month,day,start, pageSize,categoryId);
         }
         countPage = ((countRecord % pageSize) != 0 ? (countRecord / pageSize + 1) : (countRecord / pageSize));
 
@@ -111,6 +118,23 @@ public class WeChatServiceImpl implements WeChatDataService{
 
 
         return resultPage;
+    }
+    private int getDay(int year,int month){
+
+        Calendar calendar = Calendar.getInstance();
+        final int currentMonth = calendar.get(Calendar.MONTH)+1;
+        final int currentYear = calendar.get(Calendar.YEAR);
+        final int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+        if (currentYear>year){
+            return 3;
+        }
+        if (currentMonth>month){
+            return 3;
+        }
+        if (currentDay>3){
+            return 3;
+        }
+        return currentDay;
     }
     private List<WeChatDataEntity> calInex(List<WeChatDataEntity> entitys){
         List<WeChatDataEntity> entitieList = null;
@@ -136,9 +160,12 @@ public class WeChatServiceImpl implements WeChatDataService{
         this.password = password;
         final String json=HttpService.dataStoryJSON(username,password,HttpService.DATA_WEIXIN);
         threadSleep2Sec();
-        List<WeChatDataEntity> dataEntityList=DataStoryParse.parseWeChatJSONData(json);
+        final List<WeChatDataEntity> dataEntityList=DataStoryParse.parseWeChatJSONData(json);
+        final List<WeChatDataEntity> entityList = getWeChatDataEntities(username, dataEntityList);
+        this.insertByList(calInex(entityList));
+    }
 
-        List<ArticleEntity> articleEntityList = null;
+    private List<WeChatDataEntity> getWeChatDataEntities(String username, List<WeChatDataEntity> dataEntityList) throws InterruptedException, IOException, ExecutionException {
         if (clientBlockingQueue.size() == 0){
             for (int i=0;i<10;i++){
                 clientBlockingQueue.put(prepareClient());
@@ -173,14 +200,13 @@ public class WeChatServiceImpl implements WeChatDataService{
             executorService.shutdown();
         }
         }
-        dataEntityList = new ArrayList<>();
+        final List<WeChatDataEntity> entityList = new ArrayList<>();
         for (Future<WeChatDataEntity> future:futures){
             WeChatDataEntity entity = future.get();
             entity.setAccount(username);
-
-            dataEntityList.add(entity);
+            entityList.add(entity);
         }
-        this.insertByList(calInex(dataEntityList));
+        return entityList;
     }
 
     /**

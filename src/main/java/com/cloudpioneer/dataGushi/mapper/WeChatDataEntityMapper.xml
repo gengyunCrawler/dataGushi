@@ -19,12 +19,12 @@
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
         select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li from wechatdata
-        where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY ri DESC limit #{start},#{pageSize}
+        where  YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND DAY(latestDate)=#{day} ORDER  BY ri DESC limit #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
         select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li from wechatdata
-        where categoryId=#{categoryId} and deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER BY  ri DESC limit #{start},#{pageSize}
+        where categoryId=#{categoryId} AND YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND DAY(latestDate)=#{day} ORDER BY ri DESC limit #{start},#{pageSize}
     </select>
 
     <select id="countByCategory" resultType="integer">
@@ -52,4 +52,9 @@
          select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li  from wechatdata
         where deleteflag=1 and YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} ORDER  BY influenceNum DESC limit #{start},#{pageSize}
     </select>
+
+    <delete id="deleteByDay">
+        DELETE FROM  wechatdata
+        WHERE YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND  DAY(latestDate)=#{day}
+    </delete>
 </mapper>

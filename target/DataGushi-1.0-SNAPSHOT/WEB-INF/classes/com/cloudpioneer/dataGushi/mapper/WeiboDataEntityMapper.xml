@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cloudpioneer.dataGushi.mapper.WeiboDataEntityMapper" >
+    <insert id="insert">
+        INSERT INTO weibo(uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId,deleteFlag,searchDate) VALUES
+        (#{uid},#{nickName},#{head},#{followCount},#{rateActivity},#{interactNum},#{newFllowCount},#{qualityIndex},#{influence},#{categoryId},#{deleteFlag},#{searchDate})
+    </insert>
+
+    <select id="findPageByCategory" resultType="WeiboDataEntity">
+    SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM weibo WHERE  categoryId=#{categoryId} AND deleteFlag="false" AND YEAR(searchDate)=#{year} AND MONTH(searchDate)=#{month} ORDER BY interactNum DESC LIMIT #{start},#{limit}
+    </select>
+
+    <select id="countAll" resultType="integer">
+        SELECT COUNT(*) FROM  weibo WHERE deleteFlag="false"
+    </select>
+
+    <select id="countByCategoryId" resultType="integer">
+        SELECT COUNT(*) FROM weibo WHERE categoryId=#{categoryId} AND deleteFlag="false" AND YEAR(searchDate)=#{year} AND MONTH(searchDate)=#{month}
+    </select>
+
+
+    <select id="findPageByAll" resultType="WeiboDataEntity">
+          SELECT uid,nickName,head,followCount,rateActivity,interactNum,newFllowCount,qualityIndex,influence,categoryId FROM  weibo WHERE deleteFlag="false" AND YEAR(searchDate)=#{year} AND MONTH(searchDate)=#{month}  ORDER BY interactNum DESC LIMIT #{start},#{limit}
+    </select>
+
+    <delete id="deleteAll">
+        DELETE  FROM  weibo
+    </delete>
+    
+    <update id="setDeleteFlagByMonth">
+        UPDATE  weibo SET deleteFlag=#{deleteFlag} WHERE searchDate  BETWEEN #{startDate} AND #{endDate}
+    </update>
+
+    <select id="findDateList" resultType="date">
+        SELECT DISTINCT(searchDate) FROM weibo
+    </select>
+</mapper>

@@ -14,21 +14,54 @@
     </insert>
 
     <select id="countAll" resultType="integer">
-        select count(*) from wechatdata WHERE  deleteflag=1
+        select count(*)
+        from wechatdata
+         where YEAR(latestDate)=#{year}
+              AND MONTH(latestDate)=#{month}
+              AND DAY(latestDate)=#{day}
     </select>
 
     <select id="findIimitPage" parameterType="integer" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li from wechatdata
-        where  YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND DAY(latestDate)=#{day} ORDER  BY ri DESC limit #{start},#{pageSize}
+        select
+            headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,
+            totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li
+        from wechatdata
+        where YEAR(latestDate)=#{year}
+              AND MONTH(latestDate)=#{month}
+              AND DAY(latestDate)=#{day}
+              ORDER BY
+                      ${order} DESC
+        limit
+              #{start},#{pageSize}
     </select>
 
     <select id="findByCategoryId" resultType="WeChatDataEntity">
-        select headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li from wechatdata
-        where categoryId=#{categoryId} AND YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month} AND DAY(latestDate)=#{day} ORDER BY ri DESC limit #{start},#{pageSize}
+        select
+              headPicture,wxid,wxName,wxBiz,articlesNum,totalOriginalNum,totalReadNum,
+              totalLikeNum,avgReadNum,avgLikeNum,avgHeadlineNum,qualityNum,influenceNum,latestDate,di,ri,li
+        from
+              wechatdata
+        where
+              categoryId=#{categoryId}
+              AND YEAR(latestDate)=#{year}
+              AND MONTH(latestDate)=#{month}
+              AND DAY(latestDate)=#{day}
+        ORDER BY
+                ${order} DESC
+        limit
+              #{start},#{pageSize}
     </select>
 
     <select id="countByCategory" resultType="integer">
-        select count(*) from wechatdata where categoryId=#{categoryId} and deleteflag=1 AND  YEAR(latestDate)=#{year} and MONTH(latestDate)=#{month}
+        select
+              count(*)
+        from
+              wechatdata
+        where
+              categoryId=#{categoryId}
+              AND YEAR(latestDate)=#{year}
+              AND MONTH(latestDate)=#{month}
+              AND DAY(latestDate)=#{day}
     </select>
 
     <delete id="deleteAll">

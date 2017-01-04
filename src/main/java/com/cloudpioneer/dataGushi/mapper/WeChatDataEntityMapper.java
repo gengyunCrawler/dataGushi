@@ -15,11 +15,11 @@ import java.util.List;
 @Repository
 public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
 
-    List<WeChatDataEntity> findIimitPage(@Param("year") int year, @Param("month") int month,@Param("day") int day,@Param("start") int start, @Param("pageSize") int pageSize) throws Exception;
+    List<WeChatDataEntity> findIimitPage(@Param("year") int year, @Param("month") int month,@Param("day") int day,@Param("start") int start, @Param("pageSize") int pageSize,@Param("order")String order) throws Exception;
 
-    List<WeChatDataEntity> findByCategoryId(@Param("year") int year, @Param("month") int month,@Param("day") int day,@Param("start") int start, @Param("pageSize") int pageSize, @Param("categoryId") String categoryId) throws Exception;
+    List<WeChatDataEntity> findByCategoryId(@Param("year") int year, @Param("month") int month,@Param("day") int day,@Param("start") int start, @Param("pageSize") int pageSize, @Param("categoryId") String categoryId,@Param("order")String order) throws Exception;
 
-    int countByCategory(@Param("categoryId") String categoryId, @Param("year")int year,@Param("month")int month)throws Exception;
+    int countByCategory(@Param("categoryId") String categoryId, @Param("year")int year,@Param("month")int month,@Param("day")int day)throws Exception;
 
     void deleteAll() throws Exception;
 
@@ -35,4 +35,5 @@ public interface WeChatDataEntityMapper extends BaseDao<WeChatDataEntity> {
     List<WeChatDataEntity> findBySimilarName(@Param("year")int year,@Param("month")int month,@Param("name") String name);
 
     void deleteByDay(@Param("year")int year,@Param("month")int month,@Param("day") int day);
+    int countAll(@Param("year")int year,@Param("month")int month,@Param("day") int day);
 }

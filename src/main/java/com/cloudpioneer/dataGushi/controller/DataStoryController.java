@@ -8,6 +8,7 @@ import com.cloudpioneer.dataGushi.domain.WeiboDataEntity;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.service.WeiboDataService;
 import com.cloudpioneer.dataGushi.util.Page;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,25 +43,17 @@ public class DataStoryController
     }
 
 
-    @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}")
-    public  Object weChatData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId,
-                              @PathVariable("year")int year,@PathVariable("month")int month) throws Exception {
+    @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}/{order}")
+    public  Object weChatData(@PathVariable("currentPage")Integer currentPage, @PathVariable("pageSize")Integer pageSize, @PathVariable("categoryId")String categoryId,
+                              @PathVariable("year")int year, @PathVariable("month")int month, @PathVariable("order")String order) throws Exception {
      if(categoryId.equals("all")){
          categoryId="";
      }
-        Page<WeChatDataEntity> page= weChatDataService.findIimitPage(year,month,currentPage, pageSize, categoryId);
+        Page<WeChatDataEntity> page= weChatDataService.findIimitPage(year,month,currentPage, pageSize, categoryId,order);
         return page;
     }
 
-    @RequestMapping("wx/data/{categoryId}/{year}/{month}")
-    public  Object wxData(Integer currentPage,Integer pageSize,@PathVariable("categoryId")String categoryId,
-                              @PathVariable("year")int year,@PathVariable("month")int month) throws Exception {
-        if(categoryId.equals("all")){
-            categoryId="";
-        }
-        Page<WeChatDataEntity> page= weChatDataService.findIimitPage(year,month,currentPage, pageSize, categoryId);
-        return page;
-    }
+
     @RequestMapping("wx/detail/{year}/{month}/{wxBiz}")
     public Object getDetail(@PathVariable("year") Integer year, @PathVariable("month") Integer month, @PathVariable("wxBiz") String wxBiz, HttpSession session){
         session.setAttribute("year",year);

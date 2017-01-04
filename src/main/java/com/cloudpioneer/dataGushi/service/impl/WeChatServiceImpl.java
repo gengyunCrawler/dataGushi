@@ -17,7 +17,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import us.codecraft.webmagic.downloader.HttpClientDownloader;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -41,9 +40,6 @@ public class WeChatServiceImpl implements WeChatDataService{
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(15);
 
-    private final ExecutorService articleExecutorService = Executors.newFixedThreadPool(15);
-
-    private final HttpClientDownloader downloader = new HttpClientDownloader();
     private final BlockingQueue<CloseableHttpClient> clientBlockingQueue = new LinkedBlockingQueue<>();
     @Autowired
     private ArticleEntityMapper articleEntityMapper;
@@ -90,7 +86,7 @@ public class WeChatServiceImpl implements WeChatDataService{
     }
 
     @Override
-    public Page<WeChatDataEntity> findIimitPage(int year, int month,int newPage,int pageSize,String categoryId) throws Exception {
+    public Page<WeChatDataEntity> findIimitPage(int year, int month,int newPage,int pageSize,String categoryId,String order) throws Exception {
 
 
         int countPage;// 共有多少页
@@ -100,12 +96,12 @@ public class WeChatServiceImpl implements WeChatDataService{
         start = (newPage - 1) * pageSize;
         List<WeChatDataEntity> resultList;
         if(categoryId==null||categoryId==""){
-            countRecord=weChatDataEntityMapper.countAll();
-            resultList = weChatDataEntityMapper.findIimitPage(year, month, day,start, pageSize);
+            countRecord=weChatDataEntityMapper.countAll(year,month,day);
+            resultList = weChatDataEntityMapper.findIimitPage(year, month, day,start, pageSize,order);
         }
         else{
-            countRecord=weChatDataEntityMapper.countByCategory(categoryId,year,month);
-            resultList=weChatDataEntityMapper.findByCategoryId(year,month,day,start, pageSize,categoryId);
+            countRecord=weChatDataEntityMapper.countByCategory(categoryId,year,month,day);
+            resultList=weChatDataEntityMapper.findByCategoryId(year,month,day,start, pageSize,categoryId,order);
         }
         countPage = ((countRecord % pageSize) != 0 ? (countRecord / pageSize + 1) : (countRecord / pageSize));
 

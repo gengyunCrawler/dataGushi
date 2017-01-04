@@ -2,12 +2,10 @@ package com.cloudpioneer.dataGushi.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cloudpioneer.dataGushi.domain.ArticleEntity;
-import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.domain.WxArticle;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.service.ArticleService;
 import com.cloudpioneer.dataGushi.util.Page;
-import com.google.common.base.Preconditions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

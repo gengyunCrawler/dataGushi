@@ -128,7 +128,6 @@ public class HttpService
     }
     public static void ajaxEx(CloseableHttpClient client) throws IOException {
         String ajaxAccountUrl = "http://social.datastory.com.cn/account/ajax/accountInfo?random="+Math.random();
-
         HttpGet get = HttpUtil.getMethd(ajaxAccountUrl);
         client.execute(get);
     }
@@ -146,6 +145,27 @@ public class HttpService
         Map<String,String> param = new HashMap<>();
         param.put("wxBiz",entity.getWxBiz());
         param.put("type","30");
+        HttpPost post = HttpUtil.postForm(detailUrl,param);
+        post.setHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
+        HttpResponse  response = client.execute(post);
+        return EntityUtils.toString(response.getEntity());
+    }
+
+    /**
+     * 根据时间段来获微信公众号的详细时间
+     * 这几个方法应该被从构
+     * @param wxBiz
+     * @param client
+     * @return
+     * @throws IOException
+     */
+    public static String getDetailCustom(String wxBiz, String startTime,String endTime,CloseableHttpClient client) throws IOException {
+        String detailUrl = "http://social.datastory.com.cn/detail/getDetailCustom";
+        Map<String,String> param = new HashMap<>();
+        param.put("wxBiz",wxBiz);
+        param.put("type","30");
+        param.put("startTime","1480953600000");
+        param.put("endTime","1483545600000");
         HttpPost post = HttpUtil.postForm(detailUrl,param);
         post.setHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
         HttpResponse  response = client.execute(post);

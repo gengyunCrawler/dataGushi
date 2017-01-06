@@ -119,15 +119,11 @@ public class WeiboServiceTester
         System.out.println("year: "+ calendar.get(Calendar.YEAR)+"---  Month: " + (calendar.get(Calendar.MONTH)+1));
     }
 
+
       @Test
       public void testSetFalse() throws Exception
       {
-//          Calendar cal=Calendar.getInstance();
-//          Date currentDate=cal.getTime();
-//          System.out.println(currentDate);
-//          cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), 1, 0, 0, 0);
-//          Date startDate=cal.getTime();
-//          weiboDataEntityMapper.setDeleteFlagByMonth(startDate, currentDate,"true");
+
 
       }
 

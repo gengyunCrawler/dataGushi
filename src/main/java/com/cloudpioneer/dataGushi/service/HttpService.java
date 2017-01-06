@@ -4,11 +4,16 @@ import com.cloudpioneer.dataGushi.domain.WeChatDataEntity;
 import com.cloudpioneer.dataGushi.util.FileUtil;
 import com.cloudpioneer.dataGushi.util.HttpUtil;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.HttpClientUtils;
+import org.apache.http.entity.BasicHttpEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.springframework.http.HttpEntity;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -163,9 +168,9 @@ public class HttpService
         String detailUrl = "http://social.datastory.com.cn/detail/getDetailCustom";
         Map<String,String> param = new HashMap<>();
         param.put("wxBiz",wxBiz);
-        param.put("type","30");
-        param.put("startTime","1480953600000");
-        param.put("endTime","1483545600000");
+        param.put("startTime",startTime);
+        param.put("endTime",endTime);
+
         HttpPost post = HttpUtil.postForm(detailUrl,param);
         post.setHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
         HttpResponse  response = client.execute(post);

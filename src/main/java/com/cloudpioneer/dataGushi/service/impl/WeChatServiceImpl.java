@@ -9,11 +9,14 @@ import com.cloudpioneer.dataGushi.index.WXIndex;
 import com.cloudpioneer.dataGushi.mapper.ArticleEntityMapper;
 import com.cloudpioneer.dataGushi.mapper.WeChatDataEntityMapper;
 import com.cloudpioneer.dataGushi.parse.DataStoryParse;
+import com.cloudpioneer.dataGushi.parse.WxParser;
 import com.cloudpioneer.dataGushi.service.HttpService;
 import com.cloudpioneer.dataGushi.service.WeChatDataService;
 import com.cloudpioneer.dataGushi.util.Page;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +33,7 @@ import java.util.concurrent.*;
 @Service
 @Transactional
 public class WeChatServiceImpl implements WeChatDataService{
+
 
     @Autowired
     WeChatDataEntityMapper weChatDataEntityMapper;
@@ -150,22 +154,32 @@ public class WeChatServiceImpl implements WeChatDataService{
     }
 
     @Override
-    public void gainData(String username,String password,String type) throws Exception
+    public void gainData(String username,String password,String startTime,String endTime,String type) throws Exception
     {
         this.username = username;
         this.password = password;
         final String json=HttpService.dataStoryJSON(username,password,HttpService.DATA_WEIXIN);
         threadSleep2Sec();
         final List<WeChatDataEntity> dataEntityList=DataStoryParse.parseWeChatJSONData(json);
-        final List<WeChatDataEntity> entityList = getWeChatDataEntities(username, dataEntityList);
+        final List<WeChatDataEntity> entityList = getWeChatDataEntities(username, startTime,endTime,dataEntityList);
         this.insertByList(calInex(entityList));
     }
 
-    private List<WeChatDataEntity> getWeChatDataEntities(String username, List<WeChatDataEntity> dataEntityList) throws InterruptedException, IOException, ExecutionException {
+    /**
+     * 获取detail
+     * @param username
+     * @param startTime
+     * @param endTime
+     * @param dataEntityList
+     * @return
+     * @throws InterruptedException
+     * @throws IOException
+     * @throws ExecutionException
+     */
+    private List<WeChatDataEntity> getWeChatDataEntities(String username, String startTime,String endTime,List<WeChatDataEntity> dataEntityList) throws InterruptedException, IOException, ExecutionException {
         if (clientBlockingQueue.size() == 0){
             for (int i=0;i<10;i++){
                 clientBlockingQueue.put(prepareClient());
-
             }
         }
         //用多线程处理此处慢的问题
@@ -174,7 +188,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             WeChatDataEntity entity = dataEntityList.get(i);
             if (entity!=null){
                 CloseableHttpClient client1 = clientBlockingQueue.take();
-                ExCallable callable = new ExCallable(entity,client1);
+                ExCallable callable = new ExCallable(entity,client1,startTime,endTime);
                 Future<WeChatDataEntity>  future = executorService.submit(callable);
                 futures.add(future);
 
@@ -187,7 +201,6 @@ public class WeChatServiceImpl implements WeChatDataService{
         for (Future future:futures){
             if (future.isDone()){//when the thread throw a exception ,this may result in a serious problem
                 i++;
-
               //  futures.remove(future.get());
             }
         }
@@ -421,16 +434,20 @@ public class WeChatServiceImpl implements WeChatDataService{
 
         private WeChatDataEntity entity;
         private CloseableHttpClient client;
-        ExCallable(WeChatDataEntity entity,CloseableHttpClient client){
+        private String startTime;
+        private String endTime;
+        ExCallable(WeChatDataEntity entity,CloseableHttpClient client,String startTime,String endTime){
             this.client = client;
             this.entity = entity;
+            this.startTime = startTime;
+            this.endTime = endTime;
         }
 
         @Override
         public WeChatDataEntity call() throws Exception {
-
-            String details = HttpService.wxArticlesJson(entity,client);
-            entity.setDetail(details);
+            final String details = HttpService.getDetailCustom(entity.getWxBiz(),startTime,endTime,client);
+            //final WeChatDataEntity  newEntity =  WxParser.parseFromDetail(entity,details);
+            entity =  WxParser.parseFromDetail(entity,details);
             clientBlockingQueue.put(client);
             return entity;
         }

@@ -16,7 +16,7 @@ public interface WeChatDataService {
 
     Page<WeChatDataEntity> findIimitPage(int year, int month, int newPage, int pageSize, String categoryId,String order) throws Exception;
 
-    void gainData(String username,String password,String type)throws Exception;
+    void gainData(String username,String password,String startTime,String endTime,String type)throws Exception;
 
     WeChatDataEntity findWxDetail(int year, int month,String wxBiz);
 

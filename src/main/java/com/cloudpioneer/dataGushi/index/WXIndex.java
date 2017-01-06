@@ -1,5 +1,8 @@
 package com.cloudpioneer.dataGushi.index;
 
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
+
 /**
  * Created by Tijun on 2016/12/19.
  * 基数
@@ -21,17 +24,39 @@ public abstract class WXIndex {
 
     /**权重*/
 
-    private static final float WDA = 0.50F;
+    private static  float WDA = 0.50F;
 
-    private static final float WDE = 0.50F;
+    private static  float WDE = 0.50F;
 
-    private static final float WRA = 0.60F;
+    private static  float WRA = 0.50F;
 
-    private static final float WRE = 0.40F;
+    private static  float WRE = 0.50F;
 
-    private static final float WLA = 0.50F;
+    private static  float WLA = 0.50F;
 
-    private static final float WLE = 0.50F;
+    private static  float WLE = 0.50F;
+
+    private static  float WD = 0.30F;
+
+    private static  float WR = 0.40F;
+
+    private static  float WL = 0.30F;
+
+
+    static {
+        ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
+        WDA = Float.parseFloat(bundle.getString("WDA"));
+        WDE = 1 - WDA;
+
+        WRA = Float.parseFloat(bundle.getString("WRA"));
+        WRE = 1 - WRA;
+
+        WLA = Float.parseFloat(bundle.getString("WLA"));
+        WLE = 1 - WLA;
+
+
+    }
+
     /**
      *
      * @param articlesNum 每天发文总数
@@ -97,6 +122,8 @@ public abstract class WXIndex {
         return  WLA * L1(likeNum) + WLE * EL1(everageReadNum);
     }
 
-
+   public static double GWI(double di,double ri,double li){
+       return WD*di+WR*ri+WL*li;
+   }
 
 }

@@ -105,7 +105,9 @@ public class WeiboServiceTester
         try {
           //  String datastr = this.currentTime();
            // System.out.println(datastr+"  start to gain wechat data from datastory");
-            weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),null);
+            String startTime = "1480521600000";
+            String endTime = "1483200000000";
+            weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),startTime,endTime,null);
         } catch (Exception e) {
             e.printStackTrace();
         }

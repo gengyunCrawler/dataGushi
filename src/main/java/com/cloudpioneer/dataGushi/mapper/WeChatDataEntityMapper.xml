@@ -4,13 +4,13 @@
 
 
     <insert id="insert">
-        INSERT INTO wechatdata (userId,accountId,categoryId,categoryType,groupName,headPicture,wxName,lastUpdateTime,payTime,expireTime,
+        INSERT INTO wechatdata_copy (userId,accountId,categoryId,categoryType,groupName,headPicture,wxName,lastUpdateTime,payTime,expireTime,
                                 wxid,username,openid,wxBiz,rank,articlesNum,totalReadNum,totalLikeNum,avgReadNum,
-                                avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price,latestDate,deleteFlag,detail,account,di,ri,li)
+                                avgLikeNum,qualityNum,influenceNum,activeNum,totalOriginalNum,avgHeadlineNum,confirm,tag,price,latestDate,deleteFlag,detail,account,di,ri,li,gwi)
                                  VALUES
                               (#{userId},#{accountId},#{categoryId},#{categoryType},#{groupName},#{headPicture},#{wxName},#{lastUpdateTime},#{payTime},#{expireTime},
                                 #{wxid},#{username},#{openid},#{wxBiz},#{rank},#{articlesNum},#{totalReadNum},#{totalLikeNum},#{avgReadNum},
-                                #{avgLikeNum},#{qualityNum},#{influenceNum},#{activeNum},#{totalOriginalNum},#{avgHeadlineNum},#{confirm},#{tag},#{price},#{latestDate},#{deleteFlag},#{detail},#{account},#{di},#{ri},#{li})
+                                #{avgLikeNum},#{qualityNum},#{influenceNum},#{activeNum},#{totalOriginalNum},#{avgHeadlineNum},#{confirm},#{tag},#{price},#{latestDate},#{deleteFlag},#{detail},#{account},#{di},#{ri},#{li},#{gwi})
     </insert>
 
     <select id="countAll" resultType="integer">

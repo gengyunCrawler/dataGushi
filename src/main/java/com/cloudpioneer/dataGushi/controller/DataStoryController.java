@@ -42,7 +42,17 @@ public class DataStoryController
         return modelAndView;
     }
 
-
+    /**
+     * 根据微信公众号类别获取排行榜
+     * @param currentPage
+     * @param pageSize
+     * @param categoryId
+     * @param year
+     * @param month
+     * @param order 根据指数指标排序如 li,ri,di,gwi
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}/{order}")
     public  Object weChatData(@PathVariable("currentPage")Integer currentPage, @PathVariable("pageSize")Integer pageSize, @PathVariable("categoryId")String categoryId,
                               @PathVariable("year")int year, @PathVariable("month")int month, @PathVariable("order")String order) throws Exception {
@@ -53,7 +63,14 @@ public class DataStoryController
         return page;
     }
 
-
+    /**
+     * 根据wxBiz 来获取微信详情
+     * @param year
+     * @param month
+     * @param wxBiz
+     * @param session
+     * @return
+     */
     @RequestMapping("wx/detail/{year}/{month}/{wxBiz}")
     public Object getDetail(@PathVariable("year") Integer year, @PathVariable("month") Integer month, @PathVariable("wxBiz") String wxBiz, HttpSession session){
         session.setAttribute("year",year);
@@ -123,15 +140,26 @@ public class DataStoryController
      //   weChatDataService.gainData(username,password,null);
         return "success";
     }
+
+    /**
+     * 将wechataData中的detail字段解析后存入wxArticle 表中，文章排行榜由wxArticle这个表出
+     */
     @RequestMapping("data/weixin/dealArticle")
     public void dealWxArticle(){
         weChatDataService.exDetailToArticles();
     }
+
+    /**
+     * 按时间段获取数据
+     * @param startTime  开始时间
+     * @param endTime    结束时间
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("data/weixin/gain/All")
-    public Object gainAllData() throws Exception {
+    public Object gainAllData(String startTime,String endTime) throws Exception {
         ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
-        String startTime = "";
-        String endTime = "";
+
         weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),startTime,endTime,null);
         return "success";
     }

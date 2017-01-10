@@ -98,7 +98,7 @@ public class WeChatServiceImpl implements WeChatDataService{
         int countRecord;//根据条件查询的数据库记录数
         int day = getDay(year,month);
         start = (newPage - 1) * pageSize;
-        List<WeChatDataEntity> resultList;
+        List<WeChatDataEntity> resultList;//榜单显示每月当前日如果<3 显示当前日，否则显示3号的数据
         if(categoryId==null||categoryId==""){
             countRecord=weChatDataEntityMapper.countAll(year,month,day);
             resultList = weChatDataEntityMapper.findIimitPage(year, month, day,start, pageSize,order);

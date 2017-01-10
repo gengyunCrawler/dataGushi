@@ -42,76 +42,14 @@ public class WeiboServiceTester
     ArticleEntityMapper articleEntityMapper;
     @Autowired
     WeChatDataService weChatDataService;
-    @Test
-    public void testDataStore() throws Exception
-    {
-        weiboDataService.gainData4DB("","");
-    }
 
-    @Test
-    public void testSearchByDate() throws Exception
-    {
-        Calendar calendar=Calendar.getInstance();
-     int list= weiboDataEntityMapper.countByCategoryId("231", calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)+1);
-    }
-
-    @Test
-    public void testDateSet() throws Exception
-    {
-      Set<Map<String,String>> set= weiboDataService.dateList();
-        System.out.println(set);
-    }
-
-    @Test
-    public void testFindByWxBiz(){
-     // String str=  weChatDataService.findWxDetail(2016,11,"MjM5ODI2MzgzMA==");
-     //   System.out.println(str);
-        List<String> list =null;
-        for (String s:list){
-            System.out.println("tttt");
-        }
-    }
-
-    @Test
-    public void testDownloader(){
-        HttpClientDownloader downloader = new HttpClientDownloader();
-        Html html = downloader.download("http://mp.weixin.qq.com/s?__biz=MjM5NDUwMzY2MA==&mid=2650410704&idx=8&sn=82a256e14f6add8616a22f60746e8701");
-        System.out.println(html.xpath("//div[@id='js_content']"));
-    }
-    @Test
-    public void testInsertArticle(){
-        ArticleEntity articleEntity = new ArticleEntity();
-        articleEntity.setContent("dfdfdfd");
-        articleEntityMapper.insert(articleEntity);
-    }
-    @Test
-    public void testDataTransfer(){
-        weChatDataService.exDetailToArticles();
-    }
-    @Test
-    public void testGetArticle(){
-
-        List<ArticleEntity> list = articleEntityMapper.findByWxBizAndDate(2011,6,"MjM5MjQ1NTM0MA==");
-    }
 
     @Test
     public void testGainArticles(){
         List<ArticleEntity> lists = articleEntityMapper.findByCategoryId(2016,11,0,10,"5578");
     }
 
-    @Test
-    public void testGetWxData(){
-        ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
-        try {
-          //  String datastr = this.currentTime();
-           // System.out.println(datastr+"  start to gain wechat data from datastory");
-            String startTime = "";
-            String endTime = "";
-            weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),startTime,endTime,null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 
     @Test
     public void testGetDat(){

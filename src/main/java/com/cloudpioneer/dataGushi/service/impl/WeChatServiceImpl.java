@@ -367,7 +367,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             int oldDay =calendar.get(Calendar.DAY_OF_MONTH);
             isNew = day == oldDay ? true:false;
         }
-        if (isNew){
+        if (true){
             for(WeChatDataEntity entity : entities){
                 if (entity!=null){
                     this.wxDetailToArticles(entity);

@@ -16,7 +16,7 @@ public class WxParser {
      * @param detail
      * @return
      */
-    public static WeChatDataEntity parseFromDetail(WeChatDataEntity entity,String detail){
+    public static WeChatDataEntity  parseFromDetail(WeChatDataEntity entity,String detail){
         if (detail==null||"".equals(detail)){
             return entity;
         }

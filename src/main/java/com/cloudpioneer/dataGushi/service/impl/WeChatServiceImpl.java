@@ -138,19 +138,35 @@ public class WeChatServiceImpl implements WeChatDataService{
     }
     private List<WeChatDataEntity> calInex(List<WeChatDataEntity> entitys){
         List<WeChatDataEntity> entitieList = null;
-        if (entitys!=null){
-            entitieList = new ArrayList<>();
-            for (WeChatDataEntity entity:entitys){
-                double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
-                double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
-                double LI = WXIndex.LI(entity.getTotalLikeNum(),entity.getAvgLikeNum());
-                entity.setDi(DI);
-                entity.setRi(RI);
-                entity.setLi(LI);
-                entitieList.add(entity);
+        if (entitys!=null&&entitys.size()>0){
+            WeChatDataEntity entity1 = entitys.get(0);
+            if (entity1.getLi()==0&&entity1.getDi()==0&&entity1.getRi()==0){
+                if (entitys!=null){
+                    entitieList = new ArrayList<>();
+                    for (WeChatDataEntity entity:entitys){
+                        entitieList.add(calIndex4Entity(entity));
+                    }
+                }
+            }else {
+                entitieList= entitys;
             }
+        }else {
+            entitieList = entitys;
         }
+
+
        return entitieList;
+    }
+    private WeChatDataEntity calIndex4Entity(WeChatDataEntity entity){
+        double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
+        double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
+        double LI = WXIndex.LI(entity.getTotalLikeNum(),entity.getAvgLikeNum());
+        double GWI = WXIndex.GWI(DI,RI,LI);
+        entity.setDi(DI);
+        entity.setRi(RI);
+        entity.setLi(LI);
+        entity.setGwi(GWI);
+        return entity;
     }
 
     @Override

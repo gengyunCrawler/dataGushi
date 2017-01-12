@@ -44,8 +44,8 @@ public class WeixinTester {
     public void testGetWxData(){
         ResourceBundle bundle = PropertyResourceBundle.getBundle("account");//accout中保存了获取数据的账号
         try {
-            String startTime = "";/**long 型的开始时间格式*/
-            String endTime = "";  /**long 型的结束时间*/
+            String startTime = "1467302400000";/**long 型的开始时间格式*/
+            String endTime = "1483977600000";  /**long 型的结束时间*/
             weChatDataService.gainData(bundle.getString("username"),bundle.getString("password"),startTime,endTime,null);
         } catch (Exception e) {
             e.printStackTrace();

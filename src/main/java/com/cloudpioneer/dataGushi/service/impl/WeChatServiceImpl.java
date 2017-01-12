@@ -80,7 +80,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             int day = calendarT.get(Calendar.DAY_OF_MONTH);
             int month = calendarT.get(Calendar.MONTH)+1;
             int year = calendarT.get(Calendar.YEAR);
-            weChatDataEntityMapper.deleteByDay(year,month,day);
+            //weChatDataEntityMapper.deleteByDay(year,month,day);
             for(WeChatDataEntity weChatDataEntity:weChatDataEntityList){
               //  this.wxDetailToArticles(weChatDataEntity);
                 weChatDataEntityMapper.insert(weChatDataEntity);
@@ -367,7 +367,7 @@ public class WeChatServiceImpl implements WeChatDataService{
             int oldDay =calendar.get(Calendar.DAY_OF_MONTH);
             isNew = day == oldDay ? true:false;
         }
-        if (isNew){
+        if (true){
             for(WeChatDataEntity entity : entities){
                 if (entity!=null){
                     this.wxDetailToArticles(entity);

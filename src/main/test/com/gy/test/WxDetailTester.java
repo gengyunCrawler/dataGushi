@@ -19,8 +19,8 @@ public class WxDetailTester {
         CloseableHttpClient client = HttpClients.custom().build();
         ResourceBundle bundle = PropertyResourceBundle.getBundle("account");
         HttpResponse httpResponse =HttpService.login(bundle.getString("username"),bundle.getString("password"),client);
-        String startTime = "1480953600000";
-        String endTime = "1483545600000";
+        String startTime = "1467302400000";
+        String endTime = "1483977600000";
         String response = HttpService.getDetailCustom("MzA5NTEyNDAxMQ==",startTime,endTime,client);
         System.out.println();
     }

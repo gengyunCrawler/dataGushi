@@ -3,7 +3,7 @@
 var url = window.location.href;
 redirectURL =url.replace('weixin','mobilewx');
 deviceJudge(redirectURL);
-
+var order="qualityNum"
 var date=new Date()
 var year=date.getFullYear();
 var month=date.getMonth()+1
@@ -12,7 +12,7 @@ var wxOrArticle = 'wx'// if value is article/wx
 function loadData(currentPage,pageSize,categoryId){
     var wxData;
     $.ajax({
-        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month,
+        url:'../wx/data/'+currentPage+'/'+pageSize+'/'+categoryId+"/"+year+"/"+month+"/"+order,
         type:"get",
         async:false,
         dataType:"json",
@@ -49,7 +49,13 @@ function changeDateForLable(){
     var start=month-1
     var startHtml=start+"月1日"
     var publishDate=month+"月1日"
-    $("#monitorRangeDate").html(startHtml+"-"+publishDate)
+    if(month ==1)   {
+        // $("#monitorRangeDate").html("2016年12月1日"+"-"+"2017年"+publishDate)
+        $("#monitorRangeDate").html("2016年12月1日"+"-"+"2016年12月31日")
+
+    }else {
+        $("#monitorRangeDate").html(startHtml+"-"+publishDate)
+    }
     $("#publishDate").html(publishDate)
 }
 var categoryId="all";
@@ -57,22 +63,22 @@ var totalPage;
 function bindWx(data,pageNo) {
     var html="";
     var theadHtml =
-    '<tr>'+
-    '<th>序号</th>'+
-    '<th>头像</th>'+
-    '<th>昵称</th>'+
-    '<th>文章数</th>'+
-    '<th id="origin" original-title="带原创标识的文章数" >原创数<span class="questionmark">[?]</span></th>'+
-        '<th id="readNo" original-title="30天所有文章阅读总数">阅读数<span class="questionmark">[?]</span></th>'+
-        '<th id="likeNo"  original-title="30天所有文章点赞总数">点赞数<span class="questionmark" >[?]</span></th>'+
-        '<th id="aveReadNo"  original-title="30天的平均阅读数">平均阅读数<span  class="questionmark">[?]</span></th>'+
-        '<th id="aveLikeNo"  original-title="30天的平均点赞数">平均点赞数<span  class="questionmark">[?]</span></th>'+
-        '<th id="aveTopReadNo"  original-title="30天的平均头条阅读数">平均头条阅读数<span  class="questionmark">[?]</span></th>'+
-        '<th id="quaVector"  original-title="平均发文总数和发文数的加权">活跃指数<span  class="questionmark">[?]</span></th>'+
-        '<th id="influence"  original-title="总点赞数和平均点赞数的加权">质量指数<span  class="questionmark">[?]</span></th>'+
-        '<th id="operation"  original-title="总阅读数和平均阅读数的加权">传播指数<span  class="questionmark">[?]</span></th>'+
-        '<th id="operation"  original-title="操作">操作<span  class="questionmark">[?]</span></th>'+
-        '</tr>'
+        '<tr>'+
+        '<th>序号</th>'+
+        '<th>头像</th>'+
+        '<th>昵称</th>'+
+        '<th>文章数</th>'+
+        // '<th id="origin" original-title="带原创标识的文章数" >原创数<span class="questionmark">[?]</span></th>'+
+        '<th >阅读数<span id="readNo" original-title="30天所有文章阅读总数" class="questionmark">[?]</span></th>'+
+        '<th >点赞数<span id="likeNo"  original-title="30天所有文章点赞总数" class="questionmark" >[?]</span></th>'+
+        '<th >平均阅读数<span id="aveReadNo"  original-title="30天的平均阅读数" class="questionmark">[?]</span></th>'+
+        '<th >平均点赞数<span id="aveLikeNo"  original-title="30天的平均点赞数" class="questionmark">[?]</span></th>'+
+        '<th >平均头条阅读数<span  id="aveTopReadNo"  original-title="30天的平均头条阅读数" class="questionmark">[?]</span></th>'+
+//        '<th > <span class="hand" onclick=orderIndex("di") >活跃指数</span> <span  id="dynamicIndex" original-title="平均发文总数和发文数的加权" class="questionmark">[?]</span></th>'+
+//        '<th > <span class="hand" onclick=orderIndex("li") >质量指数</span> <span id="qualityIndex" original-title="总点赞数和平均点赞数的加权"class="questionmark">[?]</span></th>'+
+//        '<th > <span class="hand" onclick=orderIndex("ri")>传播指数</span> <span id="spreadIndex"  original-title="总阅读数和平均阅读数的加权" class="questionmark">[?]</span></th>'+
+        '<th > <span class="hand"onclick=orderIndex("qualityNum") >综合指数</span> <span id="synthesizeIndex"  original-title="活跃指数，质量指数，传播指数的加权" class="questionmark">[?]</span></th>' // '<th id="operation"  original-title="操作">操作<span  class="questionmark">[?]</span></th>'+
+    '</tr>'
 
     $('thead').empty();
     $('thead').append(theadHtml)
@@ -80,6 +86,7 @@ function bindWx(data,pageNo) {
     $.each(data,function(index,item){
 
         var sequence=(pageNo-1)*10+index+1
+        var synthesize = item.ri+item.li+item.di
         var sequenceHtml =''
         if(sequence<4){
             sequenceHtml='<tr>'+
@@ -92,22 +99,24 @@ function bindWx(data,pageNo) {
             "<td class='avator'><img src='"+item.headPicture+"'></td>"+
             '<td class="nickname"><div style="margin-top: 10px"><div class="weixin_hao" >'+item.wxName+'</div><div class="weixin_hao" >'+item.wxid+'</div></div>'+'</td>'+
             '<td>'+item.articlesNum+'</td>'+
-            '<td>'+item.totalOriginalNum+'</td>'+
+            // '<td>'+item.totalOriginalNum+'</td>'+
             '<td>'+item.totalReadNum+'</td>'+
             '<td>'+item.totalLikeNum+'</td>'+
             '<td>'+item.avgReadNum+'</td>'+
             '<td>'+item.avgLikeNum+'</td>'+
             '<td>'+item.avgHeadlineNum+'</td>'+
-            '<td>'+item.di.toFixed(2)+'</td>'+
-            '<td>'+item.li.toFixed(2)+'</td>'+
-            '<td>'+item.ri.toFixed(2)+'</td>'+
-            '<td><a target=\'_blank\' href=\'../wx/detail/'+year+'/'+month+'/'+item.wxBiz+'\'>查看详情</a></td>'+
+            //           '<td>'+item.di.toFixed(2)+'</td>'+
+            //           '<td>'+item.li.toFixed(2)+'</td>'+
+            //           '<td>'+item.ri.toFixed(2)+'</td>'+
+            '<td>'+item.qualityNum+'</td>'+
+            // '<td><a target=\'_blank\' href=\'../wx/detail/'+year+'/'+month+'/'+item.wxBiz+'\'>查看详情</a></td>'+
             '</tr>'
         html+=sequenceHtml
         sequence++;
     })
 
     $('tbody').append(html)
+    tip()
 }
 
 function bindWxArticle(data,pageNo) {
@@ -152,11 +161,11 @@ function bindWxArticle(data,pageNo) {
 }
 
 function pageselectCallback(page_index, jq) {
-  /* var data = loadData(page_index+1,10,categoryId)
-    bindWx(data.datas,data.currentPage)*/
+    /* var data = loadData(page_index+1,10,categoryId)
+     bindWx(data.datas,data.currentPage)*/
     if(wxOrArticle == 'wx'){
-         data = loadData(page_index+1,10,categoryId)
-         bindWx(data.datas,data.currentPage)
+        data = loadData(page_index+1,10,categoryId)
+        bindWx(data.datas,data.currentPage)
     }else if(wxOrArticle =='article'){
         data = loadArticles(page_index+1,10,categoryId)
         bindWxArticle(data.datas,data.currentPage)
@@ -165,18 +174,18 @@ function pageselectCallback(page_index, jq) {
 }
 //数据绑定
 function bindWxData(data,categoryId){
-   //这里添加对微信还是微博的判断
-  var  data
+    //这里添加对微信还是微博的判断
+    var  data
     if(wxOrArticle == 'wx'){
-         data = loadData(1,10,categoryId)
-         bindWx(data.datas,data.currentPage)
+        data = loadData(1,10,categoryId)
+        bindWx(data.datas,data.currentPage)
     }else {
         data = loadArticles(1,10,categoryId)
         bindWxArticle(data.datas,data.currentPage)
     }
     $("#pagination").pagination(data.totalPage, {
-        num_edge_entries: 0,
-        num_display_entries: 4,
+        num_edge_entries: 1,
+        num_display_entries: 3,
         callback: pageselectCallback,
         items_per_page:1,
         prev_text:'上一页',
@@ -234,6 +243,7 @@ function addNewMonth() {
     var now = new Date();
     var year = now.getFullYear();
     var month = now.getMonth();
+    var lastYear = 2016;
     var recentMonthString = $("#dropDate span:last-child").text();
     var recentMonth = parseInt(recentMonthString.substring(0,recentMonthString.indexOf("月")));
     var appendCss = {
@@ -249,29 +259,37 @@ function addNewMonth() {
         width: '72px',
         'margin-bottom':'10px'
     }
-    if(recentMonth != 12)   {
-        var range = (month+1)-recentMonth;
-        var loading_month;
-        var i;
-        var top;
-        var top_value;
-        top = $(".dropDate span#s1").css('top');
-        if(month+1 > recentMonth) {
-            var loading_top;
-            for(i=0; i<range; i++)  {
-                top_value = parseInt(top.substring(0,top.indexOf("px")));
-                loading_top = top_value+30;
-                loading_month = recentMonth+1+i;
-                $("#dropDate").append('<span onclick="changeDate('+ year +','+ loading_month+')">'+loading_month+'月1日</span>');
+    var range;
+    if(year == lastYear){
+        range = (month+1)-recentMonth;
+    }else {
+        range = (month+1)-recentMonth+12;
+    }
+    var loading_month;
+    var i;
+    var top;
+    var top_value;
+    top = $(".dropDate span#s1").css('top');
+    if(month+1 != recentMonth)   {
+        var loading_top;
+        for(i=0; i<range; i++)  {
+            top_value = parseInt(top.substring(0,top.indexOf("px")));
+            loading_top = top_value+30;
+            loading_month = recentMonth+1+i;
+            if(loading_month<13)  {
+                $("#dropDate").append('<span onclick="changeDate('+ lastYear +','+ loading_month+')">'+loading_month+'月1日</span>');
+            }else   {
+                if((loading_month-12)==1)  {
+                    //每年的一月份
+                    $("#dropDate").append('<span onclick="changeDate('+ (year) +','+ (loading_month-12)+')">'+(loading_month-12)+'月1日</span>');
+                }else   {
+                    $("#dropDate").append('<span onclick="changeDate('+ (year) +','+ (loading_month-12)+')">'+(loading_month-12)+'月1日</span>');
 
-                $("#dropDate span:last-child").css(appendCss).css('top',loading_top+"px");
-                top = loading_top+'px';
+                }
             }
+            $("#dropDate span:last-child").css(appendCss).css('top',loading_top+"px");
+            top = loading_top+'px';
         }
-    }else if (recentMonth === 12) {
-        $("#dropDate span").remove();
-        $("#dropDate").append('<span id="s1" onclick="changeDate('+ (year+1) +',1)">1月1日</span>');
-
     }
 }
 
@@ -285,8 +303,24 @@ function firstHandle(){
         $(this).html(index+1)
     });
 }
+function orderIndex(index) {
+    order=index
+    bindWxData('1',categoryId);
+    tip()
+}
 
-
+function tip(){
+    $("#origin").tipsy({gravity:'s'});
+    $("#readNo").tipsy({gravity:'s'});
+    $("#likeNo").tipsy({gravity:'s'});
+    $("#aveReadNo").tipsy({gravity:'s'});
+    $("#aveLikeNo").tipsy({gravity:'s'});
+    $("#aveTopReadNo").tipsy({gravity:'s'});
+    $("#dynamicIndex").tipsy({gravity:'s'});
+    $("#qualityIndex").tipsy({gravity:'s'});
+    $("#spreadIndex").tipsy({gravity:'s'});
+    $("#synthesizeIndex").tipsy({gravity:'s'});
+}
 $(function(){
     $("#point").hide();
     $("#dropDate").hide();
@@ -336,6 +370,7 @@ $(function(){
             removeCursor();
             $(this).addClass("active")
             bindWxData($(this).text(),categoryId)
+
         })
     });
 
@@ -345,8 +380,10 @@ $(function(){
     $("#aveReadNo").tipsy({gravity:'s'});
     $("#aveLikeNo").tipsy({gravity:'s'});
     $("#aveTopReadNo").tipsy({gravity:'s'});
-    $("#quaVector").tipsy({gravity:'s'});
-    $("#influence").tipsy({gravity:'s'});
+    $("#dynamicIndex").tipsy({gravity:'s'});
+    $("#qualityIndex").tipsy({gravity:'s'});
+    $("#spreadIndex").tipsy({gravity:'s'});
+
 
 
     $("#selectDate").mouseenter(function () {

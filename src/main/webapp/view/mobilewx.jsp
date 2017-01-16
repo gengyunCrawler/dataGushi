@@ -34,7 +34,7 @@
 
   <div style="height: 100%;margin-bottom: 80px">
 
-    <div class="contentpanel">
+    <div class="contentpanel" id="content">
 
       <div class="row">
           <div class="col-sm-12">
@@ -53,127 +53,16 @@
               </ul>
         </div>
         <div class="col-sm-12">
-          <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;margin-left: -10px" id="monitorRangeDate">监测时间范围 : 7月1日-7月31日</span>
+          <span style="color: #2845a0;font-size: 16px;font-family: 微软雅黑;margin-left: -10px" <%--id="monitorRangeDate"--%>>监测时间范围 : 2016年12月1日-2016年12月31日
+ </span>
         </div>
       </div>
 
-      <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 70px">
-        <div class="col-sm-12" style="text-align: center;">
-          <img src="<%=basePath%>view/plugin/1.png" style="width: 35%">
-          <span style="color: #706ad3;font-size: 16px;font-family: 微软雅黑;padding: 0 10px 0 10px;">省市发布</span>
-          <img src="<%=basePath%>view/plugin/2.png" style="width: 35%">
-        </div>
-      </div>
-
-      <div class="row" style="margin-top: 20px">
-        <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px;margin-left: 10px">
-            <thead>
-            <tr>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px;">序号</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
-            </tr>
-            </thead>
-            <tbody style="color: #2845a0" id="provence">
-
-            </tbody>
-          </table>
-        </div><!-- col-md-6 -->
-      </div><!-- row -->
-
-        <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 20px">
-            <div class="col-sm-12" style="text-align: center;">
-                <img src="<%=basePath%>view/plugin/1.png" style="width: 35%">
-                <span style="color: #706ad3;font-size: 16px;font-family: 微软雅黑;padding: 0 10px 0 10px;">文化传媒</span>
-                <img src="<%=basePath%>view/plugin/2.png" style="width: 35%">
-            </div>
-        </div>
-
-      <div class="row" style="margin-top: 20px; padding-top: 0px">
-        <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px">
-            <thead>
-            <tr>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px; width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
-            </tr>
-            </thead>
-            <tbody style="color: #2845a0" id="media">
-
-            </tbody>
-          </table>
-        </div><!-- col-md-6 -->
-      </div><!-- row -->
 
 
-      <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 20px">
-        <div class="col-sm-12" style="text-align: center;">
-          <img src="<%=basePath%>view/plugin/1.png" style="width: 37%">
-          <span style="color: #706ad3;font-size: 16px;font-family: 微软雅黑;padding: 0 20px 0 20px;">旅游</span>
-          <img src="<%=basePath%>view/plugin/2.png" style="width: 37%">
-        </div>
-      </div>
-
-      <div class="row" style="margin-top: 20px">
-        <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px">
-            <thead>
-            <tr>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
-            </tr>
-            </thead>
-            <tbody style="color: #2845a0" id="trip">
-
-            </tbody>
-          </table>
-        </div><!-- col-md-6 -->
-      </div><!-- row -->
 
 
-        <div class="row" style="background-color: #F3F6F8;margin-left: 0;margin-right: 0;padding: 10px 0 10px 0;margin-top: 20px">
-            <div class="col-sm-12" style="text-align: center;">
-                <img src="<%=basePath%>view/plugin/1.png" style="width: 35%">
-                <span style="color: #706ad3;font-size: 16px;font-family: 微软雅黑;padding: 0 10px 0 10px;">生活资讯</span>
-                <img src="<%=basePath%>view/plugin/2.png" style="width: 35%">
-            </div>
-        </div>
 
-      <div class="row" style="margin-top: 20px">
-        <div class="col-md-12">
-          <table class="table table-striped table-bordered" style="font-size: 10px">
-            <thead>
-            <tr>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px">序号</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px;width: 60px">昵称</th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>文章数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>阅读数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>点赞数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>质量指数</span></th>
-                <th style="color: #0057d3;font-weight: bold;margin-top: 0px"><span>影响力</span></th>
-            </tr>
-            </thead>
-            <tbody style="color: #2845a0" id="life">
-
-            </tbody>
-          </table>
-        </div><!-- col-md-6 -->
-      </div><!-- row -->
 
     </div><!-- contentpanel -->
     </div>

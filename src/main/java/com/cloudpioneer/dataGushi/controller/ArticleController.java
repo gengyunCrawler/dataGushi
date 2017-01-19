@@ -16,6 +16,15 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 
+    /**
+     * 根据微信公众类别获取文章排行榜
+     * @param year
+     * @param month
+     * @param categoryId 为'all'时是获取全部文章排行榜
+     * @param pageNo
+     * @param size
+     * @return
+     */
     @RequestMapping("wx/article/{year}/{month}/{pageNo}/{size}/{categoryId}")
     public Object getByCategory(@PathVariable Integer year, @PathVariable Integer month, @PathVariable String categoryId, @PathVariable Integer pageNo, @PathVariable Integer size){
       if (categoryId==null||categoryId.equals("")||categoryId.equals("all")){

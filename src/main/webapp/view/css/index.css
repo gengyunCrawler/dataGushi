@@ -275,9 +275,9 @@ tbody tr {
   border-radius: 50%;
 }
 .pagination{
-    width: 75.15625%;
-    padding: 0px;
-    margin: 0 auto;
+  width: 75.15625%;
+  padding: 0px;
+  margin: 0 auto;
   min-width: 960px;
 }
 .pagination ul {
@@ -358,11 +358,11 @@ tbody tr {
   top: 8px;
   left: 19px;
   background-color: #0078ff;
-    overflow: auto;
+  overflow: auto;
 }
 
 .date-wrapper {
-    position: absolute;
+  position: absolute;
 }
 
 .dropDate span#s1 {
@@ -424,25 +424,25 @@ tbody tr {
 }
 /*.pagination{*/
 
-  /*width: 75.15625%;*/
-  /*padding: 0px;*/
-  /*margin: 0 auto;*/
-  /*min-width: 960px;*/
+/*width: 75.15625%;*/
+/*padding: 0px;*/
+/*margin: 0 auto;*/
+/*min-width: 960px;*/
 /*}*/
 
 .newPage{
-    width: 90%;
-    height:50px;
-    position: relative;
-    margin-top: 40px;
-    margin-right: 100px;
+  width: 90%;
+  height:50px;
+  position: relative;
+  margin-top: 40px;
+  margin-right: 100px;
 }
 .newPage > .pagination{
-    position: absolute !important;
-    float: right !important;
-    right: 0px !important;
-    width: 300px !important;
-    min-width: inherit;
+  position: absolute !important;
+  float: right !important;
+  right: 0px !important;
+  width: 400px !important;
+  min-width: inherit;
 }
 .wx-img{
   width: 34px;

@@ -45,6 +45,16 @@ public class WeChatDataEntity implements Serializable
     private double di;
     private double ri;
     private double li;
+    //综合指数
+    private double composite;
+
+    public double getComposite() {
+        return composite;
+    }
+
+    public void setComposite(double composite) {
+        this.composite = composite;
+    }
 
     public double getGwi() {
         return gwi;

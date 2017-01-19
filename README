@@ -1,1 +1,30 @@
 本项目为数说微博微信排行榜
+业务说明：
+  1榜单
+     数说排行榜：
+     1.如果不涉及显示微信详情页只涉及DataStoryController的wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}/{order}接口（详情看类注释）
+     2.涉及微信公众号详细内容，则只需取出wechatdata中的detail字段即可涉及DataStoryController的wx/detail/{year}/{month}/{wxBiz}和wx/detail/get
+  2文章内容爬取
+    1.获取微信公众号数据，使用类WeixinTester.java 在account.properties中配置用户信息爬取数据存入wechatdata表中，微信公众号的详细内容在detail字段中
+    （包含各种指数，以及每一篇文章的详细详细等）
+    2.解析wechatdata表的detail字段将文章数据存入wxarticle中此时文章中缺乏内容字段（使用WeixinTester的testDataTransfer方法，
+    会将所有wechatdata中的detail字段的文章信息存入wxArticle中），然后使用zkCrawler 的dev_wxArticle分支的com.gy.wm.service.ServiceTest的testStartTask
+    方法，任务id='2a175e9ad55e9ef9904746c7e4c7e04e'进行文章内容（content字段）数据更新。然后得到最终的文章信息
+
+
+
+    相关类说明（类方法详情参照详细方法说明）：
+        ArticleEntity 文章实体类
+        WeChatDataEntity 微信公众号实体类
+        WXIndex 指数计算（参考指数计算系统文档，通常不必管，只需知道哪个方法是计算哪个指数的后面加一个综合指数即为di,ri,li的加权（
+            当前线上的综合指数是手动通过sql将di,ri,li,的加权到qualityNum字段的）
+        WeChatServiceImpl 微信公众号排行榜业务和文章转换业务相关
+        ArticleServiceImpl 文章业务相关
+        HttpService 通过数说接口获取数据的类
+        DataStoryParse，WxParser 解析数说相应json串数据映射为WeChatDataEntity和ArticleEntity
+        WechatSchedule 用于线上定时获取数据的定时器
+        DataStoryController:数据获取，排行榜相关
+        ArticleController:文章排行榜相关
+        WeixinTester 用于本地获取文章数据
+
+

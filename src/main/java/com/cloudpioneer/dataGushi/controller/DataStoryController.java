@@ -43,14 +43,13 @@ public class DataStoryController
     }
 
     /**
-     * 根据微信公众号类别获取排行榜
-     * @param currentPage
-     * @param pageSize
-     * @param categoryId
-     * @param year
-     * @param month
-     * @param order 根据指数指标排序如 li,ri,di,gwi
-     * @return
+     * 根据微信公众号类别获取排行榜（手机版也掉此接口）
+     * @param currentPage 当前页
+     * @param pageSize  页大小
+     * @param categoryId 公众号类别
+     * @param year 年
+     * @param month 月
+     * @param order 根据指数指标排序如 li,ri,di,gwi，或者综合指数（线上为手动sql将di,ri,li 加权赋值到qualityNum上）
      * @throws Exception
      */
     @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}/{order}")
@@ -64,9 +63,9 @@ public class DataStoryController
     }
 
     /**
-     * 根据wxBiz 来获取微信详情
-     * @param year
-     * @param month
+     * 将微信公众号的唯一标示符wxBiz存入session然后通过接口wx/detail/get获取详细详细
+     * @param year 年
+     * @param month 月
      * @param wxBiz
      * @param session
      * @return
@@ -81,6 +80,11 @@ public class DataStoryController
         return  modelAndView;
     }
 
+    /**
+     * 取出微信公众号的详细详细（配合接口wx/detail/{year}/{month}/{wxBiz}使用）
+     * @param session
+     * @return
+     */
     @RequestMapping("wx/detail/get")
     public Object detailGet(HttpSession session){
         if (session ==null){
@@ -97,14 +101,6 @@ public class DataStoryController
 
 
 
-    /**
-     *
-     * @param currentPage
-     * @param pageSize
-     * @param categoryId categoryId=="all" 即为返回全部
-     * @return
-     * @throws Exception
-     */
 
     @RequestMapping("weibo/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}")
     public Object weiBoData(@PathVariable("currentPage")Integer currentPage,@PathVariable("pageSize")Integer pageSize,@PathVariable("categoryId")String categoryId,@PathVariable("year")Integer year,@PathVariable("month")Integer month) throws Exception
@@ -133,6 +129,7 @@ public class DataStoryController
             weiboDataService.gainData4DB(username,password);
         return "success";
     }
+
 
     @RequestMapping("data/weixin/gain/{username}/{password}")
     public String wxDataGain(@PathVariable("username") String username,@PathVariable("password") String password) throws Exception

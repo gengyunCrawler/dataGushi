@@ -49,8 +49,11 @@ public class WeChatServiceImpl implements WeChatDataService{
     private ArticleEntityMapper articleEntityMapper;
 
 
-
-
+    /**
+     * 批量插入WeChatDataEntity
+     * @param weChatDataEntityList
+     * @throws Exception
+     */
     @Override
     public void insertByList(List<WeChatDataEntity> weChatDataEntityList) throws Exception {
         /*Date currentDate=weChatDataEntityList.get(1).getLatestDate();
@@ -136,6 +139,12 @@ public class WeChatServiceImpl implements WeChatDataService{
         }
         return currentDay;
     }
+
+    /**
+     * 进行指数计算（di,ri,li,gwi,后面可能加入综合指数即为（di,ri,li的加权））
+     * @param entitys
+     * @return
+     */
     private List<WeChatDataEntity> calInex(List<WeChatDataEntity> entitys){
         List<WeChatDataEntity> entitieList = null;
         if (entitys!=null&&entitys.size()>0){
@@ -157,6 +166,12 @@ public class WeChatServiceImpl implements WeChatDataService{
 
        return entitieList;
     }
+
+    /**
+     * 进行指数计算（di,ri,li,gwi,后面可能加入综合指数即为（di,ri,li的加权））
+     * @param entity
+     * @return
+     */
     private WeChatDataEntity calIndex4Entity(WeChatDataEntity entity){
         double DI = WXIndex.DI(entity.getArticlesNum(),entity.getArticlesNum()/30);
         double RI = WXIndex.RI(entity.getTotalReadNum(),entity.getAvgReadNum());
@@ -166,6 +181,8 @@ public class WeChatServiceImpl implements WeChatDataService{
         entity.setRi(RI);
         entity.setLi(LI);
         entity.setGwi(GWI);
+        /**加入综合指数，在WeChatDataEntity中加入综合*/
+        entity.setComposite(DI+RI+LI);
         return entity;
     }
 

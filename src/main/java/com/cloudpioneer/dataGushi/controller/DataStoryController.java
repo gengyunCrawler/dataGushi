@@ -49,7 +49,7 @@ public class DataStoryController
      * @param categoryId 公众号类别
      * @param year 年
      * @param month 月
-     * @param order 根据指数指标排序如 li,ri,di,gwi，或者综合指数（线上为手动sql将di,ri,li 加权赋值到qualityNum上）
+     * @param order 根据指数指标排序如 li,ri,di,gwi，或者综合指数（composite）（线上为手动sql将di,ri,li 加权赋值到qualityNum上）
      * @throws Exception
      */
     @RequestMapping("wx/data/{currentPage}/{pageSize}/{categoryId}/{year}/{month}/{order}")
